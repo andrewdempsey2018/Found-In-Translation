@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found in Translation</title>
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+
+        {% if user.username == 'guest' %}
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        {% endif %}
+        <li>
+            <p>Admin links</p>
+        </li>
+        <li><a href="{{ url_for('admin_posts') }}">View all posts</a></li>
+        <li><a href="#">View all users</a></li>
+
+        {% if user.username != 'guest' %}
+        <li><a href="#">DM</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        {% endif %}
+
+        <p>Current user: {{user.username}}</p>
+        <p>User language: {{user.language}}</p>
+
+    </ul>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

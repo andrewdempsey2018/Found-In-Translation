@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Reploy to topic: {{thread.subject}}</h1>
+
+<form action="{{ url_for('add_post_to_db') }}" method="POST">
+
+    <input type="hidden" name="subjectID" value="{{thread._id}}">
+    <input type="hidden" name="author" value="{{user}}">
+
+    <label>Content</label>
+    <input type="text" name="content" placeholder="content">
+
+    <button type="submit">Reply to this thread</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Thread</h1>
+<h3>{{thread.subject}}</h3>
+
+<ul style="list-style-type:none;">
+
+    {% for post in posts %}
+
+    <li>
+        <p>Posted by: {{post.author}}</p>
+        <p>{{post.content.translatedText}}</p>
+        <a href="{{ url_for('delete_post_from_db', postID=post._id) }}">[Delete]</a>
+        <p>-----------------------------</p>
+    </li>
+
+    {% endfor %}
+</ul>
+
+<a href="{{ url_for('newpost', threadID=thread._id) }}">Reply to this thread</a>
+<a href="{{ url_for('index') }}">[back]</a>
+
+{% endblock %}

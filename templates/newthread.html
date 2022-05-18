@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Create a new thread</h1>
+
+<form action="{{ url_for('add_thread_to_db') }}" method="POST">
+
+    <label>Subject</label>
+    <input type="text" name="subject" placeholder="subject">
+
+    <label>Content</label>
+    <input type="text" name="content" placeholder="content">
+
+    <button type="submit">Start discussion</button>
+</form>
+
+{% endblock %}

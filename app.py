@@ -14,6 +14,7 @@ app = Flask(__name__)
 # get the environment variables from the server for the DB
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "cred.json"
 
 mongo = PyMongo(app)
 
@@ -123,6 +124,9 @@ def delete_post_from_db():
 def admin_posts():
     return render_template("admin_posts.html", posts=postDB.find())
 
+
+#if __name__ == '__main__':
+#    app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)

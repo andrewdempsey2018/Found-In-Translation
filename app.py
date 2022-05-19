@@ -14,7 +14,7 @@ app = Flask(__name__)
 # get the environment variables from the server for the DB
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "cred.json"
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "cred.json"
 
 mongo = PyMongo(app)
 

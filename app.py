@@ -23,7 +23,7 @@ threadDB = mongo.db.threads
 userDB = mongo.db.users
 postDB = mongo.db.posts
 
-
+# a
 @app.route("/", methods=['GET', 'POST'])
 def index():
     # if the route was called by the login page
@@ -129,4 +129,4 @@ def admin_posts():
 #    app.run(debug=True)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

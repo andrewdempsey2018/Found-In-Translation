@@ -23,7 +23,7 @@ threadDB = mongo.db.threads
 userDB = mongo.db.users
 postDB = mongo.db.posts
 
-# aa
+# aaa
 @app.route("/", methods=['GET', 'POST'])
 def index():
     # if the route was called by the login page

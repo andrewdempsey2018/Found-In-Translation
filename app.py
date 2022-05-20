@@ -31,9 +31,22 @@ postDB = mongo.db.posts
 # Landing page
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    # if the route was called by the login page
-    if request.method == "POST":
+    # user arrived on the index page, check if they have a username cached or if they are a guest user
+    if(session.get('user')):
+        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
+    else:
+        session["user"] = "guest"
+        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
 
+
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    """
+    Login function matches the form input with a database entry and adds user to session cookies
+    Returns:
+        render template login.html
+    """
+    if request.method == "POST":
         # see if the username entered in the login form is in the database
         userInfo = userDB.find_one({"username": request.form.get("username")})
 
@@ -54,34 +67,30 @@ def index():
             flash("No user account with this name exists")
             session["user"] = "guest"
             return render_template("login.html", user = userDB.find_one({"username": session["user"]}))
-    else:
-        # user arrived on the index page, check if they have a username cached or if they are a guest user
-        
-
-        if(session.get('user')):
-            return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
-        else:
-            session["user"] = "guest"
-            return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
-
-@app.route("/login")
-def login():
-    return render_template("login.html", user=session["user"])
+    return render_template("login.html", user = userDB.find_one({"username": session["user"]}))
 
 
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
+    """
+    Signup function to add users to the database
+    Returns:
+        render signup.html
+    """
     if request.method == 'POST':
+        # Check if user and email are already in the database
         user_exists = userDB.find_one({
             'username': request.form.get('username').lower()
         })
         email_exists = userDB.find_one({'email': request.form.get('email')})
+        # Flash error messages and return user to signup page
         if user_exists:
             flash('Username already taken')
             return redirect(url_for('signup'))
         elif email_exists:
             flash('Email already in use!')
             return redirect(url_for('signup'))
+        # If there are no conflicts get the data from the form and create the user in database
         else:
             register = {
                 'username': request.form.get('username'),
@@ -92,6 +101,7 @@ def signup():
                 'isAdmin': 'false',
             }
             userDB.insert_one(register)
+            # Add user to session cookies
             session['user'] = request.form.get('username')
             flash(
                 f'Account created {request.form.get("username")}. Welcome aboard!',

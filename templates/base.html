@@ -2,13 +2,90 @@
 <html lang="en">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DESCRIPTION">
+    <meta name="keywords" content="KEYWORDS">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social Media Meta Tags -->
+    <!-- Facebook, LinkedIn, Google -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Found in Translation" />
+    <meta property="og:description" content="DESCRIPTION OF PAGE CONTENT" />
+    <meta name="image" property="og:image" content="URL TO IMAGE" />
+    <meta property="og:image:alt" content="ALT TEXT FOR IMAGE" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="Found in Translation" />
+    <meta name="author" content="Gladiators">
+
+    <!-- Favicon -->
+    <!-- FAVICON LINKS TO GO HERE ONCE CREATED-->
+
+    <!-- Stylesheets - Bootstrap, Bootstrap Icons & style.css -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Site Title -->
     <title>Found in Translation</title>
 </head>
 
 <body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{ url_for('index') }}"><i class="bi bi-translate" aria-label="Found in Translation page"></i> Found in Translation</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index') }}"><i class="bi bi-house-fill" aria-label="Found in Translation home page"></i> Home</a>
+              </li>
+
+              {% if user.username == 'guest' %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('login') }}"><i class="bi bi-box-arrow-in-right" aria-label="Login"></i> Login</a>
+              </li>
+              {% endif %}
+
+              <li class="nav-item">
+                <a class="nav-link" href=""><i class="bi bi-file-text" aria-label="View all posts"></i> View all posts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""><i class="bi bi-people-fill" aria-label="View all users"></i> View all users</a>
+              </li>
+              
+              {% if user.username != 'guest' %}
+              <li class="nav-item">
+                <a class="nav-link" href=""><i class="bi bi-chat-fill" aria-label="Direct message"></i> DM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}"><i class="bi bi-box-arrow-right" aria-label="Logout"></i> Logout</a>
+              </li>
+              {% endif %}
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
 
     <ul>
         <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -33,6 +110,44 @@
     </ul>
     {% block content %}
     {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <nav class="navbar fixed-bottom bg-light">
+            <div class="container-fluid">
+                <span class="navbar-text">
+                    <i class="bi bi-lock-fill" aria-label="Privacy policy"></i> Privacy Policy
+                </span>
+                <span class="navbar-text">
+                    &#169 Team Gladiators
+                </span>
+                <span class="navbar-text">
+                    <i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i> Terms & Conditions
+                </span>
+            </div>
+          </nav>
+
+
+    </footer>
+
+
+
+    <!-- Global Scripts -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    {% block scripts %}
+    {% endblock %}
+
 </body>
 
 </html>

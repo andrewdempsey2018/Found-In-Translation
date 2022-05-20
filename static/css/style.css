@@ -1,3 +1,23 @@
-body {
-    background-color: #bdf3f0;
+/*----- ROOT VARIABLES -----*/
+:root {
+    --black: #1F1F1F;
+    --white: #F8F8FA;
+    --yellow: #F2B90A;
+    --orange: #E97B20;
+    --red: #DD2C25;
+    --green: #68AC5D;
+    --blue: #486DAD;
+}
+
+
+/*----- Navbar & Footer -----*/
+
+.navbar {
+    background-color: var(--blue);
+}
+
+.navbar-brand,
+.nav-link,
+.navbar-text{
+    color: var(--white);
 }

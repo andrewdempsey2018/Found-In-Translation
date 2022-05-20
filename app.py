@@ -66,22 +66,51 @@ def index():
 
 @app.route("/login")
 def login():
+    if request.method == "POST":
+        # see if the username entered in the login form is in the database
+        userInfo = userDB.find_one({"username": request.form.get("username")})
+
+        # the username is in the database, now check if the password is correct
+        if(userInfo != None):
+            userName = request.form.get("username")
+            # password is correct, go to index page
+            if(userInfo["password"] == request.form.get("password")):
+                session["user"] = userName
+                return render_template("index.html", user = userDB.find_one({"username": session["user"]}), threads=threadDB.find())
+            else:
+                # password is incorrect, reset login form
+                flash("Incorrect password")
+                session["user"] = "guest"
+                return render_template("login.html", user = userDB.find_one({"username": session["user"]}))
+        else:
+            # there is no user with this name in the database, reset login form
+            flash("No user account with this name exists")
+            session["user"] = "guest"
+            return render_template("login.html", user = userDB.find_one({"username": session["user"]}))
     return render_template("login.html", user=session["user"])
 
 
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
+    """
+    Signup function to add users to the database
+    Returns:
+        render signup.html
+    """
     if request.method == 'POST':
+        # Check if user and email are already in the database
         user_exists = userDB.find_one({
             'username': request.form.get('username').lower()
         })
         email_exists = userDB.find_one({'email': request.form.get('email')})
+        # Flash error messages and return user to signup page
         if user_exists:
             flash('Username already taken')
             return redirect(url_for('signup'))
         elif email_exists:
             flash('Email already in use!')
             return redirect(url_for('signup'))
+        # If there are no conflicts get the data from the form and create the user in database
         else:
             register = {
                 'username': request.form.get('username'),
@@ -92,6 +121,7 @@ def signup():
                 'isAdmin': 'false',
             }
             userDB.insert_one(register)
+            # Add user to session cookies
             session['user'] = request.form.get('username')
             flash(
                 f'Account created {request.form.get("username")}. Welcome aboard!',

@@ -2,9 +2,39 @@
 <html lang="en">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DESCRIPTION">
+    <meta name="keywords" content="KEYWORDS">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social Media Meta Tags -->
+    <!-- Facebook, LinkedIn, Google -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Found in Translation" />
+    <meta property="og:description" content="DESCRIPTION OF PAGE CONTENT" />
+    <meta name="image" property="og:image" content="URL TO IMAGE" />
+    <meta property="og:image:alt" content="ALT TEXT FOR IMAGE" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="Found in Translation" />
+    <meta name="author" content="Gladiators">
+
+    <!-- Favicon -->
+    <!-- FAVICON LINKS TO GO HERE ONCE CREATED-->
+
+    <!-- Stylesheets - Bootstrap, Bootstrap Icons & style.css -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Site Title -->
     <title>Found in Translation</title>
 </head>
 
@@ -33,6 +63,23 @@
     </ul>
     {% block content %}
     {% endblock %}
+
+    <!-- Global Scripts -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    {% block scripts %}
+    {% endblock %}
+
 </body>
 
 </html>

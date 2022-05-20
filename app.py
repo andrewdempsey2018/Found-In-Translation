@@ -64,7 +64,6 @@ def index():
             session["user"] = "guest"
             return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
 
-
 @app.route("/login")
 def login():
     return render_template("login.html", user=session["user"])
@@ -72,33 +71,33 @@ def login():
 
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
-    session["user"] = "guest"
-
     if request.method == 'POST':
         user_exists = userDB.find_one({
-            'username': request.form.get("username").lower()
+            'username': request.form.get('username').lower()
         })
-        email_exists = userDB.find_one({'email': request.form.get("email")})
+        email_exists = userDB.find_one({'email': request.form.get('email')})
         if user_exists:
             flash('Username already taken')
             return redirect(url_for('signup'))
         elif email_exists:
             flash('Email already in use!')
+            return redirect(url_for('signup'))
         else:
             register = {
-                'username': request.form.get("username"),
-                # Password is hashed with werkzeug.security before adding to DB
-                'password': request.form.get('password'),
+                'username': request.form.get('username'),
                 'email': request.form.get('email'),
+                'password': request.form.get('password'),
                 'avatar': request.form.get('profile_img'),
+                'language': request.form.get('language'),
+                'isAdmin': 'false',
             }
             userDB.insert_one(register)
-            session['user'] = request.form.get("username")
+            session['user'] = request.form.get('username')
             flash(
                 f'Account created {request.form.get("username")}. Welcome aboard!',
             )
             return redirect(url_for('index'))
-    return render_template("signup.html", user=session["user"])
+    return render_template('signup.html', user = userDB.find_one({'username': session['user']}))
 
 
 @app.route("/thread")

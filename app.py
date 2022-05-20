@@ -31,41 +31,21 @@ postDB = mongo.db.posts
 # Landing page
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    # if the route was called by the login page
-    if request.method == "POST":
-
-        # see if the username entered in the login form is in the database
-        userInfo = userDB.find_one({"username": request.form.get("username")})
-
-        # the username is in the database, now check if the password is correct
-        if(userInfo != None):
-            userName = request.form.get("username")
-            # password is correct, go to index page
-            if(userInfo["password"] == request.form.get("password")):
-                session["user"] = userName
-                return render_template("index.html", user = userDB.find_one({"username": session["user"]}), threads=threadDB.find())
-            else:
-                # password is incorrect, reset login form
-                flash("Incorrect password")
-                session["user"] = "guest"
-                return render_template("login.html", user = userDB.find_one({"username": session["user"]}))
-        else:
-            # there is no user with this name in the database, reset login form
-            flash("No user account with this name exists")
-            session["user"] = "guest"
-            return render_template("login.html", user = userDB.find_one({"username": session["user"]}))
+    # user arrived on the index page, check if they have a username cached or if they are a guest user
+    if(session.get('user')):
+        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
     else:
-        # user arrived on the index page, check if they have a username cached or if they are a guest user
-        
+        session["user"] = "guest"
+        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
 
-        if(session.get('user')):
-            return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
-        else:
-            session["user"] = "guest"
-            return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
+    """
+    Login function matches the form input with a database entry and adds user to session cookies
+    Returns:
+        render template login.html
+    """
     if request.method == "POST":
         # see if the username entered in the login form is in the database
         userInfo = userDB.find_one({"username": request.form.get("username")})
@@ -87,7 +67,7 @@ def login():
             flash("No user account with this name exists")
             session["user"] = "guest"
             return render_template("login.html", user = userDB.find_one({"username": session["user"]}))
-    return render_template("login.html", user=session["user"])
+    return render_template("login.html", user = userDB.find_one({"username": session["user"]}))
 
 
 @app.route("/signup", methods=['GET', 'POST'])

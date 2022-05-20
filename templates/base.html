@@ -40,6 +40,53 @@
 
 <body>
 
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{ url_for('index') }}"><i class="bi bi-translate" aria-label="Found in Translation page"></i> Found in Translation</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index') }}"><i class="bi bi-house-fill" aria-label="Found in Translation home page"></i> Home</a>
+              </li>
+
+              {% if user.username == 'guest' %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('login') }}"><i class="bi bi-box-arrow-in-right" aria-label="Login"></i> Login</a>
+              </li>
+              {% endif %}
+
+              <li class="nav-item">
+                <a class="nav-link" href=""><i class="bi bi-file-text" aria-label="View all posts"></i> View all posts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""><i class="bi bi-people-fill" aria-label="View all users"></i> View all users</a>
+              </li>
+              
+              {% if user.username != 'guest' %}
+              <li class="nav-item">
+                <a class="nav-link" href=""><i class="bi bi-chat-fill" aria-label="Direct message"></i> DM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}"><i class="bi bi-box-arrow-right" aria-label="Logout"></i> Logout</a>
+              </li>
+              {% endif %}
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+
     <ul>
         <li><a href="{{ url_for('index') }}">Home</a></li>
 
@@ -63,6 +110,27 @@
     </ul>
     {% block content %}
     {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <nav class="navbar fixed-bottom bg-light">
+            <div class="container-fluid">
+                <span class="navbar-text">
+                    <i class="bi bi-lock-fill" aria-label="Privacy policy"></i> Privacy Policy
+                </span>
+                <span class="navbar-text">
+                    &#169 Team Gladiators
+                </span>
+                <span class="navbar-text">
+                    <i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i> Terms & Conditions
+                </span>
+            </div>
+          </nav>
+
+
+    </footer>
+
+
 
     <!-- Global Scripts -->
     <script

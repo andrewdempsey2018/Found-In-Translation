@@ -65,6 +65,37 @@ def login():
     return render_template("login.html", user=session["user"])
 
 
+@app.route("/signup", methods=['GET', 'POST'])
+def signup():
+    session["user"] = "guest"
+
+    if request.method == 'POST':
+        user_exists = userDB.find_one({
+            'username': request.form.get("username").lower()
+        })
+        email_exists = userDB.find_one({'email': request.form.get("email")})
+        if user_exists:
+            flash('Username already taken')
+            return redirect(url_for('signup'))
+        elif email_exists:
+            flash('Email already in use!')
+        else:
+            register = {
+                'username': request.form.get("username"),
+                # Password is hashed with werkzeug.security before adding to DB
+                'password': request.form.get('password'),
+                'email': request.form.get('email'),
+                'avatar': request.form.get('profile_img'),
+            }
+            userDB.insert_one(register)
+            session['user'] = request.form.get("username")
+            flash(
+                f'Account created {request.form.get("username")}. Welcome aboard!',
+            )
+            return redirect(url_for('index'))
+    return render_template("signup.html", user=session["user"])
+
+
 @app.route("/thread")
 def thread():
     threadID = request.args.get('threadID', None)

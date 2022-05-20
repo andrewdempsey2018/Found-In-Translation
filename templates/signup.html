@@ -26,14 +26,13 @@
         <br>
         <label for="language" class="form-label">Preferred language</label>
         <select name="language" id="language" class="form-select" aria-label="Language selection">
-            <option selected>Pick your language</option>
-            <option value="en">English</option>
+            <option selected value="en">English</option>
             <option value="fr">French</option>
             <option value="ro">Romanian</option>
         </select>
         <label for="profile_img" class="form-label">Profile Image</label>
         <br>
-        <input type="radio" name="profile_img" value="avatar1" class="form-check-input">Avatar 1 image
+        <input type="radio" name="profile_img" value="avatar1" class="form-check-input" checked>Avatar 1 image
         <br>
         <input type="radio" name="profile_img" value="avatar2" class="form-check-input">Avatar 2 image
         <br>
@@ -53,5 +52,6 @@ Already have an account? <a href="{{ url_for('login') }}">Log In</a>
 
 <!-- Page specific scripts -->
 {% block scripts %}
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="{{url_for('static', filename='js/form_validation.js') }}"></script>
 {% endblock %}

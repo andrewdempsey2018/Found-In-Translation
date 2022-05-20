@@ -15,6 +15,8 @@ app = Flask(__name__)
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+app.config["GOOGLE_APPLICATION_CREDENTIALS"] = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+
 # Set debug status based on enviornment variable
 if os.environ.get("DEBUG") == 'True':
     app.debug = True
@@ -120,8 +122,8 @@ def thread():
     
     translatedPosts = list(allPostsInThread)
 
-    #for post in translatedPosts:
-    #    post['content'] = translate_text(user['language'], post['content'])
+    for post in translatedPosts:
+        post['content'] = translate_text(user['language'], post['content'])
 
     return render_template("thread.html", user=user, thread=threadDB.find_one({'_id': ObjectId(threadID)}), posts=translatedPosts)
     

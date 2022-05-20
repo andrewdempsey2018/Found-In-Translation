@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% for message in messages %}
+<p>{{message}}</p>
+{% endfor %}
+{% endwith %}
+
+<h1>Sign Up</h1>
+
+<form action="{{ url_for('signup') }}" method="POST">
+
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" id="username" placeholder="Username" class="form-control">
+        <br>
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+        <br>        
+        <label for="password_conf" class="form-label">Confirm Password</label>
+        <input type="password" name="password_conf" id="password_conf" placeholder="Confirm Password" class="form-control">
+        <br>
+        <label for="profile_img" class="form-label">Profile Image</label>
+        <br>
+        <input type="radio" name="profile_img" value="Avatar 1" class="form-check-input">Avatar 1 image
+        <br>
+        <input type="radio" name="profile_img" value="Avatar 2" class="form-check-input">Avatar 2 image
+        <br>
+        <input type="radio" name="profile_img" value="Avatar 3" class="form-check-input">Avatar 3 image
+        <br>
+
+        <label for="terms" class="form-label">I agree to terms and conditions</label>
+        <input type="checkbox" name="terms" id="terms" class="form-control">
+
+        <button type="submit">Sign Up</button>
+    
+</form>
+
+Already have an account? <a href="{{ url_for('login') }}">Log In</a>
+
+{% endblock %}

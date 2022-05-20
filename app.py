@@ -14,7 +14,12 @@ app = Flask(__name__)
 # get the environment variables from the server for the DB
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
-# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "cred.json"
+
+# Set debug status based on enviornment variable
+if os.environ.get("DEBUG") == 'True':
+    app.debug = True
+else:
+    app.debug = False
 
 mongo = PyMongo(app)
 
@@ -23,7 +28,7 @@ threadDB = mongo.db.threads
 userDB = mongo.db.users
 postDB = mongo.db.posts
 
-# aaa
+# Landing page
 @app.route("/", methods=['GET', 'POST'])
 def index():
     # if the route was called by the login page
@@ -106,8 +111,8 @@ def thread():
     
     translatedPosts = list(allPostsInThread)
 
-    for post in translatedPosts:
-        post['content'] = translate_text(user['language'], post['content'])
+    #for post in translatedPosts:
+    #    post['content'] = translate_text(user['language'], post['content'])
 
     return render_template("thread.html", user=user, thread=threadDB.find_one({'_id': ObjectId(threadID)}), posts=translatedPosts)
     
@@ -155,9 +160,9 @@ def delete_post_from_db():
 def admin_posts():
     return render_template("admin_posts.html", posts=postDB.find())
 
-
-#if __name__ == '__main__':
-#    app.run(debug=True)
-
+# Set debug status based on enviornment variable
 if __name__ == '__main__':
-    app.run(debug=False)
+    if app.debug:
+        app.run(debug=True)
+    else:
+        app.run(debug=False)

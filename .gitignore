@@ -1,6 +1,5 @@
 env/
 __pycache__/
 env.py
-cred.json
 virtual/
 .gitpod.yml

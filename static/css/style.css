@@ -9,12 +9,25 @@
     --blue: #486DAD;
 }
 
-body {
-    background-image: url("../images/bg-img.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
+
+/*----- Hero Image -----*/
+.bg-image {
+    background-image: url('/static/images/hero.webp');
+    background-size: contain;
+    background-position: center;
+    height: 400px;
+    margin-top: 58px;
 }
 
+.mask {
+    background-color: #1F1F1F60;
+    height: 300px;
+}
+
+.hero-button {
+    background: var(--yellow);
+    color: var(--black);
+}
 
 /*----- Navbar & Footer -----*/
 

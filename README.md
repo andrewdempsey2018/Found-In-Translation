@@ -1,3 +1,5 @@
+# Found in Translation
+
 # **FOUND IN TRANSLATION**
 
 ![overview of found in translation on all devices](static/images/)

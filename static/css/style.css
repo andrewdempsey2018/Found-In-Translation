@@ -9,15 +9,21 @@
     --blue: #486DAD;
 }
 
+body {
+    background-image: url("../images/bg-img.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /*----- Navbar & Footer -----*/
 
 .navbar {
-    background-color: var(--blue);
+    background-color: var(--yellow);
 }
 
 .navbar-brand,
 .nav-link,
 .navbar-text{
-    color: var(--white);
+    color: var(--black);
 }

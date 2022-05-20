@@ -42,7 +42,7 @@
 
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="{{ url_for('index') }}"><i class="bi bi-translate" aria-label="Found in Translation page"></i> Found in Translation</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,12 +84,7 @@
         </div>
       </nav>
 
-
-
-
-
-
-
+      <!--
     <ul>
         <li><a href="{{ url_for('index') }}">Home</a></li>
 
@@ -111,21 +106,22 @@
         <p>User language: {{user.language}}</p>
 
     </ul>
+-->
     {% block content %}
     {% endblock %}
 
     <!-- Footer -->
     <footer>
-        <nav class="navbar fixed-bottom bg-light">
+        <nav class="navbar fixed-bottom">
             <div class="container-fluid">
                 <span class="navbar-text">
-                    <i class="bi bi-lock-fill" aria-label="Privacy policy"></i> Privacy Policy
+                    <i class="bi bi-lock-fill" aria-label="Privacy policy"></i>
                 </span>
                 <span class="navbar-text">
                     &#169 Team Gladiators
                 </span>
                 <span class="navbar-text">
-                    <i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i> Terms & Conditions
+                    <i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i>
                 </span>
             </div>
           </nav>

@@ -2,9 +2,24 @@
 
 {% block content %}
 
-<h1>Home</h1>
+<!-- Background image -->
+<div class="p-5 text-center bg-image">
+<div class="mask d-flex justify-content-center align-items-center">
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="text-white">
+      <h1 class="mb-3 hero-text">Found in Translation</h1>
+      <h2 class="mb-3 hero-text">Find your tribe, lose the language barrier</h2>
+      <a class="btn hero-button btn-lg" href="{{ url_for('login') }}" role="button">Sign up Now!</a>
+    </div>
+  </div>
+</div>
+</div>
+
+
 
 <h3>Latest discussions</h3>
+
+<p>Theres a topic for everyone at Found in Translation!</p>
 
 {% for thread in threads %}
 

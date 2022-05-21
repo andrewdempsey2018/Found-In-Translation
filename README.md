@@ -74,38 +74,38 @@ Found-In Translation is an online discussion board that aims to bridge individua
 The user can easily search for a topic, language, or discussion to view its content and leave a comment; however, in order to add/edit a discussion, the user must login/register to the site. The site's goal is for users to be able to perform basic CRUD functionality (Create, Read, Update, and Delete) and interact with it intuitively while having a positive experience.  
 
 # **Table of Contents**  
-
 ## **User Stories**
-
 ### **New User**
 As a first time visitor I should be able to do:
 
 * Easily navigate through the whole website
 * Create a profile
 * Get the info that the profile is successfully created.
-
 ### **Registered User/Returning Users**
 * To be able to view all users registered.
 * To be able to view all previous posts.
-
 ### **Admin User**
 * To be able read user data
 * To be able to edit or remove users
-
 ### **Target Audience**
 * Connect with people around the world to share experiences or information in different languages.
 
 # **Design** 
-
-## **COLOUR SCHEME** 
+## **Colour Scheme** 
 Colors have a significant effect on our mood, through them, we simulate a series of emotions. Our main objective in choosing pastel colors is to transmit peace, happiness and harmony.
 
 (color pallete image)
 
-## **Technology Used** 
-### Language Used 
+# **Features**
+## **Privacy Page and Terms and Conditions Page**
+We are aware that as we are asking users to create a username and a password to allow full interactivity with our site we need to also be mindful of how we are storing the data to ensure it remains private and secure. In the UK it is also important to be GDPR compliant.
+As this site was created as part of a hackathon project, the privacy and terms & conditions pages have been created to demonstrate an understanding that we, as the site creators and custodians of peoples personal data have taken consideration about this and have provided the user with a terms and conditions and privacy policy page which lets the users know how their data is being used.
+These documents were created on [RocketLawyer.com](https://www.rocketlawyer.com/gb/en?gclid=Cj0KCQjwm6KUBhC3ARIsACIwxBg54TtP8b529a5qduEkHY7u-D1hKr_I6qvoCuqtQM6VhwDUdpnR6fsaApToEALw_wcB), a site that creates documents. As the site has been created for educational purposes only, please note that the following documents would not be legally binding, they are purely to demonstrate an understanding of the topic. We would like to however ensure users that all measures have been taken to ensure any data entered into the site is secure.
+
+# **Technology Used** 
+## Language Used 
 HTML, CSS, Javascript, Python
-### Frameworks, libraries & Program Used 
+## Frameworks, libraries & Program Used 
 [Figma](https://www.figma.com/) - Used to create wireframes. 
 Git - For version control. 
 Github - To save and store the files for the website. 

@@ -168,15 +168,13 @@ def delete_post_from_db():
 
 @app.route("/privacy")
 def privacy():
-    return render_template("privacy.html")
+    return render_template("privacy.html", user = userDB.find_one({"username": session["user"]}))
 
 @app.route("/terms")
 def terms():
-    return render_template("terms.html")
+    return render_template("terms.html", user = userDB.find_one({"username": session["user"]}))
 
-@app.route("/404")
-def 404():
-    return render_template("404.html")
+
 
 # View for admins to view all posts in the database
 @app.route("/admin_posts")

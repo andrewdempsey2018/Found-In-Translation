@@ -166,6 +166,24 @@ def delete_post_from_db():
     postDB.remove({ "_id": ObjectId(postID) })
     return redirect(url_for("index"))
 
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html", user = userDB.find_one({"username": session["user"]}))
+
+@app.route("/terms")
+def terms():
+    return render_template("terms.html", user = userDB.find_one({"username": session["user"]}))
+
+@app.errorhandler(404)
+def page_not_found(e):
+    '''
+    When error 404 occurs render template for respective page,
+    :param e: the error that occurs
+    :return render_template of error_404.html
+    '''
+    return render_template(
+        '404.html', user = userDB.find_one({"username": session["user"]}), error=e), 404
+
 # View for admins to view all posts in the database
 @app.route("/admin_posts")
 def admin_posts():

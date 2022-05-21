@@ -61,3 +61,10 @@ Find your tribe, lose the language barrier
 Found-In Translation is an online discussion board that aims to bridge individuals' language gaps. Its mission is to connect individuals from all over the world to discuss and share real-life experiences without any barriers.People of all ages are targeted by Found in Translation. 
 
 The user can easily search for a topic, language, or discussion to view its content and leave a comment; however, in order to add/edit a discussion, the user must login/register to the site. The site's goal is for users to be able to perform basic CRUD functionality (Create, Read, Update, and Delete) and interact with it intuitively while having a positive experience.  
+
+# **Design** 
+
+## **COLOUR SCHEME** 
+Colors have a significant effect on our mood, through them, we simulate a series of emotions. Our main objective in choosing pastel colors is to transmit peace, happiness and harmony.
+
+

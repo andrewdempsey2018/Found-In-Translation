@@ -2,26 +2,35 @@
 
 {% block content %}
 
-<h1>Login</h1>
-
-<form action="{{ url_for('login') }}" method="POST">
-
-    <label>Username</label>
-    <input type="text" name="username" placeholder="Username">
-
-    <label>Password</label>
-    <input type="password" name="password" placeholder="Password">
-
-    <label for="rememberMe"> Remember me</label>
-    <input type="checkbox" name="rememberme">
-
-    <button type="submit">Login</button>
-</form>
-
 {% with messages = get_flashed_messages() %}
 {% for message in messages %}
 <p>{{message}}</p>
 {% endfor %}
 {% endwith %}
 
+
+<div class="container mt-5">
+    <div class="row pt-lg-5">
+        <div class="col-12 text-center">
+            <h1>Sign In</h1>
+        </div>
+        <div class="col-12 col-lg-6 card mx-auto mt-5 py-5">
+            <form action="{{ url_for('login') }}" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input class="form-control" type="text" name="username" placeholder="Username">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="mb-3 text-center">
+                    <label class="form-label" for="rememberMe"> Remember me</label>
+                    <input class="" type="checkbox" name="rememberme">
+                </div>
+                <button class="btn hero-button btn-lg w-100" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

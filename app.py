@@ -125,8 +125,8 @@ def thread():
     
     translatedPosts = list(allPostsInThread)
 
-    for post in translatedPosts:
-        post['content'] = translate_text(user['language'], post['content'])
+    #for post in translatedPosts:
+    #    post['content'] = translate_text(user['language'], post['content'])
 
     return render_template("thread.html", user=user, thread=threadDB.find_one({'_id': ObjectId(threadID)}), posts=translatedPosts)
     

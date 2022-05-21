@@ -122,7 +122,7 @@
 
     <!-- Footer -->
     <footer>
-        <nav class="navbar fixed-bottom">
+        <nav class="navbar">
             <div class="container-fluid">
                 <span class="navbar-text">
                     <a href="{{ url_for('privacy') }}"><i class="bi bi-lock-fill" aria-label="Privacy policy"></i></a>
@@ -147,6 +147,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/28d929900c.js" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
     {% block scripts %}

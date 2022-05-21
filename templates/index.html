@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<!-- Background image -->
+<!-- Background image 
 <div class="p-5 text-center bg-image">
 <div class="mask d-flex justify-content-center align-items-center">
   <div class="d-flex justify-content-center align-items-center h-100">
@@ -15,21 +15,96 @@
 </div>
 </div>
 
+-->
+  <header>
+      <div class="container-fluid  header-container">
+        <div class="opaque">&nbsp;</div>
+        <div class="row ">
+            <div class="col-12">
+                <h2 class="header-text">Find your tribe, lose the language barrier </h2>
+            </div>
+        </div>
+      </div>
+  </header>
 
+  <section>
+    <h3 class="text-center header-content">Latest Discussions</h3>
+    <p class="summary-text text-center">We are here to create a community were people from all over the world can come and
+      share their experiences regarding  real life situations were everyone can learn and contribute.<br>
+      Theres a topic for everyone at Found in Translation!
+    </p>
+    <p class="text-center view-more-threads"><a href="{{url_for('thread')}}" class="view-more-thread" >View All Threads</a></p>
+    
+    <div class="topthread-container">
+      <div class="row">
+          {% for thread in threads %}
+            <div class="col-12 text-center">
+              <h4 class="single-thread"><a href="{{ url_for('thread', threadID=thread._id) }}" class="view-more-thread">{{ thread.subject }}</a></h4>
+            </div>
+          {% endfor %}
+          <p class="text-center view-more-threads "><a href="{{url_for('thread')}}" class="link-color view-more-thread" >Start New Thread</a></p>
+      </div>
+    </div>
+   
+  </section> 
+ <!--
+    {% for thread in threads %}
 
-<h3>Latest discussions</h3>
-
-<p>Theres a topic for everyone at Found in Translation!</p>
-
-{% for thread in threads %}
-
-<ul style="list-style-type:none;">
-    <li><a href="{{ url_for('thread', threadID=thread._id) }}">{{thread.subject}}</a></li>
-    <li><a href="{{ url_for('delete_thread_from_db', threadID=thread._id) }}">[Delete]</a></li>
-</ul>
+  <ul style="list-style-type:none;">
+      <li><a href="{{ url_for('thread', threadID=thread._id) }}">{{thread.subject}}</a></li>
+      <li><a href="{{ url_for('delete_thread_from_db', threadID=thread._id) }}">[Delete]</a></li>
+  </ul>
 
 {% endfor %}
+ -->
 
-<a href="{{ url_for('newthread') }}">Start new discussion</a>
+ <section>
+  <h3 class="text-center community-header pt-2">Find Your Community</h3>
+  <p class="summary-text text-center">Found in Translation's online community has you covered. Every day, there are new topics to discuss from a 
+    <br>
+    list of over 500 health-related topics.</p>
+
+  <div class="container community-container">
+    <div class="row text-center card-container">
+      <div class="col-sm-6 col-md-4 space-cards">
+        <div class="card card-style mx-auto">
+          <img src="{{url_for('static',filename='images/depressed-lady.jpg')}}" class="card-img-top" alt="Woman laying in bed sad ">
+          <div class="card-body">
+            <h5 class="card-title card-headertext">DEALING WITH LOSS</h5>
+            <p class="card-subtitle mb-2 card-subheader ">13K USERS</p>
+            <p class="card-text community-card-text">This is a place that provides compassion and a listening ear for everyone. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 space-cards">
+        <div class="card card-style mx-auto">
+          <img src="{{url_for('static',filename='images/depressed-lady.jpg')}}" class="card-img-top" alt="Showing a woman having many thoughts in her head">
+          <div class="card-body">
+            <h5 class="card-title card-headertext">COPING WITH  ANXIETY</h5>
+            <p class="card-subtitle mb-2 text-muted card-subheader">6K USERS</p>
+            <p class="card-text community-card-text">This is a place that provides compassion and a listening ear for everyone. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 space-cards">
+        <div class="card card-style mx-auto">
+          <img src="{{url_for('static',filename='images/depressed-lady.jpg')}}" class="card-img-top" alt=" Two women having a conversation consoling each other">
+          <div class="card-body">
+            <h5 class="card-title card-headertext">DEPRESSION </h5>
+            <p class="card-subtitle mb-2 card-subheader">10K USERS</p>
+            <p class="card-text community-card-text">This is a place that provides compassion and a listening ear for everyone. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center pb-4"><a href="{{url_for('thread')}}" class="view-more-thread text-center volunteer-text">GET INVOLVED :  VOLUNTEER WITH OUR PARTNER ORGANIZATIONS </a></p>
+  </div>
+
+
+ </section>
+ 
+ 
 
 {% endblock %}

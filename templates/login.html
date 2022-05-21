@@ -9,18 +9,26 @@
 {% endwith %}
 
 
-<div class="container mt-5">
+<div class="container mt-5 bg-image">
     <div class="row pt-lg-5">
-        <div class="col-12 text-center">
-            <h1>Sign In</h1>
-        </div>
-        <div class="col-12 col-lg-6 card mx-auto mt-5 py-5">
+        <!-- Login form start -->
+        <div class="col-12 col-lg-6 mx-auto py-5 card">
+            <div class="col-12 text-center">
+                <h1>LOGIN</h1>
+            </div>
+            <div class="col-12 text-center py-2">
+                <p>
+                    If you have not created an account yet, then please
+                    <a href="{{ url_for('signup') }}">Sign Up</a> first
+                </p>
+    
+            </div>
             <form action="{{ url_for('login') }}" method="POST">
-                <div class="mb-3">
+                <div class="my-3 text-center">
                     <label class="form-label">Username</label>
                     <input class="form-control" type="text" name="username" placeholder="Username">
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 text-center">
                     <label class="form-label">Password</label>
                     <input class="form-control" type="password" name="password" placeholder="Password">
                 </div>
@@ -28,8 +36,16 @@
                     <label class="form-label" for="rememberMe"> Remember me</label>
                     <input class="" type="checkbox" name="rememberme">
                 </div>
-                <button class="btn hero-button btn-lg w-100" type="submit">Login</button>
+                <div class="text-center">
+                    <button class="btn hero-button btn-lg" type="submit">Sign In <i class="bi bi-box-arrow-in-right"></i></button>
+                </div>
             </form>
+        </div>
+        <!-- Login form end -->
+        <div class="text-center mt-3">
+            <p>
+                Return <a href="{{ url_for('index') }}">Home</a>
+            </p>
         </div>
     </div>
 </div>

@@ -114,6 +114,16 @@ def signup():
             return redirect(url_for('index'))
     return render_template('signup.html', user = userDB.find_one({'username': session['user']}))
 
+@app.route('/get_all_threads')
+def get_all_threads():
+    """
+    Query the database for all threads and sort them by most recent.
+    Store sorted results in <all_threads> variable to be passed to template render
+    Returns:
+        render_template threads.html
+    """
+    sorted_threads = threadDB.find().sort('_id', -1)
+    return render_template('threads.html', user=userDB.find_one({'username': session['user']}), threads=sorted_threads)
 
 @app.route("/thread")
 def thread():

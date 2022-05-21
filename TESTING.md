@@ -2,7 +2,7 @@
 
 Responsive site image to go here  
 
-Visit the deployed site: site link to go here
+Visit the deployed site: [Found in Translation](https://foundintranslationsodaci.herokuapp.com/)
 
 - - -
 
@@ -148,3 +148,6 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+
+
+Back to [README.md](README.md)

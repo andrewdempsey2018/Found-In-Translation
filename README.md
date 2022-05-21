@@ -36,6 +36,7 @@ Find your tribe, lose the language barrier
         * [General Features On All Pages](#general-features-on-all-pages)
         * [Features Of Each Page](#features-of-each-page)
         * [Features To Implement In Future](#features-to-implement-in-future)
+        * [Privacy Page and Terms and Conditions Page](#privacy-page-and-terms-and-conditions-page)
 
       
 3. [Technology Used](#technology-used)  
@@ -118,3 +119,31 @@ Google Dev Tools - To troubleshoot and test features, solve issues with responsi
 [Favicon.io](https://favicon.io/) To create favicon. 
 [Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices. 
 [Shields.io](https://shields.io/) To add badges to the README
+[Heroku](https://www.heroku.com/) To deploy the project.
+
+
+# **Deployment**  
+### **Deployment Heroku**
+The project was deployed to Heroku:
+
+1. Create a new app with the name found-in-translation.
+2. Linked the found-in-translation app to its Github repository.
+3. Verify that the project has an up to date Procfile and requirements.txt
+4. Push the project to the Heroku remote.
+5. Set the SECRET_KEY environmental variable in the Heroku config vars.
+6. Set the IP to 0.0.0.0 and the PORT to 5000 in the Heroku config vars.
+7. Set the MONGO_URI environmental variable in the Heroku config vars.
+8. Restart all dynos.
+9. Open the app on Heroku and check to ensure that it's working correctly. 
+
+### **How to clone**
+1. Under the repository name on GitHub, click Clone or download.
+2. In the Clone with HTTPs section, click the icon beside the URL to copy the clone URL for the repository.
+3. Change the current working directory to the location where you want the cloned directory to be made.
+4. Type git clone, and then paste the URL you copied in Step 2.
+5. Press Enter. Your local clone will be created.
+6. Set up a virtual environment.
+7. Install the packages in requirements.txt by typing pip3 install -r requirements.txt in the CLI.
+8. Set the IP address to 127.0.0.1 and the PORT to 5000.
+
+The website address: [Found In Translation](https://foundintranslationsodaci.herokuapp.com/)

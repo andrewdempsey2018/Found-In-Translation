@@ -107,19 +107,19 @@ These documents were created on [RocketLawyer.com](https://www.rocketlawyer.com/
 ## Language Used 
 HTML, CSS, Javascript, Python
 ## Frameworks, libraries & Program Used 
-[Figma](https://www.figma.com/) - Used to create wireframes. 
-Git - For version control. 
-Github - To save and store the files for the website. 
-[Jinja](https://jinja.palletsprojects.com/en/3.1.x/) - Templating engine
-Google Cloud Translate API - Controls the translation of the site into the chosen language. Please see ** section for more information on this API
-[Bootstrap V5.2](https://getbootstrap.com/) - Used as CSS Framework 
-[Bootstrap Icons V1.8.2](https://icons.getbootstrap.com/) - Used for the sites iconography
-Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling. 
-[Birme](https://www.birme.net/) To compress images and convert to webP format. 
-[Favicon.io](https://favicon.io/) To create favicon. 
-[Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices. 
-[Shields.io](https://shields.io/) To add badges to the README
-[Heroku](https://www.heroku.com/) To deploy the project.
+* [Figma](https://www.figma.com/) - To create wireframes. 
+* [Git](https://git-scm.com/) - For version control. 
+* [Github](https://github.com/)- To save and store the files for the website. 
+* [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) - Templating engine
+* [Google Cloud Translate API](https://console.cloud.google.com/apis/library/translate.googleapis.com?project=wp-mail-smtp-322517) - Controls the translation of the site into the chosen language. Please see ** section for more information on this API
+* [Bootstrap V5.2](https://getbootstrap.com/) - Used as CSS Framework 
+* [Bootstrap Icons V1.8.2](https://icons.getbootstrap.com/) - Used for the sites iconography
+* [Google DevTools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling. 
+* [Birme](https://www.birme.net/) To compress images and convert to webP format. 
+* [Favicon.io](https://favicon.io/) To create favicon. 
+* [Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices. 
+* [Shields.io](https://shields.io/) To add badges to the README
+* [Heroku](https://www.heroku.com/) To deploy the project.
 
 
 # **Deployment**  

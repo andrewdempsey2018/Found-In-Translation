@@ -212,3 +212,15 @@ body{
     margin-bottom: 5rem;
 
 }
+
+/*----- 404 Page -----*/
+
+.button-container {
+    padding-top: 5rem;
+
+}
+
+.error-button {
+    background: var(--green);
+    color: var(--white);
+}

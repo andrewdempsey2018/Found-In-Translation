@@ -166,6 +166,18 @@ def delete_post_from_db():
     postDB.remove({ "_id": ObjectId(postID) })
     return redirect(url_for("index"))
 
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html")
+
+@app.route("/terms")
+def terms():
+    return render_template("terms.html")
+
+@app.route("/404")
+def 404():
+    return render_template("404.html")
+
 # View for admins to view all posts in the database
 @app.route("/admin_posts")
 def admin_posts():

@@ -40,3 +40,178 @@
 .navbar-text{
     color: var(--black);
 }
+
+
+/*index Page */
+
+body{
+    font-family: "quicksand",sans-serif;
+}
+
+.header-container {
+    width:100%;
+    background: url(../images/hero.webp) no-repeat center center / cover fixed;  
+    object-fit: cover;
+
+    padding-top: 2rem;
+}
+
+.header-text{
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-align: center;
+    padding: 8rem 0;
+    font-family: "quicksand",sans-serif;
+    color:#007AC3;
+    font-size: 2.2rem;
+}
+
+.opaque{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45%;
+    width: 100%;
+    background-color: rgb(174 167 167 / 10%);
+}
+
+.summary-text{
+    padding:0 4rem;
+    color:#33576E;
+}
+
+.header-content{
+    padding: 4rem 0 2rem 0;
+    color:#007AC3;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.top-threads{
+    padding: 2rem 0;
+}
+
+.single-thread{
+    height: 33px;
+    font-family: 'Quicksand',sans-serif;
+    font-style: normal;
+    font-weight: 540;
+    font-size: 20px;
+    color: #1F1F1F;
+}
+
+.single-thread a:hover{
+    color: #F2B90A;
+}
+
+.view-more-thread{
+    text-decoration: none;
+    color: #1F1F1F;
+}
+
+.view-more-threads a:hover{
+    color:#F2B90A;
+}
+
+.community-header{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    text-align: center;
+    color: #009DAE;
+}
+
+.topthread-container{
+    padding: 1rem 0;
+}
+
+.link-color{
+    color:#FDB71A;
+}
+
+.community-container{
+    margin: 0 auto;
+}
+
+.card-container{
+    padding:2rem;
+}
+
+.card-headertext{
+    font-size: 18px;
+    text-align: left;
+    padding-left:5px;
+    font-family: "quicksand",sans-serif;
+    font-weight: 400;
+    line-height: 159%;
+}
+
+.card-subheader{
+    color:#61150E !important;
+    font-family: "quicksand",sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align:left;
+    padding-left:5px;
+}
+
+.community-card-text{
+    font-family: "quicksand",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align:left;
+    padding-left:5px;
+}
+
+.card-style{
+    width: 18rem !important;
+}
+
+
+.volunteer-text{
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    color:#009DAE;
+}
+
+
+
+@media (max-width: 400px) {
+    .summary-text{
+        padding: 0 2rem;
+    }
+
+    .header-text{
+        padding: 5rem 0;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        line-height: 2rem;
+    }
+
+    .header-content{
+        padding: 2rem 0;
+    }
+}    
+
+@media only screen and (max-width:768px){
+    .space-cards{
+       padding-bottom: 1.5rem;
+    }
+
+    .card-style{
+        width: 100% !important;
+    }
+
+    .card-container{
+        padding:2rem 0 0.4rem 0 ;
+    }
+    
+}

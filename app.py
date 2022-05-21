@@ -36,6 +36,7 @@ def index():
     # user arrived on the index page, check if they have a username cached or if they are a guest user
     if(session.get('user')):
         return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
+        
     else:
         session["user"] = "guest"
         return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())

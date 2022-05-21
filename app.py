@@ -157,7 +157,9 @@ def newthread():
 
 @app.route("/add_thread_to_db", methods=["POST"])
 def add_thread_to_db():
-    threadDB.insert_one(request.form.to_dict())
+    new_thread = request.form.to_dict()
+    new_thread['created_on'] = datetime.now()
+    threadDB.insert_one(new_thread)
     return redirect(url_for('index'))
 
 @app.route("/newpost")

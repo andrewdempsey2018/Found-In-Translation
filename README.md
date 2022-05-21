@@ -1,4 +1,7 @@
-# Found in Translation
+![GitHub last commit](https://img.shields.io/github/last-commit/andrewdempsey2018/Found-In-Translation?color=red&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/andrewdempsey2018/Found-In-Translation?color=orange&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/andrewdempsey2018/Found-In-Translation?color=yellow&style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/andrewdempsey2018/Found-In-Translation?color=green&style=for-the-badge)
 
 # **FOUND IN TRANSLATION**
 
@@ -58,6 +61,8 @@ Find your tribe, lose the language barrier
 
 <br/>   
 
+
+
 # **The Team**
 ## **Team Members**
 
@@ -91,6 +96,8 @@ As a first time visitor I should be able to do:
 ### **Target Audience**
 * Connect with people around the world to share experiences or information in different languages.
 
+# **Research**
+
 # **Design** 
 ## **Colour Scheme** 
 Colors have a significant effect on our mood, through them, we simulate a series of emotions. Our main objective in choosing pastel colors is to transmit peace, happiness and harmony.
@@ -121,6 +128,8 @@ HTML, CSS, Javascript, Python
 * [Shields.io](https://shields.io/) To add badges to the README
 * [Heroku](https://www.heroku.com/) To deploy the project.
 
+# **Testing**   
+    * [TEST.md](#testing)  
 
 # **Deployment**  
 ### **Deployment Heroku**
@@ -147,3 +156,10 @@ The project was deployed to Heroku:
 8. Set the IP address to 127.0.0.1 and the PORT to 5000.
 
 The website address: [Found In Translation](https://foundintranslationsodaci.herokuapp.com/)
+
+# **Credits**  
+    * [Content](#content) 
+#### **Media**
+  [hero.webp](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person) - Image used on the index page as the hero image  
+ 
+# **Acknowledgements**  

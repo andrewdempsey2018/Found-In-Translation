@@ -58,6 +58,8 @@ def login():
             # password is correct, go to index page
             if(userInfo["password"] == request.form.get("password")):
                 session["user"] = userName
+                flash(f'Welcome back {userName}!'
+                )
                 return render_template("index.html", user = userDB.find_one({"username": session["user"]}), threads=threadDB.find())
             else:
                 # password is incorrect, reset login form

@@ -40,3 +40,9 @@
 .navbar-text{
     color: var(--black);
 }
+
+/*----- Card & Forms -----*/
+
+.error {
+    color: var(--red);
+}

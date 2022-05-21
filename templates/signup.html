@@ -11,28 +11,30 @@
 
 <div class="container mt-5 bg-image">
     <div class="row pt-lg-5">
-        <!-- Login form start -->
         <div class="col-12 col-lg-6 mx-auto py-5 card">
             <div class="col-12 text-center">
                 <h1>Create an account with us!</h1>
             </div>
+            <!-- Signup form start -->
             <form action="{{ url_for('signup') }}" method="POST" id="signup_form">
                 <div class="my-3 text-center">
-                    <label for="username" class="form-label" hidden>Username</label>
+                    <label for="username" class="form-label">Username <i class="bi bi-person-plus-fill"></i></label>
                     <input type="text" name="username" id="username" placeholder="Username" class="form-control">
                 </div>
-                    <label for="email" class="form-label" hidden>Email Address</label>
-                    <input type="text" name="email" id="email" placeholder="Email Address" class="form-control">
                 <div class="my-3 text-center">
-                    <label for="password" class="form-label" hidden>Password</label>
+                    <label for="email" class="form-label">Email Address <i class="bi bi-envelope-fill"></i></label>
+                    <input type="text" name="email" id="email" placeholder="Email Address" class="form-control">
+                </div>  
+                <div class="my-3 text-center">
+                    <label for="password" class="form-label">Password <i class="bi bi-key-fill"></i></label>
                     <input type="password" name="password" id="password" placeholder="Password" class="form-control">
                 </div>  
                 <div class="my-3 text-center">
-                    <label for="password_conf" class="form-label" hidden>Confirm Password</label>
+                    <label for="password_conf" class="form-label">Confirm Password <i class="bi bi-key-fill"></i></label>
                     <input type="password" name="password_conf" id="password_conf" placeholder="Confirm Password" class="form-control">
                 </div>
                 <div class="my-3 text-center">
-                    <label for="language" class="form-label" hidden>Preferred language</label>
+                    <label for="language" class="form-label">Preferred language <i class="bi bi-globe"></i></label>
                     <select name="language" id="language" class="form-select" aria-label="Language selection">
                         <option selected value="en">English</option>
                         <option value="fr">French</option>
@@ -40,13 +42,14 @@
                     </select>
                 </div>
                 <div class="my-3 text-center">
-                    <label for="profile_img" class="form-label" hidden>Profile Image</label>
+                    <label for="profile_img" class="form-label">Profile Image</label>
+                    <div>
+                        <input type="radio" name="profile_img" value="avatar1" class="form-check-input" checked>Avatar 1 image
 
-                    <input type="radio" name="profile_img" value="avatar1" class="form-check-input" checked>Avatar 1 image
+                        <input type="radio" name="profile_img" value="avatar2" class="form-check-input">Avatar 2 image
 
-                    <input type="radio" name="profile_img" value="avatar2" class="form-check-input">Avatar 2 image
-
-                    <input type="radio" name="profile_img" value="avatar3" class="form-check-input">Avatar 3 image
+                        <input type="radio" name="profile_img" value="avatar3" class="form-check-input">Avatar 3 image
+                    </div>
                 </div>
                 <div class="my-3">
                     <label for="terms" class="form-label">I agree to terms and conditions</label>
@@ -56,6 +59,7 @@
                     <button class="btn hero-button btn-lg" type="submit">Sign Up</button>
                 </div>
             </form>
+            <!-- Signup form end -->
         </div>
         <div class="col-12 text-center mt-3">
             <p>

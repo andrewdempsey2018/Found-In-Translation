@@ -52,5 +52,5 @@ $('#signup_form').validate({
         language: {
             required: "Please select your preferred language"
         },
-    }
+    },
 });

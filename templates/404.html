@@ -1,11 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container-fluid">
-    <h1>Oh No...</h1>
-    <h2>It looks like you might be lost in Translation!</h2>
+<div class="container policy-container">
+   
+    <div class="p-5 text-center bg-404-image">
+        <div class="mask d-flex justify-content-center align-items-center">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white justify-content-center align-items-center">
+                <h1>Oh No...</h1>
+                <p>It looks like you might be lost in Translation!</p>
+            
+                <p>Lets get you back on track.</p>
+            </div>
+        </div>
+    </div>
 
-    <p>Lets get you back on track.</p>
+    <div class="button-container d-grid gap-2 col-6 mx-auto">
+        <a href="{{ url_for('login') }}" class="btn error-button btn-lg" role="button">Login</a>
+        <a href="{{ url_for('signup') }}" class="btn error-button btn-lg" role="button">Signup</a>
+    </div>
+
 </div>
 
 {% endblock %}

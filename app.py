@@ -34,12 +34,13 @@ postDB = mongo.db.posts
 @app.route("/", methods=['GET', 'POST'])
 def index():
     # user arrived on the index page, check if they have a username cached or if they are a guest user
+    sorted_threads = threadDB.find().sort('_id', -1).limit(3)
     if(session.get('user')):
-        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
+        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=sorted_threads)
         
     else:
         session["user"] = "guest"
-        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
+        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=sorted_threads)
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -142,7 +143,6 @@ def thread():
 
     return render_template("thread.html", user=user, thread=threadDB.find_one({'_id': ObjectId(threadID)}), posts=translatedPosts)
     
-
 
 @app.route("/logout")
 def logout():

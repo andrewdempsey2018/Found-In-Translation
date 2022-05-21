@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from datetime import datetime
 
 import os
 
@@ -166,8 +167,10 @@ def newpost():
 
 @app.route("/add_post_to_db", methods=["POST"])
 def add_post_to_db():
-    postDB.insert_one(request.form.to_dict())
-    return redirect(url_for('index'))
+    new_post = request.form.to_dict()
+    new_post['posted_on'] = datetime.now()
+    postDB.insert_one(new_post)
+    return redirect(url_for('thread'))
 
 @app.route("/delete_thread_from_db")
 def delete_thread_from_db():

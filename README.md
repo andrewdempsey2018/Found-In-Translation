@@ -7,6 +7,8 @@
 Find your tribe, lose the language barrier
 
 [View deployed site]()
+# **The Team**
+[Team Members](#team-members)
 
 # **Table of Contents**   
 1. [UX Development](#ux-development)
@@ -54,6 +56,15 @@ Find your tribe, lose the language barrier
 7. [Acknowledgements](#acknowledgements)  
 
 <br/>   
+
+# **The Team**
+## **Team Members**
+
+* Andrew Dempsey [LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/) / [Github](https://github.com/andrewdempsey2018)
+* Cristian B.    [LinkedIn](https://www.linkedin.com/in/cristianbuca/) / [Github](https://github.com/CristianBuca)
+* Didi           [LinkedIn](https://www.linkedin.com/in/onyema-onyejekwe-492128102/) / [Github](https://github.com/Didisimmons)
+* Kera Cudmore   [LinkedIn](https://www.linkedin.com/in/keracudmore/) / [Github](https://github.com/kera-cudmore)
+* Paula Silva    [LinkedIn](https://www.linkedin.com/in/paulacgsilva) / [Github](https://github.com/paulasdev) 
 
 # **UX Development**   
 

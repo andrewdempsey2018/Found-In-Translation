@@ -84,6 +84,16 @@
         </div>
       </nav>
 
+    <!-- Displays flash messages to the user -->
+    <div class="messages text-center">
+        {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endwith %}
+    </div>
+    <!-- End flash messages -->
+
       <!--
     <ul>
         <li><a href="{{ url_for('index') }}">Home</a></li>

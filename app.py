@@ -15,11 +15,11 @@ app = Flask(__name__)
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
-app.config["GOOGLE_APPLICATION_CREDENTIALS"] = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
-
-# Set debug status based on enviornment variable
+# Configure app for debug mode if the enviornment is set for debug
+# Run the app in production otherwise
 if os.environ.get("DEBUG") == 'True':
     app.debug = True
+    app.config["GOOGLE_APPLICATION_CREDENTIALS"] = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
 else:
     app.debug = False
 

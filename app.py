@@ -11,15 +11,15 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-# get the environment variables from the server for the DB
+## get the environment variables from the server for the DB
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
-app.config["GOOGLE_APPLICATION_CREDENTIALS"] = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
-
-# Set debug status based on enviornment variable
+# Configure app for debug mode if the enviornment is set for debug
+# Run the app in production otherwise
 if os.environ.get("DEBUG") == 'True':
     app.debug = True
+    app.config["GOOGLE_APPLICATION_CREDENTIALS"] = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
 else:
     app.debug = False
 
@@ -165,6 +165,24 @@ def delete_post_from_db():
     postID=request.args.get("postID", None)
     postDB.remove({ "_id": ObjectId(postID) })
     return redirect(url_for("index"))
+
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html", user = userDB.find_one({"username": session["user"]}))
+
+@app.route("/terms")
+def terms():
+    return render_template("terms.html", user = userDB.find_one({"username": session["user"]}))
+
+@app.errorhandler(404)
+def page_not_found(e):
+    '''
+    When error 404 occurs render template for respective page,
+    :param e: the error that occurs
+    :return render_template of error_404.html
+    '''
+    return render_template(
+        '404.html', user = userDB.find_one({"username": session["user"]}), error=e), 404
 
 # View for admins to view all posts in the database
 @app.route("/admin_posts")

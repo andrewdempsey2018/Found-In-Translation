@@ -41,8 +41,9 @@
     color: var(--black);
 }
 
-/*----- Card & Forms -----*/
+/*----- Terms & Privacy Page container -----*/
 
-.error {
-    color: var(--red);
+.policy-container {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
 }

@@ -62,6 +62,28 @@ Found-In Translation is an online discussion board that aims to bridge individua
 
 The user can easily search for a topic, language, or discussion to view its content and leave a comment; however, in order to add/edit a discussion, the user must login/register to the site. The site's goal is for users to be able to perform basic CRUD functionality (Create, Read, Update, and Delete) and interact with it intuitively while having a positive experience.  
 
+# **Table of Contents**  
+
+## **User Stories**
+
+### **New User**
+As a first time visitor I should be able to do:
+
+* Easily navigate through the whole website
+* Create a profile
+* Get the info that the profile is successfully created.
+
+### **Registered User/Returning Users**
+* To be able to view all users registered.
+* To be able to view all previous posts.
+
+### **Admin User**
+* To be able read user data
+* To be able to edit or remove users
+
+### **Target Audience**
+* Connect with people around the world to share experiences or information in different languages.
+
 # **Design** 
 
 ## **COLOUR SCHEME** 

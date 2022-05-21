@@ -19,6 +19,15 @@
     margin-top: 58px;
 }
 
+.bg-404-image {
+    background-image: url('/static/images/404hero.webp');
+    background-size: contain;
+    background-position: center;
+    height: 400px;
+    margin-top: 58px;
+
+}
+
 .mask {
     background-color: #1F1F1F60;
     height: 300px;
@@ -223,4 +232,8 @@ body{
 .error-button {
     background: var(--green);
     color: var(--white);
+}
+
+.footer-icon {
+    font-size: 1.5rem;
 }

@@ -41,7 +41,6 @@
     color: var(--black);
 }
 
-
 /*index Page */
 
 body{
@@ -214,4 +213,11 @@ body{
         padding:2rem 0 0.4rem 0 ;
     }
     
+  
+/*----- Terms & Privacy Page container -----*/
+
+.policy-container {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+
 }

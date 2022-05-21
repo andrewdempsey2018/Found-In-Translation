@@ -84,8 +84,16 @@
         </div>
       </nav>
 
+    <!-- Displays flash messages to the user -->
+    <div class="messages text-center">
+        {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endwith %}
+    </div>
+    <!-- End flash messages -->
 
-    
       <!--
     <ul>
         <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -117,13 +125,13 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <span class="navbar-text">
-                    <i class="bi bi-lock-fill" aria-label="Privacy policy"></i>
+                    <a href="{{ url_for('privacy') }}"><i class="bi bi-lock-fill" aria-label="Privacy policy"></i></a>
                 </span>
                 <span class="navbar-text">
                     &#169 Team Gladiators
                 </span>
                 <span class="navbar-text">
-                    <i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i>
+                    <a href="{{ url_for('terms') }}"><i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i></a>
                 </span>
             </div>
           </nav>

@@ -345,3 +345,7 @@ body{
     background: var(--green);
     color: var(--white);
 }
+
+.list-group {
+    --bs-list-group-border-color: #fff;
+}

@@ -1,42 +1,112 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <!-- All the flag threads -->
+    <div class="container">
+        <h1 class="fs-3 text-center">Admin section: all flagged threads</h1>
+        {% if threads.count() > 0 %}
+            <div class="allthread-box">
+            {% for thread in threads %}
+                <div class="card thread-box mt-3 mb-4">
+                    <div class="card-body text-center">
+                        <div class="row">
+                            <div class="col-sm-6 ">
+                                <div class="threads">
+                                    <h5 class="bold">{{thread.subject}}</h5> 
+                                    <small class="general-color">
+                                        Posted by : {{ thread.author }} on 
+                                        {% if thread.created_on %}
+                                            {{ thread.created_on.strftime('%Y-%m-%d at %H:%M') }}
+                                        {% endif %}
+                                    </small>
+                                    <p class="pt-1">{{thread.content}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="threads">
+                                    <div class="view-more-button my-3">
+                                        <a href="{{ url_for('thread', threadID=thread._id) }}" class="more-button button">VIEW THREAD</a>
+                                    </div>
+                                    <div class="delete-button my-3">
+                                        <a href="{{ url_for('delete_thread_from_db', threadID=thread._id) }}" class="more-button button">REMOVE THREAD</a>
+                                    </div>
+                                    <div class="icons">
+                                        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                                            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                                                <li class ="list-inline-item pl-3">
+                                                    <a class="remove-style" href= "{{ url_for('remove_thread_flag', threadID=thread._id) }}">
+                                                        <div class="text-center">
+                                                            <div><i class="bi bi-flag-fill"><em class="text-black">Remove Flag</em></i></div> 
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            <li class ="list-inline-item pl-5">
+                                                <div class="text-center">
+                                                    <div><i class="bi bi-chat-dots-fill"><em class="text-black">{{thread.posts}}</em></i> Posts</div> 
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% else %}
+        <div class="card mt-3 mb-4">
+            <div class="card-body text-center">
+                <p class="text-center pt-2 text-capitalize general-color fs-3">No flagged threads</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
 
-<h1>Admin section: all flagged posts</h1>
-
-{% for post in posts %}
-
-<ul style="list-style-type:none;">
-    <li>
-        <p>{{post.author}}</p>
-    </li>
-    <li>
-        <p>{{post.content}}</p>
-    </li>
-    <li><a href="{{ url_for('delete_post_from_db', postID=post._id) }}">[ Delete ]</a></li>
-    <p>-----------------------------</p>
-</ul>
-
-{% endfor %}
-
-
-<h1>Admin section: all flagged threads</h1>
-
-{% for thread in threads %}
-
-<ul style="list-style-type:none;">
-    <li>
-        <p>{{thread.subject}}</p>
-    </li>
-    <li>
-        <p>{{thread.content}}</p>
-    </li>
-    <li><a href="{{ url_for('delete_thread_from_db', threadID=thread._id) }}">[ Delete ]</a></li>
-    <p>-----------------------------</p>
-</ul>
-
-{% endfor %}
-
-<a href="{{ url_for('index') }}">[back]</a>
+    <!-- All the flagged posts -->
+    <div class="container">
+        <h1 class="fs-3 text-center">Admin section: all flagged posts</h1>
+        {% if posts.count() > 0 %}
+            <div class="allthread-box">
+            {% for post in posts %}
+                <div class="card thread-box mt-3 mb-4">
+                    <div class="card-body text-center">
+                        <div class="row">
+                            <div class="col-sm-6 ">
+                                <div class="threads">
+                                    <small class="general-color">
+                                        Posted by : {{ post.author }} on 
+                                        {% if post.posted_on %}
+                                            {{ post.posted_on.strftime('%Y-%m-%d at %H:%M') }}
+                                        {% endif %}
+                                    </small>
+                                    <p class="pt-1">{{post.content}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="threads">
+                                    <div class="delete-button my-3">
+                                        <a href="{{ url_for('delete_post_from_db', postID=post._id) }}" class="more-button button">REMOVE POST</a>
+                                    </div>
+                                    <a class="remove-style" href= "{{ url_for('remove_post_flag', postID=post._id) }}">
+                                        <div class="text-center">
+                                            <div><i class="bi bi-flag-fill"><em class="text-black">Remove Flag</em></i></div> 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% else %}
+        <div class="card mt-3 mb-4">
+            <div class="card-body text-center">
+                <p class="text-center pt-2 text-capitalize general-color fs-3">No flagged posts</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
 
 {% endblock %}

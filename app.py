@@ -187,13 +187,13 @@ def add_post_to_db():
 def delete_thread_from_db():
     threadID=request.args.get("threadID", None)
     threadDB.remove({ "_id": ObjectId(threadID) })
-    return redirect(url_for("index"))
+    return redirect(url_for("admin_posts"))
 
 @app.route("/delete_post_from_db")
 def delete_post_from_db():
     postID=request.args.get("postID", None)
     postDB.remove({ "_id": ObjectId(postID) })
-    return redirect(url_for("index"))
+    return redirect(url_for("admin_posts"))
 
 @app.route("/privacy")
 def privacy():
@@ -226,9 +226,27 @@ def report_thread():
     thread['flagged'] = 'TRUE'
     threadDB.replace_one({'_id': ObjectId(threadID)}, thread)
     flash(
-        f'The thread {thread["subject"]} has been reported to the Admin!',
+        f'The thread {thread["subject"]} has been reported to the Admin!'
     )
     return redirect(url_for('get_all_threads'))
+
+@app.route("/remove_thread_flag")
+def remove_thread_flag():
+    """
+    Route for the admin to remove the flag from a thread
+    Returns:
+        redirect to admin_posts route
+    """
+
+    threadID = request.args.get("threadID", None)
+    thread = threadDB.find_one({'_id': ObjectId(threadID)})
+    thread['flagged'] = 'FALSE'
+    threadDB.replace_one({'_id': ObjectId(threadID)}, thread)
+    flash(
+        f'The thread {thread["subject"]} has been unflagged!'
+    )
+    return redirect(url_for('admin_posts'))
+
 
 @app.route("/report_post")
 def report_post():
@@ -243,13 +261,35 @@ def report_post():
     post['flagged'] = 'TRUE'
     postDB.replace_one({'_id': ObjectId(postID)}, post)
     flash(
-        f'The post by {post["author"]} has been reported to the Admin!',
+        f'The post by {post["author"]} has been reported to the Admin!'
     )
     return redirect(url_for('get_all_threads'))
+
+@app.route("/remove_post_flag")
+def remove_post_flag():
+    """
+    Route for the admin to remove the flag from a post
+    Returns:
+        redirect to admin_posts route
+    """
+    postID = request.args.get("postID", None)
+    post = postDB.find_one({'_id': ObjectId(postID)})
+    post['flagged'] = 'FALSE'
+    postDB.replace_one({'_id': ObjectId(postID)}, post)
+    flash(
+        f'The post by {post["author"]} has been unflagged!'
+    )
+    return redirect(url_for('admin_posts'))
 
 # View for admins to view all posts in the database
 @app.route("/admin_posts")
 def admin_posts():
+    """
+    Checks if logged used is admin and queries the database
+    for all the flagged threads and posts then returns them to the view
+    Returns:
+        render template admin_posts.html
+    """
     user = userDB.find_one({'username': session['user']})
     if user['isAdmin']:
         flagged_threads = threadDB.find({'flagged': 'TRUE'})

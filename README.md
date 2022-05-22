@@ -105,6 +105,14 @@ Colors have a significant effect on our mood, through them, we simulate a series
 (color pallete image)
 
 # **Features**
+
+## **General Features On All Pages**
+
+**Favicon**
+The Favicon was created using [Favicon.io](https://favicon.io/). We have chosen this image as our site logo and have also used it as our favicon as it brings brand cohesion to the site.
+**Site Logo**
+We have chosen this image as our site logo as we feel it displays the core principle of our site in an icon which allows the site logo to be understood by anyone, regardless of their language. The image shows a globe with two speech bubbles, each with a different language character.
+
 ## **Privacy Page and Terms and Conditions Page**
 We are aware that as we are asking users to create a username and a password to allow full interactivity with our site we need to also be mindful of how we are storing the data to ensure it remains private and secure. In the UK it is also important to be GDPR compliant.
 As this site was created as part of a hackathon project, the privacy and terms & conditions pages have been created to demonstrate an understanding that we, as the site creators and custodians of peoples personal data have taken consideration about this and have provided the user with a terms and conditions and privacy policy page which lets the users know how their data is being used.
@@ -164,5 +172,6 @@ The website address: [Found In Translation](https://foundintranslationsodaci.her
 #### **Media**
   [hero.webp](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person) - Image used on the index page as the hero image  
   [hero.webp](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon) - Image used on the index page as the hero image 
- 
+  [logo.webp](https://www.flaticon.com/free-icons/language") - Image used for the sites logo and favicon, sourced from Flatiron, created by Freepik
 # **Acknowledgements**  
+.

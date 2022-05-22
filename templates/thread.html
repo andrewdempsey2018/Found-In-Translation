@@ -12,9 +12,41 @@
         </div>
         <div class="col-sm id-thread  reply-button">
             <div class="replybutton">
-                <a href="{{ url_for('newpost', threadID=thread._id) }}" class="button reply">REPLY</a>
+                <!-- Button trigger modal -->
+                <button type="button" class="button reply" data-bs-toggle="modal" data-bs-target="#commentModal">
+                    REPLY
+                </button>
             </div> 
         </div>
+
+        <!-- Reply Modal Start -->
+        <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="commentModalLabel">{{ thread.subject }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <form action="{{ url_for('add_post_to_db') }}" method="POST">
+
+                            <input type="hidden" name="subjectID" value="{{thread._id}}">
+                            <input type="hidden" name="author" value="{{user.username}}">
+                        
+                            <label>Your Comment</label>
+                            <br>
+                            <textarea name="content" cols="40" rows="10" maxlength="200" class="textarea form-control" required="" id="content"></textarea>
+                            <br>
+                            <button type="submit" class="button reply">Reply to this thread</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Reply Modal End -->
     </div>
 
 </div>
@@ -28,8 +60,12 @@
                         <img src="{{url_for('static',filename='images/anxiety.jpeg')}}"  class="rounded-circle mr-3" height="100" width="100">
                     </div>
                     <div class="post-media-body">
-                       <p>{{post.author}}</p> 
-                       <small>United States on {{post.posted_on | date:"d/m/Y"}}</small>
+                       <p>{{post.author}}</p>
+                       <small>United States on 
+                            {% if post.posted_on %}
+                                {{ post.posted_on.strftime('%Y-%m-%d %H:%M') }}
+                            {% endif %}
+                        </small>
                         <p class="pt-1">{post.content.translatedText}}</p>
                         <div class="links">
                             {% if session.user|lower == posts.author|lower or session.user == "administrator" %}

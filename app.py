@@ -35,6 +35,7 @@ postDB = mongo.db.posts
 @app.route("/", methods=['GET', 'POST'])
 def index():
     # user arrived on the index page, check if they have a username cached or if they are a guest user
+
     sorted_threads = threadDB.find().sort('_id', -1).limit(3)
     if(session.get('user')):
         return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=sorted_threads)
@@ -120,19 +121,27 @@ def signup():
 def get_all_threads():
     """
     Query the database for all threads and sort them by most recent.
-    Store sorted results in <all_threads> variable to be passed to template render
+    Store sorted results in <sorted_threads> variable to be passed to template render
     Returns:
         render_template threads.html
     """
-    sorted_threads = list(threadDB.find().sort('_id', -1))
-    return render_template('allthreads.html', user=userDB.find_one({'username': session['user']}), threads=sorted_threads)
+
+    # Update the number of posts in each thread in the Database
+    threads = threadDB.find()
+    for thread in threads:
+        threadID = str(thread['_id'])
+        number_of_posts = postDB.count_documents({'subjectID': threadID})
+        thread['posts'] = number_of_posts
+        threadDB.replace_one({'_id': ObjectId(threadID)}, thread)
+
+    sorted_threads = threadDB.find().sort('_id', -1)
+    return render_template('threads.html', user=userDB.find_one({'username': session['user']}), threads=sorted_threads)
 
 @app.route("/thread")
 def thread():
     threadID = request.args.get('threadID', None)
 
     allPostsInThread=postDB.find({'subjectID': threadID})
-    
     user = userDB.find_one({"username": session["user"]})
     
     translatedPosts = list(allPostsInThread)
@@ -172,7 +181,7 @@ def add_post_to_db():
     new_post = request.form.to_dict()
     new_post['posted_on'] = datetime.now()
     postDB.insert_one(new_post)
-    return redirect(url_for('thread'))
+    return redirect(url_for('thread', threadID=new_post['subjectID']))
 
 @app.route("/delete_thread_from_db")
 def delete_thread_from_db():

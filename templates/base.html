@@ -77,7 +77,7 @@
               {% endif %}
 
               <li class="nav-item">
-                <a class="nav-link" href=""><i class="bi bi-file-text" aria-label="View all posts"></i> View all posts</a>
+                <a class="nav-link" href="{{url_for('get_all_threads')}}"><i class="bi bi-file-text" aria-label="View all posts"></i> View all posts</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href=""><i class="bi bi-people-fill" aria-label="View all users"></i> View all users</a>
@@ -130,75 +130,117 @@
 
     </ul>
 -->
+
     {% block content %}
     {% endblock %}
 
-    <!-- Footer -->
-    <footer>
-        <nav class="navbar pt-4 pb-4">
-            <div class="container-fluid">
-
-                <span class="navbar-text">
-                    <a href="{{ url_for('privacy') }}"><i class="bi bi-lock-fill" aria-label="Privacy policy"></i></a>
-                </span>
-
-                <!-- Button trigger modal -->
-                <span class="navbar-text" id="egg" data-bs-toggle="modal" data-bs-target="#eggModal">
-                    &#169 Team Gladiators
-                </span>
-                
-                <!-- Modal -->
-                <div class="modal fade" id="eggModal" tabindex="-1" aria-labelledby="eggModal" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content text-center">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            
-                            <div class="modal-body">
-                                <img width="700"src="{{ url_for('static', filename='images/teamgladiators.webp') }}">
-
-                                <ul class="list-group list-group-horizontal pt-4">
-                                    <li class="list-group-item flex-fill">Andrew: 
-                                        <a href="https://github.com/andrewdempsey2018" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Andrew's GitHub Profile"></i></a>
-                                        <a href="https://www.linkedin.com/in/andrew-dempsey-20ab40180/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Andrew's Linked in Profile"></i></a>
-                                    </li>
-
-
-                                    <li class="list-group-item flex-fill">Cristian: 
-                                        <a href="https://github.com/CristianBuca" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Cristian's GitHub Profile"></i></a>
-                                        <a href="https://www.linkedin.com/in/cristianbuca/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Cristian's Linked in Profile"></i></a>
-                                    </li>
-
-                                    <li class="list-group-item flex-fill">Didi: 
-                                        <a href="https://github.com/Didisimmons" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Didi's GitHub Profile"></i></a>
-                                        <a href="https://www.linkedin.com/in/onyema-onyejekwe-492128102/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Didi's Linked in Profile"></i></a>
-                                    </li>
-
-                                    <li class="list-group-item flex-fill">Kera: 
-                                        <a href="https://github.com/kera-cudmore" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Kera's GitHub Profile"></i></a>
-                                        <a href="https://www.linkedin.com/in/keracudmore/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Kera's Linked in Profile"></i></a>
-                                    </li>
-
-                                    <li class="list-group-item flex-fill">Paula: 
-                                        <a href="https://github.com/paulasdev" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Paula's GitHub Profile"></i></a>
-                                        <a href="https://www.linkedin.com/in/paulacgsilva" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Paula's Linked in Profile"></i></a>
-                                    </li>
-
-                                  </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <span class="navbar-text">
-                    <a href="{{ url_for('terms') }}"><i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i></a>
-                </span>
+  
+    <footer id="footer">
+      <div class="container-fluid footer-container">
+        <div class="row">
+          <div  class="col-6 col-sm-4 footer-content text-center">
+            <div class="community text-center d-none d-sm-block">
+              <h5 class="text-uppercase"> Join Our Community </h5> 
+              <p class="news">Never miss out on exciting news and upcoming events</p>
+              <div class="subscribe">
+                <a href="{{url_for('login')}}" class="btn mt-1 small mb-1"> Join Now</a>
+              </div>               
             </div>
-          </nav>
+            <ul class="social-links">
+              <li class="list-inline-item social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Find us on Facebook" rel="noopener">
+                  <i class="fab fa-facebook-f" aria-hidden="true"></i> 
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
+              <li class="list-inline-item social">
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Find us on Instagram" rel="noopener" >
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                  <span class="sr-only">Instagram</span>
+                </a>
+            </li>
+              <li class="list-inline-item social">
+                <a href="https://twitter.com/" target="_blank" aria-label="Find us on Twitter" rel="noopener">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item social">
+                <a href=" https://www.youtube.com/" target="_blank" aria-label="Find us on Youtube" rel="noopener">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                  <span class="sr-only">Youtube</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class=" col-sm-4">
+            <div class="logo-footer">
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/logo.webp') }}" alt="Logo for Found In translation" class="footer-image circle responsive-img">
+                </a>
+            </div>
+          </div>        
+          <div class="col-6 col-sm-4">
+            <div class="services text-center">
+              <h5 class="uppercase"> Information Links</h5> 
+                <h6 class="service"><a href="{{ url_for('privacy') }}" class="general pt-2">Privacy Policy</a></h6>
+                <h6 class="service"><a href="{{ url_for('terms') }}" class="general">Terms & Condition </a></h6>
+                <h6 class="service"><a href="{{ url_for('terms') }}"  class="general">Compliant Policy</a></h6> 
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <span class="navbar-text general-color" id="egg" data-bs-toggle="modal" data-bs-target="#eggModal">
+            &#169 Team Gladiators
+        </span>
+      </div>
+      <div class="modal fade" id="eggModal" tabindex="-1" aria-labelledby="eggModal" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+              <div class="modal-content text-center">
+                  <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  
+                  <div class="modal-body">
+                      <img width="700"src="{{ url_for('static', filename='images/teamgladiators.webp') }}">
+
+                      <ul class="list-group list-group-horizontal pt-4">
+                          <li class="list-group-item flex-fill">Andrew: 
+                              <a href="https://github.com/andrewdempsey2018" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Andrew's GitHub Profile"></i></a>
+                              <a href="https://www.linkedin.com/in/andrew-dempsey-20ab40180/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Andrew's Linked in Profile"></i></a>
+                          </li>
 
 
+                          <li class="list-group-item flex-fill">Cristian: 
+                              <a href="https://github.com/CristianBuca" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Cristian's GitHub Profile"></i></a>
+                              <a href="https://www.linkedin.com/in/cristianbuca/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Cristian's Linked in Profile"></i></a>
+                          </li>
+
+                          <li class="list-group-item flex-fill">Didi: 
+                              <a href="https://github.com/Didisimmons" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Didi's GitHub Profile"></i></a>
+                              <a href="https://www.linkedin.com/in/onyema-onyejekwe-492128102/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Didi's Linked in Profile"></i></a>
+                          </li>
+
+                          <li class="list-group-item flex-fill">Kera: 
+                              <a href="https://github.com/kera-cudmore" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Kera's GitHub Profile"></i></a>
+                              <a href="https://www.linkedin.com/in/keracudmore/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Kera's Linked in Profile"></i></a>
+                          </li>
+
+                          <li class="list-group-item flex-fill">Paula: 
+                              <a href="https://github.com/paulasdev" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Paula's GitHub Profile"></i></a>
+                              <a href="https://www.linkedin.com/in/paulacgsilva" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Paula's Linked in Profile"></i></a>
+                          </li>
+
+                        </ul>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+      </div>
+    
+      </div>   
     </footer>
 
     <!-- Global Scripts -->

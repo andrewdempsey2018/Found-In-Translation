@@ -1,3 +1,4 @@
+from pickle import TRUE
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -212,6 +213,23 @@ def page_not_found(e):
     '''
     return render_template(
         '404.html', user = userDB.find_one({"username": session["user"]}), error=e), 404
+
+@app.route("/report_issue")
+def report_issue():
+    """
+    Route adds flagged: TRUE to the thread that was reported
+    Returns:
+       redirect to get_all_threads
+    """
+
+    threadID = request.args.get("threadID", None)
+    thread = threadDB.find_one({'_id': ObjectId(threadID)})
+    thread['flagged'] = 'TRUE'
+    threadDB.replace_one({'_id': ObjectId(threadID)}, thread)
+    flash(
+        f'The thread {thread["subject"]} has been reported to the Admin!',
+    )
+    return redirect(url_for('get_all_threads'))
 
 # View for admins to view all posts in the database
 @app.route("/admin_posts")

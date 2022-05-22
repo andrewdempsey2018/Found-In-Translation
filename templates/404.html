@@ -19,12 +19,12 @@
 
         {% if user.username == 'guest' %}
 
-        <a href="{{ url_for('login') }}" class="btn error-button btn-lg" role="button">Login</a>
-        <a href="{{ url_for('signup') }}" class="btn error-button btn-lg" role="button">Signup</a>
+        <a href="{{ url_for('login') }}" class="btn green-button btn-lg" role="button">Login</a>
+        <a href="{{ url_for('signup') }}" class="btn green-button btn-lg" role="button">Signup</a>
 
         {% else %}
 
-        <a href="{{ url_for('index') }}" class="btn error-button btn-lg" role="button">Home</a>
+        <a href="{{ url_for('index') }}" class="btn green-button btn-lg" role="button">Home</a>
 
         {% endif %}
     </div>

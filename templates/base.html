@@ -130,10 +130,15 @@
 
     </ul>
 -->
+  <div id="page-container">
     {% block content %}
-    {% endblock %}
+      {% endblock %}
 
-    <!-- Footer -->
+  </div>
+      
+    
+
+    <!-- Footer
     <footer>
         <nav class="navbar">
             <div class="container-fluid">
@@ -150,6 +155,69 @@
           </nav>
 
 
+    </footer> --->
+    <footer id="footer">
+      <div class="container-fluid footer-container">
+        <div class="row">
+          <div  class="col-6 col-sm-4 footer-content text-center">
+            <div class="community text-center d-none d-sm-block">
+              <h5 class="general uppercase"> Join Our Community </h5> 
+              <p class="news">Never miss out on exciting news and upcoming events</p>
+              <div class="subscribe">
+                <a href="{{url_for('login')}}" class="btn mt-1 small mb-1"> Join Now</a>
+              </div>               
+            </div>
+            <ul class="social-links">
+              <li class="list-inline-item social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Find us on Facebook" rel="noopener">
+                  <i class="fab fa-facebook-f" aria-hidden="true"></i> 
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
+              <li class="list-inline-item social">
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Find us on Instagram" rel="noopener" >
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                  <span class="sr-only">Instagram</span>
+                </a>
+            </li>
+              <li class="list-inline-item social">
+                <a href="https://twitter.com/" target="_blank" aria-label="Find us on Twitter" rel="noopener">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item social">
+                <a href=" https://www.youtube.com/" target="_blank" aria-label="Find us on Youtube" rel="noopener">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                  <span class="sr-only">Youtube</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class=" col-sm-4">
+            <div class="logo-footer">
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/logo.webp') }}" alt="Logo for Found In translation" class="footer-image circle responsive-img">
+                </a>
+            </div>
+          </div>        
+          <div class="col-6 col-sm-4">
+            <div class="services text-center">
+              <h5 class="uppercase"> Information Links</h5> 
+                <h6 class="service"><a href="{{ url_for('privacy') }}" class="general pt-2">Privacy Policy</a></h6>
+                <h6 class="service"><a href="{{ url_for('terms') }}" class="general">Terms & Condition </a></h6>
+                <h6 class="service"><a href="{{ url_for('terms') }}"  class="general">Compliant Policy</a></h6> 
+            </div>
+          </div>
+      
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="general-color pb-2 text-center text-capitalize"> &copy;Team Gladiators </p>
+        </div>
+      </div>
+    
+      </div>   
     </footer>
 
     <!-- Global Scripts -->

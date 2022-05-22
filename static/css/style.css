@@ -352,6 +352,80 @@ body{
     color:#61150E;
 }
 
+/* Footer */
+
+.footer-container{
+    background-color:#f2b90a;
+    padding:2rem 0 0 0;
+    color:black;
+    width: 100%;
+    
+}
+
+.subscribe a{
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.subscribe a:hover{
+    color:#592715;
+}
+.community-button{
+    padding: 0 3px;
+}
+
+.social-links{
+    margin-top:15px;
+    padding:0;
+}
+
+.social-links li a i {
+    width:30px;
+    height:30px; 
+    font-size:13px;
+    text-align:center;
+    color:black;
+}
+
+.fa-facebook-f:hover {
+    color:#007bff;
+}
+
+.fa-instagram:hover {
+    color:#fd7e14;
+}
+
+.fa-twitter:hover {
+    color:#17a2b8;
+}
+
+.fa-youtube:hover {
+    color:#dc3545;
+}
+
+.service {
+    line-height: 1.3rem;
+}
+
+.general{
+    color:black;
+    text-decoration: none;
+}
+
+.general:hover{
+    color:white;
+}
+
+.footer-image{
+    width:10rem;
+}
+
+.logo-footer{
+    display:flex;
+    justify-content: center;
+}
+
+
 @media (max-width: 400px) {
     .summary-text{
         padding: 0 2rem;

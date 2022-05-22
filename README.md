@@ -103,14 +103,23 @@ As a first time visitor I should be able to do:
 Colors have a significant effect on our mood, through them, we simulate a series of emotions. Our main objective in choosing pastel colors is to transmit peace, happiness and harmony.
 
 (color pallete image)
+## **Typography**
+<img src="./documentation/font.png" alt="Quicksand" style= "max-width: 100%;">
+
+
+
+
 
 # **Features**
 
 ## **General Features On All Pages**
 
 **Favicon**
+<br>
 The Favicon was created using [Favicon.io](https://favicon.io/). We have chosen this image as our site logo and have also used it as our favicon as it brings brand cohesion to the site.
+
 **Site Logo**
+<br>
 We have chosen this image as our site logo as we feel it displays the core principle of our site in an icon which allows the site logo to be understood by anyone, regardless of their language. The image shows a globe with two speech bubbles, each with a different language character.
 
 ## **Privacy Page and Terms and Conditions Page**
@@ -170,8 +179,15 @@ The website address: [Found In Translation](https://foundintranslationsodaci.her
 # **Credits**  
     * [Content](#content) 
 #### **Media**
-  [hero.webp](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person) - Image used on the index page as the hero image  
-  [hero.webp](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon) - Image used on the index page as the hero image 
-  [logo.webp](https://www.flaticon.com/free-icons/language") - Image used for the sites logo and favicon, sourced from Flatiron, created by Freepik
+1. Image used on the index page as the hero image 
+<br>
+  [<img src="./documentation/hero.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person)  
+2. Image used on the index page as the hero image
+<br>
+  [<img src="./documentation/hero1.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon)
+3. Image used for the sites logo and favicon, sourced from Flatiron, created by Freepik
+<br>
+  [<img src="./documentation/rm-logo.png" alt="Hero" style= "max-width: 100%;">](https://www.flaticon.com/free-icons/language") 
+
 # **Acknowledgements**  
 .

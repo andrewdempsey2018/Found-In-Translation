@@ -104,7 +104,7 @@ Colors have a significant effect on our mood, through them, we simulate a series
 
 (color pallete image)
 ## **Typography**
-<img src="./documentation/font.png">
+<img src="./documentation/font.png" alt="Quicksand" style= "max-width: 100%;">
 
 
 
@@ -179,9 +179,15 @@ The website address: [Found In Translation](https://foundintranslationsodaci.her
 # **Credits**  
     * [Content](#content) 
 #### **Media**
-  [hero.webp](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person) - Image used on the index page as the hero image  
-  [hero.webp](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon) - Image used on the index page as the hero image
-  <br>
-  [logo.webp](https://www.flaticon.com/free-icons/language") - Image used for the sites logo and favicon, sourced from Flatiron, created by Freepik
+1. Image used on the index page as the hero image 
+<br>
+  [<img src="./documentation/hero.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person)  
+2. Image used on the index page as the hero image
+<br>
+  [<img src="./documentation/hero1.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon)
+3. Image used for the sites logo and favicon, sourced from Flatiron, created by Freepik
+<br>
+  [logo.webp](https://www.flaticon.com/free-icons/language") 
+
 # **Acknowledgements**  
 .

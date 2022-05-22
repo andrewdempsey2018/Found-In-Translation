@@ -47,7 +47,17 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{{ url_for('index') }}"><i class="bi bi-translate" aria-label="Found in Translation page"></i> Found in Translation</a>
+        
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/logo.webp') }}" 
+            alt="Found in Translation Logo - Outline of the globe with meridan lines with two speech bubbles coming out from the sides, each speech bubble has a different language character" 
+            width="60" height="60" class="d-inline-block align-text-center ps-1">
+            Found in Translation
+          </a>
+
+
+
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

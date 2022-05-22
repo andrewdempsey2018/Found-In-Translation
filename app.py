@@ -1,4 +1,5 @@
 from pickle import TRUE
+from turtle import pos
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -251,8 +252,14 @@ def report_post():
 # View for admins to view all posts in the database
 @app.route("/admin_posts")
 def admin_posts():
-    flagged_threads = threadDB.find({'flagged': 'TRUE'})
-    return render_template("admin_posts.html", threads=flagged_threads)
+    user = userDB.find_one({'username': session['user']})
+    if user['isAdmin']:
+        flagged_threads = threadDB.find({'flagged': 'TRUE'})
+        flagged_posts = postDB.find({'flagged': 'TRUE'})
+        return render_template("admin_posts.html", threads=flagged_threads, posts=flagged_posts, user=user)
+    else:
+        flash('You are not authorized to access this feature')
+        return redirect('get_all_threads')
 
 # Set debug status based on enviornment variable
 if __name__ == '__main__':

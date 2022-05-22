@@ -1,7 +1,4 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/andrewdempsey2018/Found-In-Translation?color=red&style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/andrewdempsey2018/Found-In-Translation?color=orange&style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/andrewdempsey2018/Found-In-Translation?color=yellow&style=for-the-badge)
-![GitHub top language](https://img.shields.io/github/languages/top/andrewdempsey2018/Found-In-Translation?color=green&style=for-the-badge)
+
 
 # **FOUND IN TRANSLATION**
 
@@ -10,8 +7,8 @@
 Find your tribe, lose the language barrier
 
 [View deployed site]()
-# **The Team**
-[Team Members](#team-members)
+
+
 
 # **Table of Contents**   
 1. [UX Development](#ux-development)
@@ -58,19 +55,10 @@ Find your tribe, lose the language barrier
     * [Media](#media)  
  
 7. [Acknowledgements](#acknowledgements)  
-
+    * [Team Members](#team-members)
 <br/>   
 
 
-
-# **The Team**
-## **Team Members**
-
-* Andrew Dempsey [LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/) / [Github](https://github.com/andrewdempsey2018)
-* Cristian B.    [LinkedIn](https://www.linkedin.com/in/cristianbuca/) / [Github](https://github.com/CristianBuca)
-* Didi           [LinkedIn](https://www.linkedin.com/in/onyema-onyejekwe-492128102/) / [Github](https://github.com/Didisimmons)
-* Kera Cudmore   [LinkedIn](https://www.linkedin.com/in/keracudmore/) / [Github](https://github.com/kera-cudmore)
-* Paula Silva    [LinkedIn](https://www.linkedin.com/in/paulacgsilva) / [Github](https://github.com/paulasdev) 
 
 # **UX Development**   
 
@@ -78,6 +66,14 @@ Find your tribe, lose the language barrier
 Found-In Translation is an online discussion board that aims to bridge individuals' language gaps. Its mission is to connect individuals from all over the world to discuss and share real-life experiences without any barriers.People of all ages are targeted by Found in Translation. 
 
 The user can easily search for a topic, language, or discussion to view its content and leave a comment; however, in order to add/edit a discussion, the user must login/register to the site. The site's goal is for users to be able to perform basic CRUD functionality (Create, Read, Update, and Delete) and interact with it intuitively while having a positive experience.  
+<br>
+[Click Here to view the deployed site.](https://foundintranslationsodaci.herokuapp.com/)
+<br>
+
+![GitHub last commit](https://img.shields.io/github/last-commit/andrewdempsey2018/Found-In-Translation?color=red&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/andrewdempsey2018/Found-In-Translation?color=orange&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/andrewdempsey2018/Found-In-Translation?color=yellow&style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/andrewdempsey2018/Found-In-Translation?color=green&style=for-the-badge)
 
 # **Table of Contents**  
 ## **User Stories**
@@ -176,7 +172,7 @@ The project was deployed to Heroku:
 7. Install the packages in requirements.txt by typing pip3 install -r requirements.txt in the CLI.
 8. Set the IP address to 127.0.0.1 and the PORT to 5000.
 
-The website address: [Found In Translation](https://foundintranslationsodaci.herokuapp.com/)
+
 
 # **Credits**  
     * [Content](#content) 
@@ -188,9 +184,17 @@ The website address: [Found In Translation](https://foundintranslationsodaci.her
 2. Image used on the index page as the hero image
 <br>
   [<img src="./documentation/hero1.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon)
+
 3. Image used for the sites logo and favicon, sourced from Flatiron, created by Freepik
 <br>
   [<img src="./documentation/rm-logo.png" alt="Hero" style= "max-width: 100%;">](https://www.flaticon.com/free-icons/language") 
 
 # **Acknowledgements**  
-.
+
+## **Team Members**
+
+* Andrew Dempsey [LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/) / [Github](https://github.com/andrewdempsey2018)
+* Cristian B.    [LinkedIn](https://www.linkedin.com/in/cristianbuca/) / [Github](https://github.com/CristianBuca)
+* Didi           [LinkedIn](https://www.linkedin.com/in/onyema-onyejekwe-492128102/) / [Github](https://github.com/Didisimmons)
+* Kera Cudmore   [LinkedIn](https://www.linkedin.com/in/keracudmore/) / [Github](https://github.com/kera-cudmore)
+* Paula Silva    [LinkedIn](https://www.linkedin.com/in/paulacgsilva) / [Github](https://github.com/paulasdev) 

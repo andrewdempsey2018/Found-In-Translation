@@ -74,9 +74,13 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 `Registered/Returning Visitors`
 
 |  Goals | How are they achieved? | :--- |
-| :--- | :--- | :--- |
-|  | :--- | :--- |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
+| As a returning/registered user, I want to be able to log in to my account | :--- | :--- | :--- |
+| As a returning/registered user, I want to be able to view all Threads | :--- | :--- | :--- |
+| As a returning/registered user, I want to be able to create a new post  | :--- | :--- | :--- |
+| As a returning/registered user, I want to be able to flag offensive posts | :--- | :--- | :--- |
+| As a returning/registered user, I want to be able to reply to posts | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 
 `Admin User`
 
@@ -189,8 +193,8 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Navbar - Home Link | Redirects to home page | Click home link | Redirected to home page | Pass |
 | Navbar - Login Link (user not logged in) | Redirect to Login page | Click log in link | Redirected to log in page | Pass |
 | Navbar - Sign up Link (user not logged in)  | Redirect to Sign up page | Click sign up link | Redirected to sign up page | Pass |
-| Navbar -  | --- | --- | --- | --- |
-| Navbar | --- | --- | --- | --- |
+| Navbar - View all posts link | Redirect to the view all posts page | Click view all posts link | Redirected to the All Threads page | Pass |
+| Navbar - Logout (user logged in) | Logs the user out of their profile, and redirects to the home page | Click logout link | --- | --- |
 
 
 

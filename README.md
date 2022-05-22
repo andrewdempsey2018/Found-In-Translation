@@ -177,23 +177,30 @@ The project was deployed to Heroku:
 # **Credits**  
     * [Content](#content) 
 #### **Media**
-1. Image used on the index page as the hero image 
+1. Image used on the index page as the [hero image](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person)  
 <br>
-  [<img src="./documentation/hero.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person)  
+  ![Hero](documentation/hero.png)
 
-2. Image used on the index page as the hero image
+2. Image used on the index page as the [hero image](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon)
 <br>
-  [<img src="./documentation/hero1.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon)
+  ![Hero](documentation/hero1.png)
 
-3. Image used for the sites logo and favicon, sourced from Flatiron, created by Freepik
+3. Image used for the sites [logo and favicon](https://www.flaticon.com/free-icons/language), sourced from Flatiron, created by Freepik
 <br>
-  [<img src="./documentation/rm-logo.png" alt="Hero" style= "max-width: 100%;">](https://www.flaticon.com/free-icons/language") 
+![Logo](documentation/rm-logo.png)
+![Favicon](documentation/rm-favicon.png)
 
 # **Acknowledgements**  
 
 ## **Team Members**
 
-* Andrew Dempsey [LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/) / [Github](https://github.com/andrewdempsey2018)
+* Andrew Dempsey 
+<br>
+[LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/) / [Github](https://github.com/andrewdempsey2018)
+<br>
+*"Thank you to Trust in Soda and Code Institute for giving me this wonderful opportunity to take part in Hackathon: May 22. The event was great fun, very helpful to me and the projects that all the teams produced were simply amazing! However, the best part of the past few days was working as part of team 'Gladiator' and making some AWESOME new friends!"*    
+<br>
+<br>
 * Cristian B.    [LinkedIn](https://www.linkedin.com/in/cristianbuca/) / [Github](https://github.com/CristianBuca)
 * Didi           [LinkedIn](https://www.linkedin.com/in/onyema-onyejekwe-492128102/) / [Github](https://github.com/Didisimmons)
 * Kera Cudmore   [LinkedIn](https://www.linkedin.com/in/keracudmore/) / [Github](https://github.com/kera-cudmore)

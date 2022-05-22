@@ -258,6 +258,13 @@ body{
     color:white;
 }
 
+.back-btn:hover{
+    background-color: #4E9BB9;
+    color:white;
+    border-color: #4E9BB9;
+    padding: 10px;
+}
+
 @media (max-width: 400px) {
     .summary-text{
         padding: 0 2rem;

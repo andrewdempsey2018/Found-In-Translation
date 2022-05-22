@@ -41,20 +41,47 @@
                 <h4 class="single-thread"><a href="{{ url_for('thread', threadID=thread._id) }}" class="view-more-thread">{{ thread.subject }}</a></h4>
               </div>
             {% endfor %}
-            <p class="text-center view-more-threads "><a href="{{url_for('thread')}}" class="link-color view-more-thread" >Start New Thread</a></p>
+            <div class="col-sm id-thread reply-button w-100">
+                <div class="replybutton">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="button reply" data-bs-toggle="modal" data-bs-target="#NewThreadModal">
+                        Start New Thread
+                    </button>
+                </div> 
+            </div>
+        
+            <!-- Reply Modal Start -->
+            <div class="modal fade" id="NewThreadModal" tabindex="-1" aria-labelledby="NewThreadModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="NewThreadModalLabel">START NEW THREAD</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <form action="{{ url_for('add_thread_to_db') }}" method="POST">
+                                <input type="hidden" name="author" value="{{user.username}}">
+                                <label>Thread Subject</label>
+                                <input class="form-control" type="text" name="subject" placeholder="subject">
+                                <br>
+                                <label>Thread content</label>
+                                <br>
+                                <textarea name="content" cols="40" rows="10" maxlength="200" class="textarea form-control" required="" id="content"></textarea>
+                                <br>
+                                <button type="submit" class="button reply">Start discussion</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Reply Modal End -->
         </div>
       </div>
   </section> 
- <!--
-    {% for thread in threads %}
 
-  <ul style="list-style-type:none;">
-      <li><a href="{{ url_for('thread', threadID=thread._id) }}">{{thread.subject}}</a></li>
-      <li><a href="{{ url_for('delete_thread_from_db', threadID=thread._id) }}">[Delete]</a></li>
-  </ul>
-
-{% endfor %}
- -->
 
  <section>
   <h3 class="text-center community-header pt-2">Find Your Community</h3>

@@ -14,8 +14,9 @@
 
 <section>
     <h3 class="text-center header-content">ALL THREADS</h3>
+    <p class="text-center view-more-threads "><a href="{{url_for('thread')}}" class="link-color text-uppercase view-more-thread" >Start New Thread</a></p>
     <div class="container">
-        {% if threads|length > 0 %}
+        {% if threads %}
             <div class="allthread-box">
             {% for thread in threads %}
                 <div class="card thread-box mt-3 mb-4">

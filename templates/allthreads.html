@@ -53,7 +53,7 @@
     <!-- Reply Modal End -->
 
     <div class="container">
-        {% if threads %}
+        {% if threads.count() > 0 %}
             <div class="allthread-box">
             {% for thread in threads %}
                 <div class="card thread-box mt-3 mb-4">

@@ -87,8 +87,9 @@ As a first time visitor I should be able to do:
 * To be able to view all users registered.
 * To be able to view all previous posts.
 ### **Admin User**
-* To be able read user data
-* To be able to edit or remove users
+* As an admin user, I want to be able to view flagged posts.
+* As an admin user, I want to be able to delete messages that have been flagged that are offensive.
+* As an admin user, I want to be able to unflag posts that are not offensive.
 ### **Target Audience**
 * Connect with people around the world to share experiences or information in different languages.
 
@@ -179,14 +180,17 @@ The project was deployed to Heroku:
 #### **Media**
 1. Image used on the index page as the [hero image](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person)  
 <br>
+
   ![Hero](documentation/hero.png)
 
 2. Image used on the index page as the [hero image](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon)
 <br>
+
   ![Hero](documentation/hero1.png)
 
 3. Image used for the sites [logo and favicon](https://www.flaticon.com/free-icons/language), sourced from Flatiron, created by Freepik
 <br>
+
 ![Logo](documentation/rm-logo.png)
 ![Favicon](documentation/rm-favicon.png)
 
@@ -194,14 +198,21 @@ The project was deployed to Heroku:
 
 ## **Team Members**
 
-* Andrew Dempsey 
+* Andrew Dempsey [LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/) | [Github](https://github.com/andrewdempsey2018)
+
 <br>
-[LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/) / [Github](https://github.com/andrewdempsey2018)
+_"Thank you to Trust in Soda and Code Institute for giving me this wonderful opportunity to take part in Hackathon: May 22. The event was great fun, very helpful to me and the projects that all the teams produced were simply amazing! However, the best part of the past few days was working as part of team 'Gladiator' and making some AWESOME new friends!"_    
+
 <br>
-*"Thank you to Trust in Soda and Code Institute for giving me this wonderful opportunity to take part in Hackathon: May 22. The event was great fun, very helpful to me and the projects that all the teams produced were simply amazing! However, the best part of the past few days was working as part of team 'Gladiator' and making some AWESOME new friends!"*    
+
+
+* Cristian B.    [LinkedIn](https://www.linkedin.com/in/cristianbuca/) | [Github](https://github.com/CristianBuca)
 <br>
+
+* Didi           [LinkedIn](https://www.linkedin.com/in/onyema-onyejekwe-492128102/) | [Github](https://github.com/Didisimmons)
 <br>
-* Cristian B.    [LinkedIn](https://www.linkedin.com/in/cristianbuca/) / [Github](https://github.com/CristianBuca)
-* Didi           [LinkedIn](https://www.linkedin.com/in/onyema-onyejekwe-492128102/) / [Github](https://github.com/Didisimmons)
-* Kera Cudmore   [LinkedIn](https://www.linkedin.com/in/keracudmore/) / [Github](https://github.com/kera-cudmore)
-* Paula Silva    [LinkedIn](https://www.linkedin.com/in/paulacgsilva) / [Github](https://github.com/paulasdev) 
+
+* Kera Cudmore   [LinkedIn](https://www.linkedin.com/in/keracudmore/) | [Github](https://github.com/kera-cudmore)
+<br>
+
+* Paula Silva    [LinkedIn](https://www.linkedin.com/in/paulacgsilva) | [Github](https://github.com/paulasdev) 

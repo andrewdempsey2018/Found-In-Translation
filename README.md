@@ -47,7 +47,7 @@ Find your tribe, lose the language barrier
     * [Frameworks,libraries and Program Used](#frameworkslibraries-and-program-used)  
    
 4. [Testing](#testing)   
-    * [TEST.md](#testing)   
+    * [TESTING.md](#testing)   
 
 5. [Deployment](#deployment)  
     * [Deployment Heroku](#deployment-to-heroku) 
@@ -127,9 +127,11 @@ HTML, CSS, Javascript, Python
 * [Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices. 
 * [Shields.io](https://shields.io/) To add badges to the README
 * [Heroku](https://www.heroku.com/) To deploy the project.
+* [Flask](https://pypi.org/project/Flask/) - Web Application Framework
+* [MongoDB](https://www.mongodb.com/) - Non Relational Database
 
 # **Testing**   
-    * [TEST.md](#testing)  
+    * [TESTING.md](#testing)  
 
 # **Deployment**  
 ### **Deployment Heroku**

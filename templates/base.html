@@ -135,14 +135,63 @@
 
     <!-- Footer -->
     <footer>
-        <nav class="navbar">
+        <nav class="navbar pt-4 pb-4">
             <div class="container-fluid">
+
                 <span class="navbar-text">
                     <a href="{{ url_for('privacy') }}"><i class="bi bi-lock-fill" aria-label="Privacy policy"></i></a>
                 </span>
-                <span class="navbar-text">
+
+                <!-- Button trigger modal -->
+                <span class="navbar-text" id="egg" data-bs-toggle="modal" data-bs-target="#eggModal">
                     &#169 Team Gladiators
                 </span>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="eggModal" tabindex="-1" aria-labelledby="eggModal" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content text-center">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            
+                            <div class="modal-body">
+                                <img width="700"src="{{ url_for('static', filename='images/teamgladiators.webp') }}">
+
+                                <ul class="list-group list-group-horizontal pt-4">
+                                    <li class="list-group-item flex-fill">Andrew: 
+                                        <a href="https://github.com/andrewdempsey2018" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Andrew's GitHub Profile"></i></a>
+                                        <a href="https://www.linkedin.com/in/andrew-dempsey-20ab40180/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Andrew's Linked in Profile"></i></a>
+                                    </li>
+
+
+                                    <li class="list-group-item flex-fill">Cristian: 
+                                        <a href="https://github.com/CristianBuca" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Cristian's GitHub Profile"></i></a>
+                                        <a href="https://www.linkedin.com/in/cristianbuca/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Cristian's Linked in Profile"></i></a>
+                                    </li>
+
+                                    <li class="list-group-item flex-fill">Didi: 
+                                        <a href="https://github.com/Didisimmons" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Didi's GitHub Profile"></i></a>
+                                        <a href="https://www.linkedin.com/in/onyema-onyejekwe-492128102/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Didi's Linked in Profile"></i></a>
+                                    </li>
+
+                                    <li class="list-group-item flex-fill">Kera: 
+                                        <a href="https://github.com/kera-cudmore" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Kera's GitHub Profile"></i></a>
+                                        <a href="https://www.linkedin.com/in/keracudmore/" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Kera's Linked in Profile"></i></a>
+                                    </li>
+
+                                    <li class="list-group-item flex-fill">Paula: 
+                                        <a href="https://github.com/paulasdev" target="_blank"><i class="bi bi-github" role="img" aria-label="Visit Paula's GitHub Profile"></i></a>
+                                        <a href="https://www.linkedin.com/in/paulacgsilva" target="_blank"><i class="bi bi-linkedin" role="img" aria-label="Visit Paula's Linked in Profile"></i></a>
+                                    </li>
+
+                                  </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
                 <span class="navbar-text">
                     <a href="{{ url_for('terms') }}"><i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i></a>
                 </span>

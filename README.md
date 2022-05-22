@@ -187,7 +187,7 @@ The website address: [Found In Translation](https://foundintranslationsodaci.her
   [<img src="./documentation/hero1.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon)
 3. Image used for the sites logo and favicon, sourced from Flatiron, created by Freepik
 <br>
-  [logo.webp](https://www.flaticon.com/free-icons/language") 
+  [<img src="./documentation/rm-logo.png" alt="Hero" style= "max-width: 100%;">](https://www.flaticon.com/free-icons/language") 
 
 # **Acknowledgements**  
 .

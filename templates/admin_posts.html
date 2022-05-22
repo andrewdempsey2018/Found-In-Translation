@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1>Admin section: all posts</h1>
+<h1>Admin section: all flagged posts</h1>
 
 {% for post in posts %}
 
@@ -14,6 +14,24 @@
         <p>{{post.content}}</p>
     </li>
     <li><a href="{{ url_for('delete_post_from_db', postID=post._id) }}">[ Delete ]</a></li>
+    <p>-----------------------------</p>
+</ul>
+
+{% endfor %}
+
+
+<h1>Admin section: all flagged threads</h1>
+
+{% for thread in threads %}
+
+<ul style="list-style-type:none;">
+    <li>
+        <p>{{thread.subject}}</p>
+    </li>
+    <li>
+        <p>{{thread.content}}</p>
+    </li>
+    <li><a href="{{ url_for('delete_thread_from_db', threadID=thread._id) }}">[ Delete ]</a></li>
     <p>-----------------------------</p>
 </ul>
 

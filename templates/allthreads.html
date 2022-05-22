@@ -62,7 +62,12 @@
                             <div class="col-sm-6 ">
                                 <div class="threads">
                                     <h5 class="bold">{{thread.subject}}</h5> 
-                                    <small class="general-color">Posted by : Kay on {{thread.created_on}}</small>
+                                    <small class="general-color">
+                                        Posted by : {{ thread.author }} on 
+                                        {% if thread.created_on %}
+                                            {{ thread.created_on.strftime('%Y-%m-%d at %H:%M') }}
+                                        {% endif %}
+                                    </small>
                                     <p class="pt-1">{{thread.content}}</p>
                                 </div>
                             </div>

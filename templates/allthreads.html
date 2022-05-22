@@ -79,18 +79,16 @@
                                     <div class="icons">
                                         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                                             <li class ="list-inline-item pl-3">
-                                                <a class="remove-style" href= "#">
+                                                <a class="remove-style" href= "{{ url_for('report_thread', threadID=thread._id) }}">
                                                     <div class="text-center">
                                                         <div><i class="bi bi-flag-fill"><em class="text-black">Report Issue</em></i></div> 
                                                     </div>
                                                 </a>
                                             </li>
                                             <li class ="list-inline-item pl-5">
-                                                <a class="remove-style" href= "#">
-                                                    <div class="text-center">
-                                                        <div><i class="bi bi-chat-dots-fill"><em class="text-black">{{thread.post}}</em></i></div> 
-                                                    </div>
-                                                </a>
+                                                <div class="text-center">
+                                                    <div><i class="bi bi-chat-dots-fill"><em class="text-black">{{thread.posts}}</em></i> Posts</div> 
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>  

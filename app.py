@@ -1,3 +1,5 @@
+from pickle import TRUE
+from turtle import pos
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -213,10 +215,51 @@ def page_not_found(e):
     return render_template(
         '404.html', user = userDB.find_one({"username": session["user"]}), error=e), 404
 
+@app.route("/report_thread")
+def report_thread():
+    """
+    Route adds flagged: TRUE to the thread that was reported
+    Returns:
+       redirect to get_all_threads
+    """
+
+    threadID = request.args.get("threadID", None)
+    thread = threadDB.find_one({'_id': ObjectId(threadID)})
+    thread['flagged'] = 'TRUE'
+    threadDB.replace_one({'_id': ObjectId(threadID)}, thread)
+    flash(
+        f'The thread {thread["subject"]} has been reported to the Admin!',
+    )
+    return redirect(url_for('get_all_threads'))
+
+@app.route("/report_post")
+def report_post():
+    """
+    Route adds flagged: TRUE to the post that was reported
+    Returns:
+       redirect to get_all_threads
+    """
+
+    postID = request.args.get("postID", None)
+    post = postDB.find_one({'_id': ObjectId(postID)})
+    post['flagged'] = 'TRUE'
+    postDB.replace_one({'_id': ObjectId(postID)}, post)
+    flash(
+        f'The post by {post["author"]} has been reported to the Admin!',
+    )
+    return redirect(url_for('get_all_threads'))
+
 # View for admins to view all posts in the database
 @app.route("/admin_posts")
 def admin_posts():
-    return render_template("admin_posts.html", posts=postDB.find())
+    user = userDB.find_one({'username': session['user']})
+    if user['isAdmin']:
+        flagged_threads = threadDB.find({'flagged': 'TRUE'})
+        flagged_posts = postDB.find({'flagged': 'TRUE'})
+        return render_template("admin_posts.html", threads=flagged_threads, posts=flagged_posts, user=user)
+    else:
+        flash('You are not authorized to access this feature')
+        return redirect('get_all_threads')
 
 # Set debug status based on enviornment variable
 if __name__ == '__main__':

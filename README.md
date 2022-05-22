@@ -104,7 +104,7 @@ Colors have a significant effect on our mood, through them, we simulate a series
 
 (color pallete image)
 ## **Typography**
-<img src="./documentation/font.png" alt="Quicksand" style= "max-width: 100%;">
+<img src="./documentation/font_quicksand.png" alt="Quicksand" style= "max-width: 100%;">
 
 
 

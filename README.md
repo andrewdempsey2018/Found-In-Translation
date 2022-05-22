@@ -161,5 +161,6 @@ The website address: [Found In Translation](https://foundintranslationsodaci.her
     * [Content](#content) 
 #### **Media**
   [hero.webp](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person) - Image used on the index page as the hero image  
+  [hero.webp](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon) - Image used on the index page as the hero image 
  
 # **Acknowledgements**  

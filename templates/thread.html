@@ -13,7 +13,7 @@
         <div class="col-sm id-thread  reply-button">
             <div class="replybutton">
                 <a href="{{ url_for('newpost', threadID=thread._id) }}" class="button reply">REPLY</a>
-            </div>   
+            </div> 
         </div>
     </div>
 
@@ -29,7 +29,7 @@
                     </div>
                     <div class="post-media-body">
                        <p>{{post.author}}</p> 
-                       <small>United States on {{post.posted_on}}</small>
+                       <small>United States on {{post.posted_on | date:"d/m/Y"}}</small>
                         <p class="pt-1">{post.content.translatedText}}</p>
                         <div class="links">
                             {% if session.user|lower == posts.author|lower or session.user == "administrator" %}

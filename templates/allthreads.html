@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<header>
+    <div class="container-fluid  allthreads-container">
+      <div class="row ">
+          <div class="col-12">
+              <h2 class="header-text">Find your tribe, lose the language barrier </h2>
+          </div>
+      </div>
+    </div>
+</header>
+
+<section>
+    <h3 class="text-center header-content">ALL THREADS</h3>
+    <div class="container">
+        {% if threads|length > 0 %}
+            <div class="allthread-box">
+            {% for thread in threads %}
+                <div class="card thread-box mt-3 mb-4">
+                    <div class="card-body text-center">
+                        <div class="row">
+                            <div class="col-sm-6 ">
+                                <div class="threads">
+                                    <h5 class="bold">{{thread.subject}}</h5> 
+                                    <small class="general-color">Posted by : Kay on {{thread.created_on}}</small>
+                                    <p class="pt-1">{{thread.content}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="threads">
+                                    <div class="view-more-button">
+                                        <a href="{{ url_for('newpost', threadID=thread._id) }}" class="more-button button">VIEW MORE</a>
+                                    </div>
+                                    <div class="icons">
+                                        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                                            <li class ="list-inline-item pl-3">
+                                                <a class="remove-style" href= "#">
+                                                    <div class="text-center">
+                                                        <div><i class="bi bi-flag-fill"><em class="text-black">Report Issue</em></i></div> 
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class ="list-inline-item pl-5">
+                                                <a class="remove-style" href= "#">
+                                                    <div class="text-center">
+                                                        <div><i class="bi bi-chat-dots-fill"><em class="text-black">{{thread.post}}</em></i></div> 
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% else %}
+        <div class="card mt-3 mb-4">
+            <div class="card-body text-center">
+                <p class="text-center pt-2 text-capitalize general-color">NO THREADS</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div class="row">
+        <div class="col-12 pt-3 text-center pb-5">    
+            <a href="{{url_for('index')}}" role="button" class="btn back-btn">
+            <i class="fas fa-angle-left left"></i> RETURN HOME 
+            </a>
+        </div>
+    </div>
+    
+           
+
+           
+    </div>
+</section>
+
+
+{% endblock %}

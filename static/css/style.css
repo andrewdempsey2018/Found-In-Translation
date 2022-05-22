@@ -275,6 +275,78 @@ body{
     padding: 10px;
 }
 
+.column {
+    float: left;
+    width: 50%;
+}
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/*----- All threads -----*/
+.allthreads-container{
+    width:100%;
+    background: url(../images/bg-img.webp) no-repeat center center / cover fixed;  
+    object-fit: cover;
+    box-shadow: inset 0 0 0 50vw #adb5bd24;
+    padding-top: 2rem;
+}
+
+.more-button{
+    border-radius: 13px;
+    color:white;
+    padding: 9px;
+    border: 1px solid #4E9BB9;
+    background-color: #4E9BB9;
+    text-decoration: none;
+    font-size:14px;
+}
+
+.more-button:hover {
+    color:white; 
+    padding: 10px; 
+}
+
+.view-more-button{
+    margin-top:0.85rem;
+}
+
+.thread-box{
+    box-shadow: 0 0.1rem 0 0 #41464b1f;
+}
+
+.icons{
+    padding-top:2rem;
+}
+
+.text-center i{
+    color: 730302;
+}
+
+.remove-style{
+    text-decoration: none;
+}
+
+.text-black{
+    color:black;
+}
+
+.bi-flag-fill{
+    color:#61150E;
+}
+
+.bi-chat-dots-fill{
+    color:#61150E;
+}
+
+.general-color{
+    color:#61150E;
+}
+
 @media (max-width: 400px) {
     .summary-text{
         padding: 0 2rem;
@@ -318,7 +390,6 @@ body{
     .threadheader{
         font-size: 28px;
     }
-    
     
 }
 /*----- Terms & Privacy Page container -----*/

@@ -17,27 +17,32 @@
                 <div class="my-3 text-center">
                     <label for="email" class="form-label">Email Address <i class="bi bi-envelope-fill"></i></label>
                     <input type="text" name="email" id="email" placeholder="Email Address" class="form-control">
-                </div>  
+                </div>
                 <div class="my-3 text-center">
                     <label for="password" class="form-label">Password <i class="bi bi-key-fill"></i></label>
                     <input type="password" name="password" id="password" placeholder="Password" class="form-control">
-                </div>  
+                </div>
                 <div class="my-3 text-center">
-                    <label for="password_conf" class="form-label">Confirm Password <i class="bi bi-key-fill"></i></label>
-                    <input type="password" name="password_conf" id="password_conf" placeholder="Confirm Password" class="form-control">
+                    <label for="password_conf" class="form-label">Confirm Password <i
+                            class="bi bi-key-fill"></i></label>
+                    <input type="password" name="password_conf" id="password_conf" placeholder="Confirm Password"
+                        class="form-control">
                 </div>
                 <div class="my-3 text-center">
                     <label for="language" class="form-label">Preferred language <i class="bi bi-globe"></i></label>
+
                     <select name="language" id="language" class="form-select" aria-label="Language selection">
-                        <option selected value="en">English</option>
+                        <!-- <option selected value="en">English</option>
                         <option value="fr">French</option>
-                        <option value="ro">Romanian</option>
+                        <option value="ro">Romanian</option> -->
                     </select>
+
                 </div>
                 <div class="my-3 text-center">
                     <label for="profile_img" class="form-label">Profile Image</label>
                     <div>
-                        <input type="radio" name="profile_img" value="avatar1" class="form-check-input" checked>Avatar 1 image
+                        <input type="radio" name="profile_img" value="avatar1" class="form-check-input" checked>Avatar 1
+                        image
 
                         <input type="radio" name="profile_img" value="avatar2" class="form-check-input">Avatar 2 image
 
@@ -71,6 +76,9 @@
 
 <!-- Page specific scripts -->
 {% block scripts %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
-    <script src="{{url_for('static', filename='js/form_validation.js') }}"></script>
+<script src="{{url_for('static', filename='js/language_codes.js') }}"></script>
+<script src="{{url_for('static', filename='js/dropdown.js') }}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+<script src="{{url_for('static', filename='js/form_validation.js') }}"></script>
 {% endblock %}

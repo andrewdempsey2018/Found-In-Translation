@@ -137,12 +137,34 @@
     <footer>
         <nav class="navbar">
             <div class="container-fluid">
+
                 <span class="navbar-text">
                     <a href="{{ url_for('privacy') }}"><i class="bi bi-lock-fill" aria-label="Privacy policy"></i></a>
                 </span>
-                <span class="navbar-text">
+
+                <!-- Button trigger modal -->
+                <span class="navbar-text" data-bs-toggle="modal" data-bs-target="#eggModal">
                     &#169 Team Gladiators
                 </span>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="eggModal" tabindex="-1" aria-labelledby="eggModal" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <img width="400px" src="{{ url_for('static', filename='images/teamgladiators.webp') }}">
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
                 <span class="navbar-text">
                     <a href="{{ url_for('terms') }}"><i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i></a>
                 </span>

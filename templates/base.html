@@ -6,23 +6,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DESCRIPTION">
-    <meta name="keywords" content="KEYWORDS">
+    <meta name="description" content="Found in Translation - Find your tribe, lose the language barrier!">
+    <meta name="keywords" content="Found in Translation, Translation forum, forum, worldwide community, connect with others, choose your own language">
     <meta name="robots" content="index, follow">
 
     <!-- Social Media Meta Tags -->
     <!-- Facebook, LinkedIn, Google -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Found in Translation" />
-    <meta property="og:description" content="DESCRIPTION OF PAGE CONTENT" />
+    <meta property="og:description" content="Found in Translation - Find your tribe, lose the language barrier!" />
     <meta name="image" property="og:image" content="URL TO IMAGE" />
-    <meta property="og:image:alt" content="ALT TEXT FOR IMAGE" />
+    <meta property="og:image:alt" content="Found in Translation site shown on a variety of devices" />
     <meta property="og:url" content="#" />
     <meta property="og:site_name" content="Found in Translation" />
-    <meta name="author" content="Gladiators">
+    <meta name="author" content="Team Gladiators">
 
     <!-- Favicon -->
-    <!-- FAVICON LINKS TO GO HERE ONCE CREATED-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">    
 
     <!-- Stylesheets - Bootstrap, Bootstrap Icons & style.css -->
     <link rel="stylesheet"
@@ -44,7 +47,17 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{{ url_for('index') }}"><i class="bi bi-translate" aria-label="Found in Translation page"></i> Found in Translation</a>
+        
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/logo.webp') }}" 
+            alt="Found in Translation Logo - Outline of the globe with meridan lines with two speech bubbles coming out from the sides, each speech bubble has a different language character" 
+            width="60" height="60" class="d-inline-block align-text-center ps-1">
+            Found in Translation
+          </a>
+
+
+
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

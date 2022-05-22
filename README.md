@@ -184,6 +184,7 @@ The website address: [Found In Translation](https://foundintranslationsodaci.her
 1. Image used on the index page as the hero image 
 <br>
   [<img src="./documentation/hero.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409810/free-illustration-image-connection-community-cartoon-person)  
+
 2. Image used on the index page as the hero image
 <br>
   [<img src="./documentation/hero1.png" alt="Hero" style= "max-width: 100%;">](https://www.rawpixel.com/image/409809/free-illustration-image-guide-career-cartoon)

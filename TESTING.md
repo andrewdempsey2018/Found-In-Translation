@@ -110,51 +110,89 @@ Additional testing was taken by friends and family on a variety of devices and s
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| Navbar - Site logo | Reloads home page | Click logo |  Reloads home page | - |
+| Navbar - Site Name | Reloads home page | Click site name | Reloads home page | Pass |
+| Navbar - Home Link | Reloads home page | Click home link | Reloads home page | Pass |
+| Navbar - Login Link (user not logged in) | Redirect to Login page | Click log in link | Redirected to log in page | Pass |
+| Navbar - Sign up Link (user not logged in)  | Redirect to Sign up page | Click sign up link | Redirected to sign up page | Pass |
 
 `Login Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| Navbar - Site logo | Redirects to home page | Click logo |  Redirected to home page | Pass |
+| Navbar - Site Name | Redirects to home page | Click site name | Redirected to home page | Pass |
+| Navbar - Home Link | Redirects to home page | Click home link | Redirected to home page | Pass |
+| Navbar - Login Link (user not logged in) | Reloads Login page | Click log in link | Reloads log in page | Pass |
+| Navbar - Sign up Link (user not logged in)  | Redirect to Sign up page | Click sign up link | Redirected to sign up page | Pass |
 
 `Signup Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| Navbar - Site logo | Redirects to home page | Click logo |  Redirects to home page | Pass |
+| Navbar - Site Name | Redirects to home page | Click site name | Redirected to home page | Pass |
+| Navbar - Home Link | Redirects to home page | Click home link | Redirected to home page | Pass |
+| Navbar - Login Link (user not logged in) | Redirect to Login page | Click log in link | Redirected to log in page | Pass |
+| Navbar - Sign up Link (user not logged in)  | Reloads Sign up page | Click sign up link | Reloads sign up page | Pass |
 
 `New Post Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 
+
 `New Thread Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+
 
 `Threads Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 
+
 `Admin Posts Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 
+
 `Privacy Policy Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| Navbar - Site logo | Redirects to home page | Click logo |  Redirects to home page | Pass |
+| Navbar - Site Name | Redirects to home page | Click site name | Redirected to home page | Pass |
+| Navbar - Home Link | Redirects to home page | Click home link | Redirected to home page | Pass |
+| Navbar - Login Link (user not logged in) | Redirect to Login page | Click log in link | Redirected to log in page | Pass |
+| Navbar - Sign up Link (user not logged in)  | Redirect to Sign up page | Click sign up link | Redirected to sign up page | Pass |
 
 `Terms and Conditions Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| Navbar - Site logo | Redirects to home page | Click logo |  Redirect to home page | Pass |
+| Navbar - Site Name | Redirects to home page | Click site name | Redirected to home page | Pass |
+| Navbar - Home Link | Redirects to home page | Click home link | Redirected to home page | Pass |
+| Navbar - Login Link (user not logged in) | Redirect to Login page | Click log in link | Redirected to log in page | Pass |
+| Navbar - Sign up Link (user not logged in)  | Redirect to Sign up page | Click sign up link | Redirected to sign up page | Pass |
 
 `404 Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| Navbar - Site Logo | Redirects to home page | Click logo | Redirected to home page | Pass |
+| Navbar - Site Name | Redirects to home page | Click site name | Redirected to home page | Pass |
+| Navbar - Home Link | Redirects to home page | Click home link | Redirected to home page | Pass |
+| Navbar - Login Link (user not logged in) | Redirect to Login page | Click log in link | Redirected to log in page | Pass |
+| Navbar - Sign up Link (user not logged in)  | Redirect to Sign up page | Click sign up link | Redirected to sign up page | Pass |
+| Navbar -  | --- | --- | --- | --- |
+| Navbar | --- | --- | --- | --- |
+
+
 
 
 Back to [README.md](README.md)

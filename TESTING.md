@@ -86,8 +86,9 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 
 | Goals | How are they achieved? | :--- |
 | :--- | :--- | :--- |
-| :--- | :--- | :--- |
-| :--- | :--- | :--- |
+| As an admin user, I want to be able to view flagged posts | :--- | :--- |
+| As an admin user, I want to be able to delete messages that have been flagged that are offensive | :--- | :--- |
+| As an admin user, I want to be able to unflag posts that are not offensive | :--- | :--- |
 
 - - -
 

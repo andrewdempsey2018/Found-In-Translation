@@ -1,3 +1,8 @@
+/*-----  Google Font Import - Quicksand Font -----*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
 /*----- ROOT VARIABLES -----*/
 :root {
     --black: #1F1F1F;

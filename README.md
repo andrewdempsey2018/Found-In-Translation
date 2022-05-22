@@ -146,6 +146,8 @@ HTML, CSS, Javascript, Python
 * [Heroku](https://www.heroku.com/) To deploy the project.
 * [Flask](https://pypi.org/project/Flask/) - Web Application Framework
 * [MongoDB](https://www.mongodb.com/) - Non Relational Database
+* [Google fonts](https://fonts.google.com/) - used to import the font used on the site.
+* [TinyPNG](https://tinypng.com/) - used to compress images in the readme
 
 # **Testing**   
     * [TESTING.md](#testing)  

@@ -194,31 +194,31 @@ body{
     float: left;
     padding: 10px;
     text-align: center;
-  }
-  
-  .reply-button {
+}
+
+.reply-button {
     width: 25%;
     padding-right: 3rem;
-  }
-  
-  .threadheaderone {
+}
+
+.threadheaderone {
     width: 75%;
     padding-left: 2rem;
-  }
+}
 
-  .time-stamp{
-      color:#6D5C5C;
-  }
+.time-stamp{
+    color:#6D5C5C;
+}
 
-  /* Clear floats after the columns */
-  .row:after {
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
     padding-bottom: 10px;
-  }
+}
 
-  .reply{
+.reply{
     border-radius: 13px;
     color:white;
     padding: 9px;
@@ -226,9 +226,9 @@ body{
     border: 1px solid #4E9BB9;
     background-color: #4E9BB9;
     text-decoration: none;
-  }
+}
 
-  .reply:hover{
+.reply:hover{
     color:white; 
     padding: 10px; 
 }
@@ -241,7 +241,6 @@ body{
 
 .post-media-body{
     padding-left: 2rem;
-
 }
 
 .post-container{

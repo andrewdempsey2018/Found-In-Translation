@@ -214,8 +214,8 @@ def page_not_found(e):
     return render_template(
         '404.html', user = userDB.find_one({"username": session["user"]}), error=e), 404
 
-@app.route("/report_issue")
-def report_issue():
+@app.route("/report_thread")
+def report_thread():
     """
     Route adds flagged: TRUE to the thread that was reported
     Returns:
@@ -231,10 +231,28 @@ def report_issue():
     )
     return redirect(url_for('get_all_threads'))
 
+@app.route("/report_post")
+def report_post():
+    """
+    Route adds flagged: TRUE to the post that was reported
+    Returns:
+       redirect to get_all_threads
+    """
+
+    postID = request.args.get("postID", None)
+    post = postDB.find_one({'_id': ObjectId(postID)})
+    post['flagged'] = 'TRUE'
+    postDB.replace_one({'_id': ObjectId(postID)}, post)
+    flash(
+        f'The post by {post["author"]} has been reported to the Admin!',
+    )
+    return redirect(url_for('get_all_threads'))
+
 # View for admins to view all posts in the database
 @app.route("/admin_posts")
 def admin_posts():
-    return render_template("admin_posts.html", posts=postDB.find())
+    flagged_threads = threadDB.find({'flagged': 'TRUE'})
+    return render_template("admin_posts.html", threads=flagged_threads)
 
 # Set debug status based on enviornment variable
 if __name__ == '__main__':

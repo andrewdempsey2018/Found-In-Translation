@@ -19,6 +19,15 @@
     margin-top: 58px;
 }
 
+.bg-404-image {
+    background-image: url('/static/images/404hero.webp');
+    background-size: contain;
+    background-position: center;
+    height: 400px;
+    margin-top: 58px;
+
+}
+
 .mask {
     background-color: #1F1F1F60;
     height: 300px;
@@ -47,10 +56,12 @@ body{
     font-family: "quicksand",sans-serif;
 }
 
+
 .header-container {
     width:100%;
     background: url(../images/hero.webp) no-repeat center center / cover fixed;  
     object-fit: cover;
+    box-shadow: inset 0 0 0 50vw #adb5bd24;
     padding-top: 2rem;
 }
 
@@ -315,4 +326,17 @@ body{
 .policy-container {
     margin-top: 5rem;
     margin-bottom: 10rem;
+
+}
+
+/*----- 404 Page -----*/
+
+.button-container {
+    padding-top: 5rem;
+
+}
+
+.error-button {
+    background: var(--green);
+    color: var(--white);
 }

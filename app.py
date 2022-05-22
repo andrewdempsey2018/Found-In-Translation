@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from datetime import datetime
 
 import os
 
@@ -34,12 +35,13 @@ postDB = mongo.db.posts
 @app.route("/", methods=['GET', 'POST'])
 def index():
     # user arrived on the index page, check if they have a username cached or if they are a guest user
+    sorted_threads = threadDB.find().sort('_id', -1).limit(3)
     if(session.get('user')):
-        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
+        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=sorted_threads)
         
     else:
         session["user"] = "guest"
-        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=threadDB.find())
+        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=sorted_threads)
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -114,6 +116,16 @@ def signup():
             return redirect(url_for('index'))
     return render_template('signup.html', user = userDB.find_one({'username': session['user']}))
 
+@app.route('/get_all_threads')
+def get_all_threads():
+    """
+    Query the database for all threads and sort them by most recent.
+    Store sorted results in <all_threads> variable to be passed to template render
+    Returns:
+        render_template threads.html
+    """
+    sorted_threads = threadDB.find().sort('_id', -1)
+    return render_template('threads.html', user=userDB.find_one({'username': session['user']}), threads=sorted_threads)
 
 @app.route("/thread")
 def thread():
@@ -126,12 +138,12 @@ def thread():
     translatedPosts = list(allPostsInThread)
 
     for post in translatedPosts:
-        post['content'] = "This is some example text. This is even more example text. And finally, the example ends"
+        post['content'] = {'translatedText': "This is some example text. This is even more example text. And finally, the example ends"}
+        # The next line is commented out temporarily. It should replace the above list containing example text
         #translate_text(user['language'], post['content'])
 
     return render_template("thread.html", user=user, thread=threadDB.find_one({'_id': ObjectId(threadID)}), posts=translatedPosts)
     
-
 
 @app.route("/logout")
 def logout():
@@ -145,7 +157,9 @@ def newthread():
 
 @app.route("/add_thread_to_db", methods=["POST"])
 def add_thread_to_db():
-    threadDB.insert_one(request.form.to_dict())
+    new_thread = request.form.to_dict()
+    new_thread['created_on'] = datetime.now()
+    threadDB.insert_one(new_thread)
     return redirect(url_for('index'))
 
 @app.route("/newpost")
@@ -155,8 +169,10 @@ def newpost():
 
 @app.route("/add_post_to_db", methods=["POST"])
 def add_post_to_db():
-    postDB.insert_one(request.form.to_dict())
-    return redirect(url_for('index'))
+    new_post = request.form.to_dict()
+    new_post['posted_on'] = datetime.now()
+    postDB.insert_one(new_post)
+    return redirect(url_for('thread'))
 
 @app.route("/delete_thread_from_db")
 def delete_thread_from_db():

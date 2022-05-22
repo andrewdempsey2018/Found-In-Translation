@@ -125,6 +125,7 @@ def get_all_threads():
     Returns:
         render_template threads.html
     """
+
     # Update the number of posts in each thread in the Database
     threads = threadDB.find()
     for thread in threads:

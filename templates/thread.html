@@ -16,7 +16,7 @@
                 <button type="button" class="button reply" data-bs-toggle="modal" data-bs-target="#commentModal">
                     REPLY
                 </button>
-            </div>   
+            </div> 
         </div>
 
         <!-- Reply Modal Start -->
@@ -60,7 +60,7 @@
                         <img src="{{url_for('static',filename='images/anxiety.jpeg')}}"  class="rounded-circle mr-3" height="100" width="100">
                     </div>
                     <div class="post-media-body">
-                       <p>{{post.author}}</p> 
+                       <p>{{post.author}}</p>
                        <small>United States on 
                             {% if post.posted_on %}
                                 {{ post.posted_on.strftime('%Y-%m-%d %H:%M') }}

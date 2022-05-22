@@ -1,5 +1,3 @@
-from pickle import TRUE
-from turtle import pos
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -108,7 +106,7 @@ def signup():
                 'password': request.form.get('password'),
                 'avatar': request.form.get('profile_img'),
                 'language': request.form.get('language'),
-                'isAdmin': 'false',
+                'isAdmin': False,
             }
             userDB.insert_one(register)
             # Add user to session cookies

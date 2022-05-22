@@ -182,7 +182,98 @@ body{
     color:#009DAE;
 }
 
+/* Thread */
+.thread-container{
+    width:100%;
+    background: url(../images/bg-img.webp) no-repeat center center / cover fixed;  
+    object-fit: cover;
+    padding-top: 2rem;
+}
 
+.thread-header{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px; 
+    text-align: center;
+    color: #009DAE;
+    text-transform: capitalize;
+}
+
+.id-thread {
+    float: left;
+    padding: 10px;
+    text-align: center;
+}
+
+.reply-button {
+    width: 25%;
+    padding-right: 3rem;
+}
+
+.threadheaderone {
+    width: 75%;
+    padding-left: 2rem;
+}
+
+.time-stamp{
+    color:#6D5C5C;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding-bottom: 10px;
+}
+
+.reply{
+    border-radius: 13px;
+    color:white;
+    padding: 9px;
+    margin-right: 10px;
+    border: 1px solid #4E9BB9;
+    background-color: #4E9BB9;
+    text-decoration: none;
+}
+
+.reply:hover{
+    color:white; 
+    padding: 10px; 
+}
+
+.post-media{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.post-media-body{
+    padding-left: 2rem;
+}
+
+.post-container{
+    padding:3rem 0;
+}
+
+.single-thread-space{
+    padding-bottom: 2rem;
+}
+
+.back-btn{
+    border:1px solid #4E9BB9;
+    background-color: #4E9BB9;
+    color:white;
+}
+
+.back-btn:hover{
+    background-color: #4E9BB9;
+    color:white;
+    border-color: #4E9BB9;
+    padding: 10px;
+}
 
 @media (max-width: 400px) {
     .summary-text{
@@ -213,13 +304,28 @@ body{
     .card-container{
         padding:2rem 0 0.4rem 0 ;
     }
+
+    .reply-button {
+        width: 30%;
+        padding-right: 0;
+    }
+    
+    .threadheaderone {
+    width: 70%;
+    padding-left: 0;
+    }
+
+    .threadheader{
+        font-size: 28px;
+    }
+    
+    
 }
-  
 /*----- Terms & Privacy Page container -----*/
 
 .policy-container {
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 
 }
 

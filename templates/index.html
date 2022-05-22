@@ -27,24 +27,23 @@
   </header>
 
   <section>
-    <h3 class="text-center header-content">Latest Discussions</h3>
-    <p class="summary-text text-center">We are here to create a community were people from all over the world can come and
-      share their experiences regarding  real life situations were everyone can learn and contribute.<br>
-      Theres a topic for everyone at Found in Translation!
-    </p>
-    <p class="text-center view-more-threads"><a href="{{url_for('thread')}}" class="view-more-thread" >View All Threads</a></p>
-    
-    <div class="topthread-container">
-      <div class="row">
-          {% for thread in threads %}
-            <div class="col-12 text-center">
-              <h4 class="single-thread"><a href="{{ url_for('thread', threadID=thread._id) }}" class="view-more-thread">{{ thread.subject }}</a></h4>
-            </div>
-          {% endfor %}
-          <p class="text-center view-more-threads "><a href="{{url_for('thread')}}" class="link-color view-more-thread" >Start New Thread</a></p>
+      <h3 class="text-center header-content">Latest Discussions</h3>
+      <p class="summary-text text-center">We are here to create a community were people from all over the world can come and
+        share their experiences regarding  real life situations were everyone can learn and contribute.<br>
+        Theres a topic for everyone at Found in Translation!
+      </p>
+      <p class="text-center view-more-threads"><a href="{{url_for('thread')}}" class="view-more-thread" >View All Threads</a></p>
+      
+      <div class="topthread-container">
+        <div class="row">
+            {% for thread in threads %}
+              <div class="col-12 text-center">
+                <h4 class="single-thread"><a href="{{ url_for('thread', threadID=thread._id) }}" class="view-more-thread">{{ thread.subject }}</a></h4>
+              </div>
+            {% endfor %}
+            <p class="text-center view-more-threads "><a href="{{url_for('thread')}}" class="link-color view-more-thread" >Start New Thread</a></p>
+        </div>
       </div>
-    </div>
-   
   </section> 
  <!--
     {% for thread in threads %}

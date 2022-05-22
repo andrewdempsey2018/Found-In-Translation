@@ -180,7 +180,7 @@ def add_post_to_db():
     new_post = request.form.to_dict()
     new_post['posted_on'] = datetime.now()
     postDB.insert_one(new_post)
-    return redirect(url_for('thread'))
+    return redirect(url_for('thread', threadID=new_post['subjectID']))
 
 @app.route("/delete_thread_from_db")
 def delete_thread_from_db():

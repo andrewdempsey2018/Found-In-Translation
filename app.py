@@ -135,7 +135,7 @@ def get_all_threads():
         threadDB.replace_one({'_id': ObjectId(threadID)}, thread)
 
     sorted_threads = threadDB.find().sort('_id', -1)
-    return render_template('threads.html', user=userDB.find_one({'username': session['user']}), threads=sorted_threads)
+    return render_template('allthreads.html', user=userDB.find_one({'username': session['user']}), threads=sorted_threads)
 
 @app.route("/thread")
 def thread():

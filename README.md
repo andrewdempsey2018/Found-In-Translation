@@ -84,8 +84,12 @@ As a first time visitor I should be able to do:
 * Create a profile
 * Get the info that the profile is successfully created.
 ### **Registered User/Returning Users**
-* To be able to view all users registered.
-* To be able to view all previous posts.
+* As a returning/registered user, I want to be able to log in to my account
+* As a returning/registered user, I want to be able to create a new post
+* As a returning/registered user, I want to be able to flag offensive posts
+* As a returning/registered user, I want to be able to view all Threads
+* As a returning/registered user, I want to be able to reply to posts
+
 ### **Admin User**
 * As an admin user, I want to be able to view flagged posts.
 * As an admin user, I want to be able to delete messages that have been flagged that are offensive.
@@ -200,8 +204,7 @@ The project was deployed to Heroku:
 
 * Andrew Dempsey [LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/) | [Github](https://github.com/andrewdempsey2018)
 
-<br>
-_"Thank you to Trust in Soda and Code Institute for giving me this wonderful opportunity to take part in Hackathon: May 22. The event was great fun, very helpful to me and the projects that all the teams produced were simply amazing! However, the best part of the past few days was working as part of team 'Gladiator' and making some AWESOME new friends!"_    
+"_Thank you to Trust in Soda and Code Institute for giving me this wonderful opportunity to take part in Hackathon: May 22. The event was great fun, very helpful to me and the projects that all the teams produced were simply amazing! However, the best part of the past few days was working as part of team 'Gladiator' and making some AWESOME new friends!_"    
 
 <br>
 

@@ -29,6 +29,12 @@ body {
   margin-top: 58px;
 }
 
+.bg-image-forms{
+    background-image: url("/static/images/hero.webp");
+    background-size: contain;
+    background-position: center;
+  }
+
 .mask {
   background-color: #1f1f1f60;
   height: 300px;

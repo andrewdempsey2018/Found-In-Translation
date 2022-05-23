@@ -108,6 +108,10 @@ Colors have a significant effect on our mood, through them, we simulate a series
 
 ### **Typography**
 
+As the main focus of the site is the messages that people are sending, we have only used one font throughout the site to prevent users becoming overwhelmed.
+
+Quicksand was imported from google fonts. It is a sans-serif font which is accessible friendly.
+
 ![Quicksand Font](documentation/font_quicksand.png)
 
 ### **Wireframes**
@@ -132,11 +136,28 @@ MongoDB was chosen as the database for this project due to the flexibility it of
 * Users
 * Threads
 * Posts
+
 ![Database structure](documentation/database-schema.png)  
 
 ## **Features**
 
 ### **General Features On All Pages**
+
+The site has been designed to be fully responsive, from mobile all the way up to desktop.
+
+**Navbar**
+
+The site has a fully responsive navbar.
+
+![Navbar desktop](documentation/navbar-desktop.png)
+![Navbar Small Screens](documentation/navbar-small.png)
+
+**Footer**
+
+The site has a fully responsive footer. The footer contains links to social media, the privacy policy and terms and conditions pages. It also features a call to action button asking users to join now.
+
+![Footer Large](documentation/footer-large.png)
+![Footer Small](documentation/footer-small.png)
 
 **Favicon**
 
@@ -160,7 +181,7 @@ These documents were created on [RocketLawyer.com](https://www.rocketlawyer.com/
 
 As the site has been created for educational purposes only, please note that the following documents would not be legally binding, they are purely to demonstrate an understanding of the topic. We would like to however ensure users that all measures have been taken to ensure any data entered into the site is secure.
 
-## **Technology Used** 
+## **Technology Used**
 
 ### **Language Used**
 
@@ -194,7 +215,7 @@ Please view our [TESTING.md](#testing) file for more information on the testing 
 
 ### **Deployment Heroku**
 
-The project was deployed to Heroku:
+This project was deployed using Heroku:
 
 1. Create a new app with the name found-in-translation.
 2. Linked the found-in-translation app to its Github repository.
@@ -216,6 +237,14 @@ The project was deployed to Heroku:
 6. Set up a virtual environment.
 7. Install the packages in requirements.txt by typing pip3 install -r requirements.txt in the CLI.
 8. Set the IP address to 127.0.0.1 and the PORT to 5000.
+
+### **How to Fork**
+
+To fork the repository:
+
+Log in (or sign up) to Github.
+Go to the repository for this project, [Found in Translation](https://github.com/andrewdempsey2018/Found-In-Translation)
+Click the Fork button in the top right corner.
 
 ## **Credits**
 

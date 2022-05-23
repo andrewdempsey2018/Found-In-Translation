@@ -5,8 +5,6 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/andrewdempsey2018/Found-In-Translation?color=yellow&style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/andrewdempsey2018/Found-In-Translation?color=green&style=for-the-badge)
 
-![overview of found in translation on all devices](static/images/)
-
 Found in Translation -Find your tribe, lose the language barrier!
 
 Found in Translation may well be the first online community that has overcome the language barrier, allowing its users to spark up conversations with anyone from all over the globe!
@@ -46,7 +44,9 @@ Simply create an account and chose your language (over 160 to choose from). You 
 
 3. [Technology Used](#technology-used)  
     * [Language Used](#language-used)
-    * [Frameworks,libraries and Program Used](#frameworkslibraries-and-program-used)  
+    * [Frameworks,libraries and Program Used](#frameworkslibraries-and-program-used) 
+    * [ISO 639-1 Language Codes](#iso-639)  
+    * [Google Translation API](#google-translation-api) 
 
 4. [Testing](#testing)
     * [TESTING.md](#testing)
@@ -183,9 +183,25 @@ As the site has been created for educational purposes only, please note that the
 
 ## **Technology Used**
 
+### **iso-639**
+
+To provide users with translated text on the pages, [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) were used to classify the users’ language on the page. When a user signs up, they can choose a country to be their default language on their account. If a user replies to or starts a thread, the text posted will be translated.
+
+### **Google translation api**
+
+Translation API
+
+Translation API Basic uses Google’s neural machine translation technology to instantly translate texts into more than one hundred languages. Translation API Advanced offers the same fast, dynamic results you get with Basic and additional customization features. Customization matters for domain- and context-specific terms or phrases, and formatted document translation.
+
+Before you can start using the Cloud Translation API, you must have a project that has the Cloud Translation API enabled, and you must have a private key with the appropriate credentials. You can also install client libraries for common programming languages to help you make calls to the API. For more information, see the Setup page.
+
+We created a class that takes two arguments, 'target' and 'text'. The target is the ISO 639 code of the language desired. The test is any text that we wish to translate. The two arguments are sent to the Google Translate API as a POST request. We hit Google's endpoint which returns a dictionary with the appropriate translated text.
+
+If you wish to have further information about how we acheived the translation results, feel free to contact the team via Slack.
+
 ### **Language Used**
 
-HTML, CSS, Javascript, Python
+HTML, CSS, Javascript, Python, JQuery, Bootstrap, Heroku
 
 ### Frameworks, libraries & Program Used
 
@@ -259,6 +275,9 @@ Click the Fork button in the top right corner.
   ![Error Page Hero](documentation/hero1.png)
 
 * [Logo and Favicon Image](https://www.flaticon.com/free-icons/language), sourced from Flatiron, created by Freepik
+
+* [Avatars](https://speckyboy.com/free-cute-user-avatar-icon-set/), sourced from specyboy
+
 
   ![Logo](documentation/rm-logo.png)
   ![Favicon](documentation/rm-favicon.png)

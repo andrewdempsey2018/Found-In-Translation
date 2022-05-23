@@ -131,7 +131,7 @@ def get_all_threads():
     Returns:
         render_template threads.html
     """
-
+    user=userDB.find_one({'username': session['user']})
     # Update the number of posts in each thread in the Database
     threads = threadDB.find()
     for thread in threads:
@@ -140,8 +140,13 @@ def get_all_threads():
         thread['posts'] = number_of_posts
         threadDB.replace_one({'_id': ObjectId(threadID)}, thread)
 
+    # Sort threads by most recent first and translate them
     sorted_threads = threadDB.find().sort('_id', -1)
-    return render_template('allthreads.html', user=userDB.find_one({'username': session['user']}), threads=sorted_threads)
+    translated_threads = list(sorted_threads)
+    for thread in translated_threads:
+            thread['subject'] = translate_text(user['language'], thread['subject'])
+            thread['content'] = translate_text(user['language'], thread['content'])
+    return render_template('allthreads.html', user=user, threads=translated_threads)
 
 @app.route("/thread")
 def thread():

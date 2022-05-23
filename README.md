@@ -1,12 +1,16 @@
-
-
 # **FOUND IN TRANSLATION**
 
 ![overview of found in translation on all devices](static/images/)
 
-Find your tribe, lose the language barrier
+Found in Translation -Find your tribe, lose the language barrier!
 
-[View deployed site]()
+Found in Translation may well be the first online community that has overcome the language barrier, allowing its users to spark up conversations with anyone from all over the globe!
+
+Gone are the days of having to use annoying plugin translators - Found in Translation does all the hard work for you behind the scenes, leaving you with more time to make connections!
+
+Simply create an account and chose your language (over 160 to choose from). You can then create and read posts in your chosen language, regardless of what language they were originally written in! Theres a topic for everyone at Found in Translation!
+
+[View deployed site](https://foundintranslationsodaci.herokuapp.com/)
 
 
 

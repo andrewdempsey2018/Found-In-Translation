@@ -22,9 +22,17 @@ for (let i = 0; i < imgurcodes.length; i++) {
     avatarselectItem = document.createElement('div');
     avatarselectItem.classList.add("carousel-item")
 
+    // create radio input for avatar selection
+    avatarinput = document.createElement('input');
+    avatarinput.setAttribute("type", "radio");
+    avatarinput.setAttribute("name", "profile_img");
+    avatarinput.className="form-check-input";
+
     /* set the initial item to active, otherwise just leave it as a standard carousel item */
     if (i == 0) {
         avatarselectItem.classList.add('active')
+    // first radio input checked by default
+        avatarinput.checked = true
     }
 
     /* make the appropriate styling preferences for each item */
@@ -34,9 +42,11 @@ for (let i = 0; i < imgurcodes.length; i++) {
     image.referrerPolicy = "no-referrer"
     
     /* Grab the approprite image from imgur */
+    avatarinput.setAttribute("value", imgurcodes[i])
     image.src = "https://imgur.com/" + imgurcodes[i] + ".png";
 
     /* Add the image to the carousel element */
+    avatarselectItem.appendChild(avatarinput)
     avatarselectItem.appendChild(image)
 
     /* Add the generated carousel item to the carousel */
@@ -48,3 +58,7 @@ $('.carousel').bind('slid.bs.carousel', function (e) {
     var index = $(this).find('.active').index();
     console.log(index);
 });
+
+
+// make english default language selection on signup form
+$('#language option[value=en]').attr('selected','selected');

@@ -57,12 +57,11 @@
             <div class="col-12  single-thread-space">
                 <div class="post-media">
                     <div class="d-sm-block">
-                        <img src="{{url_for('static',filename='images/anxiety.jpeg')}}"  class="rounded-circle mr-3" height="100" width="100">
+                        <img src="https://imgur.com/{{ post.avatar }}.png"  class="rounded-circle mr-3" height="100" width="100">
                     </div>
                     <div class="post-media-body">
                        <p>{{post.author}}</p>
-                       <img id="symbol" src="https://unpkg.com/language-icons/icons/{{post.lang}}.svg" width="40" height="40" alt="">
-                       <p class="fs-2">{{ post.avatar }}</p>
+                       <img id="symbol" src="https://unpkg.com/language-icons/icons/{{ post.lang }}.svg" width="40" height="40" alt="">
                        <small>Posted on 
                             {% if post.posted_on %}
                                 {{ post.posted_on.strftime('%Y-%m-%d %H:%M') }}

@@ -40,12 +40,10 @@ def index():
     
     translated_threads = list(sorted_threads)
 
-    user = userDB.find_one({"username": session["user"]})
-
-    for thread in translated_threads:
-        thread['subject'] = translate_text(user['language'], thread['subject'])
-
     if(session.get('user')):
+        user = userDB.find_one({"username": session["user"]})
+        for thread in translated_threads:
+            thread['subject'] = translate_text(user['language'], thread['subject'])
         return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=translated_threads)
         
     else:

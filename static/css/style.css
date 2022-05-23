@@ -29,6 +29,12 @@ body {
   margin-top: 58px;
 }
 
+.bg-image-forms{
+    background-image: url("/static/images/hero.webp");
+    background-size: contain;
+    background-position: center;
+  }
+
 .mask {
   background-color: #1f1f1f60;
   height: 300px;
@@ -501,4 +507,22 @@ body {
 .green-button {
   background: var(--green);
   color: var(--white);
+}
+
+.error {
+    width: 100%;
+    color: var(--red);
+}
+
+.messages {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.input-group-text {
+    background-color: var(--green);
+}
+
+.input-group-text i {
+    color: var(--black) !important;
 }

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container mt-5 bg-image">
+<div class="container bg-image-forms">
     <div class="row pt-lg-5">
         <div class="col-12 col-lg-6 mx-auto py-5 card">
             <div class="col-12 text-center">
@@ -11,29 +11,40 @@
             <!-- Signup form start -->
             <form action="{{ url_for('signup') }}" method="POST" id="signup_form">
                 <div class="my-3 text-center">
-                    <label for="username" class="form-label">Username <i class="bi bi-person-plus-fill"></i></label>
-                    <input type="text" name="username" id="username" placeholder="Username" class="form-control">
+                    <label for="username" class="form-label" hidden>Username <i class="bi bi-person-plus-fill"></i></label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="username-icon"><i class="bi bi-person-plus-fill"></i></span>
+                        <input type="text" name="username" id="username" placeholder="Username" class="form-control">
+                    </div>
                 </div>
                 <div class="my-3 text-center">
-                    <label for="email" class="form-label">Email Address <i class="bi bi-envelope-fill"></i></label>
-                    <input type="text" name="email" id="email" placeholder="Email Address" class="form-control">
+                    <label for="email" class="form-label" hidden>Email Address <i class="bi bi-envelope-fill"></i></label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="email-icon"><i class="bi bi-envelope-fill"></i></span>
+                        <input type="text" name="email" id="email" placeholder="Email Address" class="form-control">
+                    </div>
                 </div>
                 <div class="my-3 text-center">
-                    <label for="password" class="form-label">Password <i class="bi bi-key-fill"></i></label>
-                    <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                    <label for="password" class="form-label" hidden>Password <i class="bi bi-key-fill"></i></label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="password-icon"><i class="bi bi-key-fill"></i></span>
+                        <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                    </div>
                 </div>
                 <div class="my-3 text-center">
-                    <label for="password_conf" class="form-label">Confirm Password <i
-                            class="bi bi-key-fill"></i></label>
-                    <input type="password" name="password_conf" id="password_conf" placeholder="Confirm Password"
-                        class="form-control">
+                    <label for="password_conf" class="form-label" hidden>Confirm Password <i class="bi bi-key-fill"></i></label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="password-icon"><i class="bi bi-key-fill"></i></span>
+                        <input type="password" name="password_conf" id="password_conf" placeholder="Confirm Password" class="form-control">
+                    </div>
                 </div>
                 <div class="my-3 text-center">
-                    <label for="language" class="form-label">Preferred language <i class="bi bi-globe"></i></label>
+                    <label for="language" class="form-label" hidden>Preferred language <i class="bi bi-globe"></i></label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="password-icon"><i class="bi bi-globe"></i></span>
+                        <select name="language" id="language" class="form-select" aria-label="Language selection"></select>
+                    </div>
 
-                    <select name="language" id="language" class="form-select" aria-label="Language selection"></select>
-
-                    <!-- need default selection fixed-->
                     <img id="symbol" src="https://unpkg.com/language-icons/icons/en.svg" width="40" height="40" alt="">
 
                 </div>
@@ -56,24 +67,25 @@
 
 
                 </div>
-                <div class="my-3">
+                <div class="my-3 text-center">
                     <label for="terms" class="form-label">I agree to terms and conditions</label>
                     <input type="checkbox" name="terms" id="terms">
                 </div>
                 <div class="text-center">
                     <button class="btn hero-button btn-lg" type="submit">Sign Up</button>
                 </div>
+                <p class="text-center mt-3">
+                    Already have an account? Sign in <a href="{{ url_for('login') }}">HERE</a>
+                </p>
             </form>
             <!-- Signup form end -->
         </div>
         <div class="col-12 text-center mt-3">
-            <p>
-                Already have an account? Sign in <a href="{{ url_for('login') }}">HERE</a>
-            </p>
+
         </div>
         <div class="text-center mt-3">
             <p>
-                Return <a href="{{ url_for('index') }}">Home</a>
+                <a class="btn green-button"href="{{ url_for('index') }}">Return Home</a>
             </p>
         </div>
     </div>

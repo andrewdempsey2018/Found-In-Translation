@@ -120,14 +120,14 @@ Colors have a significant effect on our mood, through them, we simulate a series
 
 The entire site's wireframe was done using [Figma](https://www.figma.com).This depicts the site on a desktop and a mobile device.
 
-![Wireframe for 404 error](documentation/404error.png)
-![Wireframe for All threads page ](documentation/allthreadspage.png)
-![Wireframe for Home page ](documentation/indexpage.png)
-![Wireframe for Individual thread page ](documentation/individualthread.png)
-![Wireframe for Login page ](documentation/loginpage.png)
-![Wireframe for Log Out page ](documentation/logoutpage.png)
-![Wireframe for Profile page ](documentation/signuppage.png)
-![Wireframe for Sign Up page ](documentation/startnewthread.png)
+![Wireframe for 404 error](documentation/wireframes/404error.png)
+![Wireframe for All threads page ](documentation/wireframes/allthreadspage.png)
+![Wireframe for Home page ](documentation/wireframes/indexpage.png)
+![Wireframe for Individual thread page ](documentation/wireframes/individualthread.png)
+![Wireframe for Login page ](documentation/wireframes/loginpage.png)
+![Wireframe for Log Out page ](documentation/wireframes/logoutpage.png)
+![Wireframe for Profile page ](documentation/wireframes/signuppage.png)
+![Wireframe for Sign Up page ](documentation/wireframes/startnewthread.png)
 
 ### **Database Structure**
 

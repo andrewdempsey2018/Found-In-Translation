@@ -16,7 +16,7 @@
                 <button type="button" class="button reply" data-bs-toggle="modal" data-bs-target="#commentModal">
                     REPLY
                 </button>
-            </div>   
+            </div> 
         </div>
 
         <!-- Reply Modal Start -->
@@ -60,8 +60,10 @@
                         <img src="{{url_for('static',filename='images/anxiety.jpeg')}}"  class="rounded-circle mr-3" height="100" width="100">
                     </div>
                     <div class="post-media-body">
-                       <p>{{post.author}}</p> 
-                       <small>United States on 
+                       <p>{{post.author}}</p>
+                       <img id="symbol" src="https://unpkg.com/language-icons/icons/{{post.lang}}.svg" width="40" height="40" alt="">
+                       <p class="fs-2">{{ post.avatar }}</p>
+                       <small>Posted on 
                             {% if post.posted_on %}
                                 {{ post.posted_on.strftime('%Y-%m-%d %H:%M') }}
                             {% endif %}
@@ -73,7 +75,11 @@
                                 <a href="{{ url_for('delete_post_from_db', postID=post._id) }}" class="btn text-danger">Delete</a>
                             {% endif %}
                         </div>
-                        
+                        <a class="remove-style" href= "{{ url_for('report_post', postID=post._id) }}">
+                            <div class="text-center">
+                                <div><i class="bi bi-flag-fill"><em class="text-black">Report Issue</em></i></div> 
+                            </div>
+                        </a>
                     </div>    
                 </div>      
             </div>
@@ -84,6 +90,10 @@
         <div class="col-12 text-center">    
             <a href="{{url_for('index')}}" role="button" class="btn back-btn">
             <i class="fas fa-angle-left prefix left"></i> RETURN HOME 
+            </a>
+            <a href="{{url_for('get_all_threads')}}" role="button" class="btn back-btn">
+                View all Threads 
+                <i class="fas fa-angle-right right"></i> 
             </a>
         </div>
     </div>

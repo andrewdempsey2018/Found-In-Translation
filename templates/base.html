@@ -6,34 +6,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Found in Translation - Find your tribe, lose the language barrier!">
-    <meta name="keywords" content="Found in Translation, Translation forum, forum, worldwide community, connect with others, choose your own language">
+    <meta name="description"
+        content="Found in Translation - Find your tribe, lose the language barrier!">
+    <meta name="keywords"
+        content="Found in Translation, Translation forum, forum, worldwide community, connect with others, choose your own language">
     <meta name="robots" content="index, follow">
 
     <!-- Social Media Meta Tags -->
     <!-- Facebook, LinkedIn, Google -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Found in Translation" />
-    <meta property="og:description" content="Found in Translation - Find your tribe, lose the language barrier!" />
+    <meta property="og:description"
+        content="Found in Translation - Find your tribe, lose the language barrier!" />
     <meta name="image" property="og:image" content="URL TO IMAGE" />
-    <meta property="og:image:alt" content="Found in Translation site shown on a variety of devices" />
+    <meta property="og:image:alt"
+        content="Found in Translation site shown on a variety of devices" />
     <meta property="og:url" content="#" />
     <meta property="og:site_name" content="Found in Translation" />
     <meta name="author" content="Team Gladiators">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">    
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+    <link rel="manifest"
+        href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
 
     <!-- Stylesheets - Bootstrap, Bootstrap Icons & style.css -->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-        rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="stylesheet"
         href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -43,113 +51,282 @@
 
 <body>
 
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-        
-          <a class="navbar-brand" href="{{ url_for('index') }}">
-            <img src="{{ url_for('static', filename='images/logo.webp') }}" 
-            alt="Found in Translation Logo - Outline of the globe with meridan lines with two speech bubbles coming out from the sides, each speech bubble has a different language character" 
-            width="60" height="60" class="d-inline-block align-text-center ps-1">
-            Found in Translation
-          </a>
 
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/logo.webp') }}"
+                    alt="Found in Translation Logo - Outline of the globe with meridan lines with two speech bubbles coming out from the sides, each speech bubble has a different language character"
+                    width="60" height="60"
+                    class="d-inline-block align-text-center ps-1">
+                Found in Translation
+            </a>
 
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">
+                            <i class="bi bi-house-fill"
+                                aria-label="Home page"></i>
+                            Home</a>
+                    </li>
 
+                    {% if user.username == 'guest' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">
+                            <i class="bi bi-box-arrow-in-right"
+                                aria-label="Login"></i>
+                            Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('signup') }}">
+                            <i class="bi bi-box-arrow-in-right"
+                                aria-label="Sign up"></i>
+                            Sign Up</a>
+                    </li>
+                    {% endif %}
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('index') }}"><i class="bi bi-house-fill" aria-label="Found in Translation home page"></i> Home</a>
-              </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="{{ url_for('get_all_threads') }}">
+                            <i class="bi bi-file-text"
+                                aria-label="View all posts"></i>
+                            View all posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="bi bi-people-fill"
+                                aria-label="View all users"></i>
+                            View all users</a>
+                    </li>
 
-              {% if user.username == 'guest' %}
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('login') }}"><i class="bi bi-box-arrow-in-right" aria-label="Login"></i> Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('signup') }}"><i class="bi bi-box-arrow-in-right" aria-label="Sign up"></i> Sign Up</a>
-              </li>
-              {% endif %}
+                    {% if user.username != 'guest' %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="bi bi-chat-fill"
+                                aria-label="Direct message"></i>
+                            DM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">
+                            <i class="bi bi-box-arrow-right"
+                                aria-label="Logout"></i>
+                            Logout</a>
+                    </li>
+                    {% endif %}
 
-              <li class="nav-item">
-                <a class="nav-link" href=""><i class="bi bi-file-text" aria-label="View all posts"></i> View all posts</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href=""><i class="bi bi-people-fill" aria-label="View all users"></i> View all users</a>
-              </li>
-              
-              {% if user.username != 'guest' %}
-              <li class="nav-item">
-                <a class="nav-link" href=""><i class="bi bi-chat-fill" aria-label="Direct message"></i> DM</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('logout') }}"><i class="bi bi-box-arrow-right" aria-label="Logout"></i> Logout</a>
-              </li>
-              {% endif %}
-
-            </ul>
-          </div>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <!-- Displays flash messages to the user -->
     <div class="messages text-center">
         {% with messages = get_flashed_messages() %}
-            {% for message in messages %}
-                <p>{{message}}</p>
-            {% endfor %}
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
         {% endwith %}
     </div>
     <!-- End flash messages -->
 
-      <!--
-    <ul>
-        <li><a href="{{ url_for('index') }}">Home</a></li>
+    {% block content %}{% endblock %}
 
-        {% if user.username == 'guest' %}
-        <li><a href="{{ url_for('login') }}">Login</a></li>
-        {% endif %}
-        <li>
-            <p>Admin links</p>
-        </li>
-        <li><a href="{{ url_for('admin_posts') }}">View all posts</a></li>
-        <li><a href="#">View all users</a></li>
-
-        {% if user.username != 'guest' %}
-        <li><a href="#">DM</a></li>
-        <li><a href="{{ url_for('logout') }}">Logout</a></li>
-        {% endif %}
-
-        <p>Current user: {{user.username}}</p>
-        <p>User language: {{user.language}}</p>
-
-    </ul>
--->
-    {% block content %}
-    {% endblock %}
-
-    <!-- Footer -->
-    <footer>
-        <nav class="navbar">
-            <div class="container-fluid">
-                <span class="navbar-text">
-                    <a href="{{ url_for('privacy') }}"><i class="bi bi-lock-fill" aria-label="Privacy policy"></i></a>
-                </span>
-                <span class="navbar-text">
-                    &#169 Team Gladiators
-                </span>
-                <span class="navbar-text">
-                    <a href="{{ url_for('terms') }}"><i class="bi bi-file-earmark-font-fill" aria-label="Terms and conditions"></i></a>
-                </span>
+    <footer id="footer">
+        <div class="container-fluid footer-container">
+            <div class="row">
+                <div class="col-6 col-sm-4 footer-content text-center">
+                    <div class="community text-center d-none d-sm-block">
+                        <h5 class="text-uppercase">
+                            Join Our Community
+                        </h5>
+                        <p class="news">Never miss out on exciting news and
+                            upcoming events</p>
+                        <div class="subscribe">
+                            <a href="{{ url_for('login') }}"
+                                class="btn mt-1 small mb-1">
+                                Join Now</a>
+                        </div>
+                    </div>
+                    <ul class="social-links">
+                        <li class="list-inline-item social">
+                            <a href="https://www.facebook.com/" target="_blank"
+                                aria-label="Find us on Facebook" rel="noopener">
+                                <i class="fab fa-facebook-f"
+                                    aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item social">
+                            <a href="https://www.instagram.com/" target="_blank"
+                                aria-label="Find us on Instagram"
+                                rel="noopener">
+                                <i class="fab fa-instagram"
+                                    aria-hidden="true"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item social">
+                            <a href="https://twitter.com/" target="_blank"
+                                aria-label="Find us on Twitter" rel="noopener">
+                                <i class="fab fa-twitter"
+                                    aria-hidden="true"></i>
+                                <span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item social">
+                            <a href=" https://www.youtube.com/" target="_blank"
+                                aria-label="Find us on Youtube" rel="noopener">
+                                <i class="fab fa-youtube"
+                                    aria-hidden="true"></i>
+                                <span class="sr-only">Youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 d-none d-md-block">
+                    <div class="logo-footer">
+                        <a href="{{ url_for('index') }}">
+                            <img src="{{ url_for('static', filename='images/logo.webp') }}"
+                                alt="Logo for Found In translation"
+                                class="footer-image circle responsive-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <div class="services text-center">
+                        <h5 class="uppercase">
+                            Information Links</h5>
+                        <h6 class="service">
+                            <a href="{{ url_for('privacy') }}"
+                                class="general pt-2">Privacy Policy</a>
+                        </h6>
+                        <h6 class="service">
+                            <a href="{{ url_for('terms') }}"
+                                class="general">Terms & Conditions
+                            </a>
+                        </h6>
+                    </div>
+                </div>
             </div>
-          </nav>
+            <div class="row">
+                <div class="col text-center">
+                    <span class="navbar-text general-color" id="egg"
+                        data-bs-toggle="modal" data-bs-target="#eggModal">
+                        &#169; Team Gladiators
+                    </span>
+                </div>
+                <div class="modal fade" id="eggModal" tabindex="-1"
+                    aria-labelledby="eggModal" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content text-center">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <img class="img-fluid"
+                                    alt="Team photo of the cast of the 90's TV show Gladiators. There is text on the image that says 'Team Gladiators Congratulate you on finding a secret easter egg!"
+                                    src="{{ url_for('static', filename='images/teamgladiators.webp') }}">
+
+                                <ul
+                                    class="list-group list-group-horizontal pt-4">
+                                    <li class="list-group-item flex-fill">
+                                        Andrew:
+                                        <a href="https://github.com/andrewdempsey2018"
+                                            target="_blank">
+                                            <i class="bi bi-github icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Andrew's GitHub Profile"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/andrew-dempsey-20ab40180/"
+                                            target="_blank">
+                                            <i class="bi bi-linkedin icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Andrew's Linked in Profile"></i>
+                                        </a>
+                                    </li>
 
 
+                                    <li class="list-group-item flex-fill">
+                                        Cristian:
+                                        <a href="https://github.com/CristianBuca"
+                                            target="_blank">
+                                            <i class="bi bi-github icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Cristian's GitHub Profile"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/cristianbuca/"
+                                            target="_blank">
+                                            <i class="bi bi-linkedin icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Cristian's Linked in Profile"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item flex-fill">Didi:
+                                        <a href="https://github.com/Didisimmons"
+                                            target="_blank">
+                                            <i class="bi bi-github icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Didi's GitHub Profile"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/onyema-onyejekwe-492128102/"
+                                            target="_blank">
+                                            <i class="bi bi-linkedin icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Didi's Linked in Profile"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item flex-fill">Kera:
+                                        <a href="https://github.com/kera-cudmore"
+                                            target="_blank">
+                                            <i class="bi bi-github icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Kera's GitHub Profile"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/keracudmore/"
+                                            target="_blank">
+                                            <i class="bi bi-linkedin icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Kera's Linked in Profile"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-group-item flex-fill">Paula:
+                                        <a href="https://github.com/paulasdev"
+                                            target="_blank">
+                                            <i class="bi bi-github icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Paula's GitHub Profile"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/paulacgsilva"
+                                            target="_blank">
+                                            <i class="bi bi-linkedin icon pe-2"
+                                                role="img"
+                                                aria-label="Visit Paula's Linked in Profile"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </footer>
 
     <!-- Global Scripts -->
@@ -160,11 +337,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/28d929900c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/28d929900c.js"
+        crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
-    {% block scripts %}
-    {% endblock %}
+    {% block scripts %}{% endblock %}
 
 </body>
 

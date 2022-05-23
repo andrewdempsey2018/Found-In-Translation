@@ -508,3 +508,8 @@ body {
   background: var(--green);
   color: var(--white);
 }
+
+.error {
+    width: 100%;
+    color: var(--red);
+}

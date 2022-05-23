@@ -26,6 +26,7 @@ for (let i = 0; i < imgurcodes.length; i++) {
     avatarinput = document.createElement('input');
     avatarinput.setAttribute("type", "radio");
     avatarinput.setAttribute("name", "profile_img");
+    avatarinput.style.visibility = "hidden";
     avatarinput.className="form-check-input";
 
     /* set the initial item to active, otherwise just leave it as a standard carousel item */
@@ -54,9 +55,15 @@ for (let i = 0; i < imgurcodes.length; i++) {
 }
 
 /* get the index of the selected item every time the user clicks the carousel */
+// $('.carousel').bind('slid.bs.carousel', function (e) {
+//     var index = $(this).find('.active').index();
+//     console.log(index);
+// });
+
+// Get the radio input on associated with the selected image in carousel add checked property
 $('.carousel').bind('slid.bs.carousel', function (e) {
-    var index = $(this).find('.active').index();
-    console.log(index);
+    var selInput = $(this).find('.active input')
+    selInput.prop('checked', true)
 });
 
 

@@ -276,6 +276,8 @@ Click the Fork button in the top right corner.
 
 * Cristian B. [LinkedIn](https://www.linkedin.com/in/cristianbuca/) | [Github](https://github.com/CristianBuca)
 
+"_I was looking forward to participating in a Soda/Code Institute Hackaton ever since I started my development course but did not have the courage to register until after I finished studying. This was a great experience with an amazing team. Everyone pushed themselves for this coding sprint to deliver a project that we can be proud of!_"
+
 * Didi [LinkedIn](https://www.linkedin.com/in/onyema-onyejekwe-492128102/) | [Github](https://github.com/Didisimmons)
 
 "_Participating in the May 2022 Hackathon organized by Trust in Soda in collaboration with Code Institute was an incredible experience. Thank you for this wonderful opportunity; the last few days have been simply incredible; I got to work with and learn from talented individuals, build my network skills, improve my collaborative skills, and have fun with my new friends while working on our exciting project. I'm looking forward to participating in many more hackathons in the future._"

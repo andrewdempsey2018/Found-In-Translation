@@ -78,11 +78,9 @@ The user can easily search for a topic, language, or discussion to view its cont
 
 ### **New User**
 
-As a first time visitor I should be able to do:
-
-* Easily navigate through the whole website
-* Create a profile
-* Get the info that the profile is successfully created.
+* As a first time user, I want to be able to easily navigate the site
+* As a first time user, I want to be able to sign up to the site and create a profile
+* As a first time user, I want to receive feedback that my profile has successfully been created
 
 ### **Registered User/Returning Users**
 

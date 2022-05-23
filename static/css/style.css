@@ -518,3 +518,11 @@ body {
     background-color: var(--orange);
     color: var(--white);
 }
+
+.input-group-text {
+    background-color: var(--green);
+}
+
+.input-group-text i {
+    color: var(--black) !important;
+}

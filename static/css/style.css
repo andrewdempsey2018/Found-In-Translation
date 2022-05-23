@@ -29,14 +29,6 @@ body {
   margin-top: 58px;
 }
 
-.bg-404-image {
-  background-image: url("/static/images/404hero.webp");
-  background-size: contain;
-  background-position: center;
-  height: 400px;
-  margin-top: 58px;
-}
-
 .mask {
   background-color: #1f1f1f60;
   height: 300px;

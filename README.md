@@ -108,6 +108,7 @@ Colors have a significant effect on our mood, through them, we simulate a series
 <img src="./documentation/font_quicksand.png" alt="Quicksand" style= "max-width: 100%;">
 
 
+
 ## **Wireframes**
 The entire site's wireframe was done using [Figma](https://www.figma.com).This depicts the site on a desktop and a mobile device.
 ![Wireframe for 404 error](documentation/404error.png)
@@ -118,6 +119,16 @@ The entire site's wireframe was done using [Figma](https://www.figma.com).This d
 ![Wireframe for Log Out page ](documentation/logoutpage.png)
 ![Wireframe for Profile page ](documentation/signuppage.png)
 ![Wireframe for Sign Up page ](documentation/startnewthread.png)
+
+## **Database Structure** 
+MongoDB was chosen as the database for this project due to the flexibility it offers for non-relational data. [Diagram.io](https://dbdiagram.io/home) was used to create the data schema for this project. Our schema had three collections:
+* Users
+* Threads
+* Posts
+![Database structure](documentation/database-schema.png "Database schema")  
+
+
+
 
 # **Features**
 
@@ -137,8 +148,11 @@ As this site was created as part of a hackathon project, the privacy and terms &
 These documents were created on [RocketLawyer.com](https://www.rocketlawyer.com/gb/en?gclid=Cj0KCQjwm6KUBhC3ARIsACIwxBg54TtP8b529a5qduEkHY7u-D1hKr_I6qvoCuqtQM6VhwDUdpnR6fsaApToEALw_wcB), a site that creates documents. As the site has been created for educational purposes only, please note that the following documents would not be legally binding, they are purely to demonstrate an understanding of the topic. We would like to however ensure users that all measures have been taken to ensure any data entered into the site is secure.
 
 # **Technology Used** 
+
 ## **Language Used**
+
 HTML, CSS, Javascript, Python
+
 ## Frameworks, libraries & Program Used 
 * [Figma](https://www.figma.com/) - To create wireframes. 
 * [Git](https://git-scm.com/) - For version control. 

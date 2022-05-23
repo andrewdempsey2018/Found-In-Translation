@@ -2,134 +2,186 @@
 
 {% block content %}
 
-<!-- Background image 
 <div class="p-5 text-center bg-image">
-<div class="mask d-flex justify-content-center align-items-center">
-  <div class="d-flex justify-content-center align-items-center h-100">
-    <div class="text-white">
-      <h1 class="mb-3 hero-text">Found in Translation</h1>
-      <h2 class="mb-3 hero-text">Find your tribe, lose the language barrier</h2>
-      <a class="btn hero-button btn-lg" href="{{ url_for('login') }}" role="button">Sign up Now!</a>
-    </div>
-  </div>
-</div>
-</div>
-
--->
-  <header>
-      <div class="container-fluid  header-container">
-        <div class="row ">
-            <div class="col-12">
-                <h2 class="header-text">Find your tribe, lose the language barrier </h2>
+    <div class="mask d-flex justify-content-center align-items-center">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="mb-3 hero-text">Found in Translation</h1>
+                <h2 class="mb-3 hero-text">Find your tribe, lose the language
+                    barrier</h2>
             </div>
         </div>
-      </div>
-  </header>
+    </div>
+</div>
 
-  <section>
-      <h3 class="text-center header-content">Latest Discussions</h3>
-      <p class="summary-text text-center">We are here to create a community were people from all over the world can come and
-        share their experiences regarding  real life situations were everyone can learn and contribute.<br>
-        Theres a topic for everyone at Found in Translation!
-      </p>
-      <p class="text-center view-more-threads"><a href="{{url_for('get_all_threads')}}" class="view-more-thread" >View All Threads</a></p>
-      
-      <div class="topthread-container">
-        <div class="row">
+<section>
+    <h3 class="text-center header-content">About Us</h3>
+    <p class="summary-text text-center">Found in Translation may well be the
+        first online community that has overcome the
+        language barrier, allowing its users to spark up conversations with
+        anyone from all over the globe!</p>
+
+    <p class="summary-text text-center">Gone are the days of having to use
+        annoying plugin translators
+        - Found in Translation does all the hard work for you behind
+        the scenes, leaving you with more time to make connections! </p>
+
+    <h3 class="text-center header-content">How it works</h3>
+
+    <p class="summary-text text-center">Simply create an account and chose your
+        language (over 160 to choose from). You can then create and
+        read posts in your chosen language, regardless of what language they
+        were originally written in!</p>
+
+    <p class="summary-text text-center">Theres a topic for everyone at Found in
+        Translation!</p>
+
+    <hr>
+
+    <h3 class="text-center header-content">Recent Threads</h3>
+
+    <div class="container pb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
             {% for thread in threads %}
-              <div class="col-12 text-center">
-                <h4 class="single-thread"><a href="{{ url_for('thread', threadID=thread._id) }}" class="view-more-thread">{{ thread.subject }}</a></h4>
-              </div>
-            {% endfor %}
-            <div class="col-sm id-thread reply-button w-100">
-                <div class="replybutton">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="button reply" data-bs-toggle="modal" data-bs-target="#NewThreadModal">
-                        Start New Thread
-                    </button>
-                </div> 
-            </div>
-        
-            <!-- Reply Modal Start -->
-            <div class="modal fade" id="NewThreadModal" tabindex="-1" aria-labelledby="NewThreadModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="NewThreadModalLabel">START NEW THREAD</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <form action="{{ url_for('add_thread_to_db') }}" method="POST">
-                                <input type="hidden" name="author" value="{{user.username}}">
-                                <label>Thread Subject</label>
-                                <input class="form-control" type="text" name="subject" placeholder="subject">
-                                <br>
-                                <label>Thread content</label>
-                                <br>
-                                <textarea name="content" cols="40" rows="10" maxlength="200" class="textarea form-control" required="" id="content"></textarea>
-                                <br>
-                                <button type="submit" class="button reply">Start discussion</button>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+            <div class="col">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ thread.subject }}</h4>
+                        <p class="text-center">
+                            <i class="bi bi-chat-dots-fill">
+                                <em class="text-black">{{thread.posts}}</em></i>
+                            Posts
+                        </p>
+                        <p class="card-text">Posted by : {{ thread.author }} on
+                            {% if thread.created_on %}
+                            {{ thread.created_on.strftime('%Y-%m-%d at %H:%M') }}
+                            {% endif %}</p>
+                        <a href="{{ url_for('thread', threadID=thread._id) }}"
+                            class="btn green-button">View Thread</a>
+
                     </div>
                 </div>
             </div>
-            <!-- Reply Modal End -->
+
+            {% endfor %}
         </div>
-      </div>
-  </section> 
-
-
- <section>
-  <h3 class="text-center community-header pt-2">Find Your Community</h3>
-  <p class="summary-text text-center">Found in Translation's online community has you covered. Every day, there are new topics to discuss from a 
-    <br>
-    list of over 500 health-related topics.</p>
-
-  <div class="container community-container">
-    <div class="row text-center card-container">
-      <div class="col-sm-6 col-md-4 space-cards">
-        <div class="card card-style mx-auto">
-          <img src="{{url_for('static',filename='images/depressed-lady.jpg')}}" class="card-img-top" alt="Woman laying in bed sad ">
-          <div class="card-body">
-            <h5 class="card-title card-headertext">DEALING WITH LOSS</h5>
-            <p class="card-subtitle mb-2 card-subheader ">13K USERS</p>
-            <p class="card-text community-card-text">This is a place that provides compassion and a listening ear for everyone. </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 space-cards">
-        <div class="card card-style mx-auto">
-          <img src="{{url_for('static',filename='images/anxiety.jpeg')}}" class="card-img-top" alt="Showing a woman having many thoughts in her head">
-          <div class="card-body">
-            <h5 class="card-title card-headertext">COPING WITH  ANXIETY</h5>
-            <p class="card-subtitle mb-2 text-muted card-subheader">6K USERS</p>
-            <p class="card-text community-card-text">This is a place that provides compassion and a listening ear for everyone. </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 space-cards">
-        <div class="card card-style mx-auto">
-          <img src="{{url_for('static',filename='images/depressed-lady.jpg')}}" class="card-img-top" alt=" Two women having a conversation consoling each other">
-          <div class="card-body">
-            <h5 class="card-title card-headertext">DEPRESSION </h5>
-            <p class="card-subtitle mb-2 card-subheader">10K USERS</p>
-            <p class="card-text community-card-text">This is a place that provides compassion and a listening ear for everyone. </p>
-          </div>
-        </div>
-      </div>
     </div>
-    <p class="text-center pb-4"><a href="{{url_for('thread')}}" class="view-more-thread text-center volunteer-text">GET INVOLVED :  VOLUNTEER WITH OUR PARTNER ORGANIZATIONS </a></p>
-  </div>
+
+    <div class="col-sm id-thread reply-button w-100 pb-5">
+        <div class="replybutton">
+            <!-- Button trigger modal -->
+            <button type="button" class="button reply mx-auto col-6"
+                data-bs-toggle="modal" data-bs-target="#NewThreadModal">
+                Start a new thread
+            </button>
+        </div>
+    </div>
+
+    <!-- Reply Modal Start -->
+    <div class="modal fade" id="NewThreadModal" tabindex="-1"
+        aria-labelledby="NewThreadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="NewThreadModalLabel">
+                        START NEW THREAD</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <form action="{{ url_for('add_thread_to_db') }}"
+                        method="POST">
+                        <input type="hidden" name="author"
+                            value="{{user.username}}">
+                        <label>Thread Subject</label>
+                        <input class="form-control" type="text" name="subject"
+                            placeholder="subject">
+                        <br>
+                        <label>Thread content</label>
+                        <br>
+                        <textarea name="content" cols="40" rows="10"
+                            maxlength="200" class="textarea form-control"
+                            required="" id="content"></textarea>
+                        <br>
+                        <button type="submit" class="button reply">Start
+                            discussion</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reply Modal End -->
+
+</section>
+
+<section>
+    <h3 class="text-center community-header pt-5">Find Your Community</h3>
+    <p class="summary-text text-center">Found in Translation's online community
+        has you covered. Every day, there are new topics to discuss - and if you
+        can't see what you want, start a new thread!
+    </p>
+
+    <div class="container community-container">
+        <div class="row text-center card-container">
+            <div class="col-sm-6 col-md-4 space-cards">
+                <div class="card card-style mx-auto">
+                    <img src="{{url_for('static',filename='images/depressed-lady.jpg')}}"
+                        class="card-img-top" alt="Woman laying in bed sad ">
+                    <div class="card-body">
+                        <h5 class="card-title card-headertext">DEALING WITH LOSS
+                        </h5>
+                        <p class="card-subtitle mb-2 card-subheader ">13K USERS
+                        </p>
+                        <p class="card-text community-card-text">This is a place
+                            that provides compassion and a listening ear for
+                            everyone. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 space-cards">
+                <div class="card card-style mx-auto">
+                    <img src="{{url_for('static',filename='images/anxiety.jpeg')}}"
+                        class="card-img-top"
+                        alt="Showing a woman having many thoughts in her head">
+                    <div class="card-body">
+                        <h5 class="card-title card-headertext">COPING WITH
+                            ANXIETY</h5>
+                        <p class="card-subtitle mb-2 text-muted card-subheader">
+                            6K USERS</p>
+                        <p class="card-text community-card-text">This is a place
+                            that provides compassion and a listening ear for
+                            everyone. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 space-cards">
+                <div class="card card-style mx-auto">
+                    <img src="{{url_for('static',filename='images/depressed-lady.jpg')}}"
+                        class="card-img-top"
+                        alt=" Two women having a conversation consoling each other">
+                    <div class="card-body">
+                        <h5 class="card-title card-headertext">DEPRESSION </h5>
+                        <p class="card-subtitle mb-2 card-subheader">10K USERS
+                        </p>
+                        <p class="card-text community-card-text">This is a place
+                            that provides compassion and a listening ear for
+                            everyone. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
- </section>
- 
- 
+</section>
+
+
 
 {% endblock %}

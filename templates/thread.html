@@ -61,7 +61,9 @@
                     </div>
                     <div class="post-media-body">
                        <p>{{post.author}}</p>
-                       <small>United States on 
+                       <img id="symbol" src="https://unpkg.com/language-icons/icons/{{post.lang}}.svg" width="40" height="40" alt="">
+                       <p class="fs-2">{{ post.avatar }}</p>
+                       <small>Posted on 
                             {% if post.posted_on %}
                                 {{ post.posted_on.strftime('%Y-%m-%d %H:%M') }}
                             {% endif %}

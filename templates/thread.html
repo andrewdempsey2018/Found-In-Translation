@@ -67,7 +67,7 @@
                                 {{ post.posted_on.strftime('%Y-%m-%d %H:%M') }}
                             {% endif %}
                         </small>
-                        <p class="pt-1">{post.content.translatedText}}</p>
+                        <p class="pt-1">{{post.content.translatedText}}</p>
                         <div class="links">
                             {% if session.user|lower == posts.author|lower or session.user == "administrator" %}
                                 <a href="{{ url_for('delete_post_from_db', postID=post._id) }}" class="btn">Edit</a> | 

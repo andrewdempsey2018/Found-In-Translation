@@ -45,8 +45,6 @@ def index():
     for thread in translated_threads:
         thread['subject'] = translate_text(user['language'], thread['subject'])
 
-    print("eeeeeeee", translated_threads)
-
     if(session.get('user')):
         return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=translated_threads)
         
@@ -74,7 +72,7 @@ def login():
                 session["user"] = userName
                 flash(f'Welcome back {userName}!'
                 )
-                return redirect("index.html")
+                return redirect(url_for("index"))
             else:
                 # password is incorrect, reset login form
                 flash("Incorrect password")

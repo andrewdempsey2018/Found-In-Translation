@@ -150,6 +150,11 @@ def thread():
     allPostsInThread=postDB.find({'subjectID': threadID})
     user = userDB.find_one({"username": session["user"]})
     
+    thread=threadDB.find_one({'_id': ObjectId(threadID)})
+    
+    thread['subject'] = translate_text(user['language'], thread['subject'])
+    thread['content'] = translate_text(user['language'], thread['content'])
+
     translatedPosts = list(allPostsInThread)
 
     for t in translatedPosts:
@@ -160,7 +165,7 @@ def thread():
     for post in translatedPosts:
         post['content'] = translate_text(user['language'], post['content'])
 
-    return render_template("thread.html", user=user, thread=threadDB.find_one({'_id': ObjectId(threadID)}), posts=translatedPosts)
+    return render_template("thread.html", user=user, thread=thread , posts=translatedPosts)
     
 
 @app.route("/logout")

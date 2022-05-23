@@ -58,3 +58,7 @@ $('.carousel').bind('slid.bs.carousel', function (e) {
     var index = $(this).find('.active').index();
     console.log(index);
 });
+
+
+// make english default language selection on signup form
+$('#language option[value=en]').attr('selected','selected');

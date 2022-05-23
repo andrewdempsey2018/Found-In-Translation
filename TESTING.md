@@ -176,7 +176,6 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Footer - Privacy Policy link | Redirects to the privacy policy page | Clicked link | Redirected to privacy policy page | Pass |
 | footer - Terms and conditions link | Redirects to the terms and conditions page | Clicked link | Redirected to terms and conditions page | Pass |
 
-
 `Login Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -186,6 +185,15 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Navbar - Home Link | Redirects to home page | Click home link | Redirected to home page | Pass |
 | Navbar - Login Link (user not logged in) | Reloads Login page | Click log in link | Reloads log in page | Pass |
 | Navbar - Sign up Link (user not logged in)  | Redirect to Sign up page | Click sign up link | Redirected to sign up page | Pass |
+| Navbar - View all posts link | Redirects the user to the all threads page | Click view all posts link | Redirected to all posts page | Pass |
+| Navbar - Logout link (user logged in) | User will be logged out | Click log out link| Redirected to home page - login link available | Pass |
+| Form - link to sign up page | Redirects user to sign in page | Click link | Redirected to sign up page | Pass |
+| Form - Submission with no information | User prompted to fill in information | clicked submit button with no fields filled out | Form highlighted first empty field | Pass |
+| --- | --- | --- | --- | --- |
+| Footer - Join now button | Redirects user to the sign up page | Click button | Redirected to sign up page | Pass |
+| Footer - Social media links | Opens new tab to the social media site | Clicked each icon | New tabs opened for each site | Pass |
+| Footer - Privacy Policy link | Redirects to the privacy policy page | Clicked link | Redirected to privacy policy page | Pass |
+| footer - Terms and conditions link | Redirects to the terms and conditions page | Clicked link | Redirected to terms and conditions page | Pass |
 
 `Signup Page`
 
@@ -196,6 +204,9 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Navbar - Home Link | Redirects to home page | Click home link | Redirected to home page | Pass |
 | Navbar - Login Link (user not logged in) | Redirect to Login page | Click log in link | Redirected to log in page | Pass |
 | Navbar - Sign up Link (user not logged in)  | Reloads Sign up page | Click sign up link | Reloads sign up page | Pass |
+
+| Form - Submission with no information | User prompted to fill in information | clicked submit button with no fields filled out | Form highlighted first empty field | Pass |
+| --- | --- | --- | --- | --- |
 
 `New Post Page`
 
@@ -252,8 +263,5 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Navbar - Sign up Link (user not logged in)  | Redirect to Sign up page | Click sign up link | Redirected to sign up page | Pass |
 | Navbar - View all posts link | Redirect to the view all posts page | Click view all posts link | Redirected to the All Threads page | Pass |
 | Navbar - Logout (user logged in) | Logs the user out of their profile, and redirects to the home page | Click logout link | --- | --- |
-
-
-
 
 Back to [README.md](README.md)

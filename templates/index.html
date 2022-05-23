@@ -38,7 +38,7 @@
 
     <hr>
 
-    <h3 class="text-center header-content">Recent Posts</h3>
+    <h3 class="text-center header-content">Recent Threads</h3>
 
     <div class="container pb-5">
         <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -47,35 +47,17 @@
                 <div class="card text-center">
                     <div class="card-body">
                         <h4 class="card-title">{{ thread.subject }}</h4>
+                        <p class="text-center">
+                            <i class="bi bi-chat-dots-fill">
+                                <em class="text-black">{{thread.posts}}</em></i>
+                            Posts
+                        </p>
                         <p class="card-text">Posted by : {{ thread.author }} on
                             {% if thread.created_on %}
                             {{ thread.created_on.strftime('%Y-%m-%d at %H:%M') }}
                             {% endif %}</p>
                         <a href="{{ url_for('thread', threadID=thread._id) }}"
                             class="btn green-button">View Thread</a>
-
-                        <div class="icons">
-                            <ul
-                                class="list-inline list-unstyled text-center text-lg-right my-0">
-                                <li class="list-inline-item pl-3">
-                                    <a class="remove-style"
-                                        href="{{ url_for('report_thread', threadID=thread._id) }}">
-                                        <div class="text-center">
-                                            <div><i class="bi bi-flag-fill"><em
-                                                        class="text-black">Report
-                                                        Issue</em></i></div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item pl-5">
-                                    <div class="text-center">
-                                        <div><i class="bi bi-chat-dots-fill"><em
-                                                    class="text-black">{{thread.posts}}</em></i>
-                                            Posts</div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
 
                     </div>
                 </div>
@@ -139,9 +121,9 @@
 <section>
     <h3 class="text-center community-header pt-5">Find Your Community</h3>
     <p class="summary-text text-center">Found in Translation's online community
-        has you covered. Every day, there are new topics to discuss from a
-        <br>
-        list of over 500 health-related topics.</p>
+        has you covered. Every day, there are new topics to discuss - and if you
+        can't see what you want, start a new thread!
+    </p>
 
     <div class="container community-container">
         <div class="row text-center card-container">
@@ -194,9 +176,7 @@
                 </div>
             </div>
         </div>
-        <p class="text-center pb-4"><a href="{{url_for('thread')}}"
-                class="view-more-thread text-center volunteer-text">GET INVOLVED
-                : VOLUNTEER WITH OUR PARTNER ORGANIZATIONS </a></p>
+
     </div>
 
 

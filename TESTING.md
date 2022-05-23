@@ -105,6 +105,7 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
   
   * 404 Error Page
   ![404 Error Page lighthouse testing mobile]()
+
 - - -
 
 ## MANUAL TESTING
@@ -213,24 +214,20 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 
-
 `New Thread Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-
 
 `Threads Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 
-
 `Admin Posts Page`
 
 Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-
 
 `Privacy Policy Page`
 

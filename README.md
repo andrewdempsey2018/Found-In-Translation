@@ -30,8 +30,6 @@ Simply create an account and chose your language (over 160 to choose from). You 
         * [Admin User](#admin-user)
         * [Target Audience](#target-audience)
 
-    * [RESEARCH](#research)
-
     * [DESIGN](#design)
         * [Colour Scheme](#colour-scheme)
         * [Typography](#typography)
@@ -99,8 +97,6 @@ The user can easily search for a topic, language, or discussion to view its cont
 ### **Target Audience**
 
 Found in Translation allows anyone to connect with others around the world with no language barrier. This means that the world is our target audience.
-
-## **Research**
 
 ## **Design**
 

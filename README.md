@@ -285,3 +285,5 @@ Click the Fork button in the top right corner.
 "_Another whirlwind Hackathon weekend completed - spent creating an amazing site with some truly talented people! I love being able to take part in these events (Thanks Code Institute & Soda Social for putting this event together 😊), theres nothing better than being part of a community of people who are so generous with sharing their knowledge. Thanks Team Gladiator - you've been amazing!_"
 
 * Paula Silva [LinkedIn](https://www.linkedin.com/in/paulacgsilva) | [Github](https://github.com/paulasdev)
+
+"_Fantastic experience participating in my first Hackathon with Code Institute & Trust Soda. I had support from my entire Gladiator team and it was a great opportunity to gain more knowledge for my journey._"

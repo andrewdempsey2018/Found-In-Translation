@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container ">
+<div class="container mt-5 bg-image">
     <div class="row pt-lg-5">
         <div class="col-12 col-lg-6 mx-auto py-5 card">
             <div class="col-12 text-center">
@@ -40,23 +40,8 @@
                 <div class="my-3 text-center">
                     <label for="profile_img" class="form-label">Profile Image</label>
 
-                    <!--
-                    {{url_for('static', filename='avatar/01-mexican.svg') }}
-                    {{url_for('static', filename='avatar/02-man.svg') }}
-                    {{url_for('static', filename='avatar/03-pirates.svg') }}-->
-
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner" id="carousel">
-                            <!--<div class="carousel-item active">
-                                <img src="{{url_for('static', filename='avatar/01-mexican.svg') }}" class="d-inline-block w-25" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{url_for('static', filename='avatar/02-man.svg') }}" class="d-inline-block w-25" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{url_for('static', filename='avatar/03-pirates.svg') }}" class="d-inline-block w-25" alt="...">
-                            </div>-->
-                        </div> 
+                        <div class="carousel-inner" id="carousel"> </div> 
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -65,7 +50,7 @@
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                            <span class="visually-hidden">Next</span> 
                         </button>
                     </div>
 

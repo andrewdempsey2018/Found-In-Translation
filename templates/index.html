@@ -15,16 +15,24 @@
 </div>
 
 <section>
-    <h3 class="text-center header-content">Latest Discussions</h3>
-    <p class="summary-text text-center">We are here to create a community were
-        people from all over the world can come and
-        share their experiences regarding real life situations were everyone can
-        learn and contribute.<br>
-        Theres a topic for everyone at Found in Translation!
-    </p>
-    <p class="text-center view-more-threads"><a
-            href="{{url_for('get_all_threads')}}" class="view-more-thread">View
-            All Threads</a></p>
+    <h3 class="text-center header-content">About Us</h3>
+    <p class="summary-text text-center">Found in Translation may well be the first online community that has overcome the 
+        language barrier, allowing its users to spark up conversations with anyone from all over the globe!</p>
+     
+    <p class="summary-text text-center">Gone are the days of having to use annoying plugin translators 
+        - Found in Translation does all the hard work for you behind
+        the scenes, leaving you with more time to make connections!  </p>
+
+    <h3 class="text-center header-content">How it works</h3>
+
+        <p class="summary-text text-center">Simply create an account and chose your language (over 160 to choose from). You can then create and 
+            read posts in your chosen language, regardless of what language they were originally written in!</p>
+    
+        <p class="summary-text text-center">Theres a topic for everyone at Found in Translation!</p>
+
+        <hr>
+
+        <h3 class="text-center header-content">Recent Posts</h3>
 
     <div class="topthread-container">
         <div class="row">
@@ -35,6 +43,12 @@
                         class="view-more-thread">{{ thread.subject }}</a></h4>
             </div>
             {% endfor %}
+
+
+
+
+
+            
             <div class="col-sm id-thread reply-button w-100">
                 <div class="replybutton">
                     <!-- Button trigger modal -->

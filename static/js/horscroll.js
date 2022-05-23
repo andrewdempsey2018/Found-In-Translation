@@ -13,9 +13,9 @@ let avatarselect = document.getElementById('carousel');
 let avatarselectItem = null;
 let image = null;
 
-let flib = ["lu9560a", ];
+let imgurcodes = ["PVe0Rrj", "mmj6PGK", "Ig3gtUz", "34LbL0J", "gornF3o", "j1VdmLj", "LJJHG7w", "ceMTvvV"];
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < imgurcodes.length; i++) {
 
     /* Bootstrap dropdown expects the elements of be of type 'option' */
     avatarselectItem = document.createElement('carousel-item');
@@ -28,7 +28,7 @@ for (let i = 0; i < 5; i++) {
     image.referrerPolicy = "no-referrer"
     image.width = 20;
     image.height = 20;
-    image.src = "https://imgur.com/lu9560a.jpg";
+    image.src = "https://imgur.com/" + imgurcodes[i] + ".png";
 
     avatarselectItem.appendChild(image);
 

@@ -36,9 +36,19 @@ postDB = mongo.db.posts
 def index():
     # user arrived on the index page, check if they have a username cached or if they are a guest user
 
-    sorted_threads = threadDB.find().sort('_id', -1).limit(3)
+    sorted_threads = threadDB.find().sort('_id', -1).limit(4)
+    
+    translated_threads = list(sorted_threads)
+
+    user = userDB.find_one({"username": session["user"]})
+
+    for thread in translated_threads:
+        thread['subject'] = translate_text(user['language'], thread['subject'])
+
+    print("eeeeeeee", translated_threads)
+
     if(session.get('user')):
-        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=sorted_threads)
+        return render_template("index.html", user = userDB.find_one({"username": session["user"]}),  threads=translated_threads)
         
     else:
         session["user"] = "guest"
@@ -64,7 +74,7 @@ def login():
                 session["user"] = userName
                 flash(f'Welcome back {userName}!'
                 )
-                return render_template("index.html", user = userDB.find_one({"username": session["user"]}), threads=threadDB.find())
+                return redirect("index.html")
             else:
                 # password is incorrect, reset login form
                 flash("Incorrect password")

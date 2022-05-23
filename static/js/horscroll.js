@@ -3,16 +3,14 @@
    "The Fistpumps Of Death!" Also, hi Kera!
 */
 
-/* Select the dropdown from the signup page */
+/* Select the avatar carousel from signup page */
 let avatarselect = document.getElementById('carousel');
-console.log(avatarselect)
-/* Get the list of ISO-639-1 languages & codes */
-//const language_codes = language_list;
 
-/* Each element of the selection dropdown*/
+/* We will use these variables to add all of the elements to the carousel*/
 let avatarselectItem = null;
 let image = null;
 
+/* Our avatars are hosted on imgur, this array holds the unique URL code for each image */
 let imgurcodes = ["PVe0Rrj", "mmj6PGK", "Ig3gtUz", "34LbL0J", "gornF3o", "j1VdmLj", "LJJHG7w", "ceMTvvV", "zJOBDqr", "roDWkKX", "EhJOV0E",
     "hDbqrma", "pfUsXVU", "DUW9Laq", "oOzPthq", "t1nnGj9", "OF0xvVW", "g9132Pw", "1cYwGzK", "cztrLBD", "wlwDib1", "yZyoUCZ", "Q9HA3Hd", "OZbX2fo",
     "YIh79Ya", "PsmudlJ", "cnIqGQc", "yK8Vzb7", "XIqjw2E", "hH7auGs", "fIsObzM", "z4Qbyip", "8yB5LaV", "aPkkaTR", "V65zySU", "unZPGYC", "1Uvifmb",
@@ -20,31 +18,32 @@ let imgurcodes = ["PVe0Rrj", "mmj6PGK", "Ig3gtUz", "34LbL0J", "gornF3o", "j1VdmL
 
 for (let i = 0; i < imgurcodes.length; i++) {
 
-    /* Bootstrap dropdown expects the elements of be of type 'option' */
+    /* carousels are built from divs with class carousel-item */
     avatarselectItem = document.createElement('div');
     avatarselectItem.classList.add("carousel-item")
 
+    /* set the initial item to active, otherwise just leave it as a standard carousel item */
     if (i == 0) {
         avatarselectItem.classList.add('active')
     }
 
-    /* Now get the appropriate ISO-639 code */
+    /* make the appropriate styling preferences for each item */
     image = document.createElement('img');
     image.className = "d-inline-block"
     image.classList.add("w-25")
     image.referrerPolicy = "no-referrer"
-    //image.width = 60;
-    //image.height = 60;
+    
+    /* Grab the approprite image from imgur */
     image.src = "https://imgur.com/" + imgurcodes[i] + ".png";
 
+    /* Add the image to the carousel element */
     avatarselectItem.appendChild(image)
 
-
-
-    /* Add the option element to the dropdown list */
+    /* Add the generated carousel item to the carousel */
     avatarselect.appendChild(avatarselectItem);
 }
 
+/* get the index of the selected item every time the user clicks the carousel */
 $('.carousel').bind('slid.bs.carousel', function (e) {
     var index = $(this).find('.active').index();
     console.log(index);

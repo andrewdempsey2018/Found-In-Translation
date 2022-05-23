@@ -152,9 +152,7 @@ def thread():
         t['lang'] = author['language']
 
     for post in translatedPosts:
-        post['content'] = {'translatedText': "This is some example text. This is even more example text. And finally, the example ends"}
-        # The next line is commented out temporarily. It should replace the above list containing example text
-        #translate_text(user['language'], post['content'])
+        post['content'] = translate_text(user['language'], post['content'])
 
     return render_template("thread.html", user=user, thread=threadDB.find_one({'_id': ObjectId(threadID)}), posts=translatedPosts)
     

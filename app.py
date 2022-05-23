@@ -146,6 +146,11 @@ def thread():
     
     translatedPosts = list(allPostsInThread)
 
+    for t in translatedPosts:
+        author = userDB.find_one({'username': t['author']})
+        t['avatar'] = author['avatar']
+        t['lang'] = author['language']
+
     for post in translatedPosts:
         post['content'] = {'translatedText': "This is some example text. This is even more example text. And finally, the example ends"}
         # The next line is commented out temporarily. It should replace the above list containing example text

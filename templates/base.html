@@ -98,21 +98,15 @@
                             href="{{ url_for('get_all_threads') }}">
                             <i class="bi bi-file-text"
                                 aria-label="View all posts"></i>
-                            View all posts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">
-                            <i class="bi bi-people-fill"
-                                aria-label="View all users"></i>
-                            View all users</a>
+                            View all threads</a>
                     </li>
 
                     {% if user.username != 'guest' %}
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="{{ url_for('admin_posts') }}">
                             <i class="bi bi-chat-fill"
-                                aria-label="Direct message"></i>
-                            DM</a>
+                                aria-label="Admin Posts"></i>
+                            Admin View</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('logout') }}">
@@ -131,7 +125,7 @@
     <div class="messages text-center">
         {% with messages = get_flashed_messages() %}
         {% for message in messages %}
-        <p>{{ message }}</p>
+        <div class="fs-4">{{ message }}</div>
         {% endfor %}
         {% endwith %}
     </div>

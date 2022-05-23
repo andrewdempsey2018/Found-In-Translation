@@ -16,96 +16,128 @@
 
 <section>
     <h3 class="text-center header-content">About Us</h3>
-    <p class="summary-text text-center">Found in Translation may well be the first online community that has overcome the 
-        language barrier, allowing its users to spark up conversations with anyone from all over the globe!</p>
-     
-    <p class="summary-text text-center">Gone are the days of having to use annoying plugin translators 
+    <p class="summary-text text-center">Found in Translation may well be the
+        first online community that has overcome the
+        language barrier, allowing its users to spark up conversations with
+        anyone from all over the globe!</p>
+
+    <p class="summary-text text-center">Gone are the days of having to use
+        annoying plugin translators
         - Found in Translation does all the hard work for you behind
-        the scenes, leaving you with more time to make connections!  </p>
+        the scenes, leaving you with more time to make connections! </p>
 
     <h3 class="text-center header-content">How it works</h3>
 
-        <p class="summary-text text-center">Simply create an account and chose your language (over 160 to choose from). You can then create and 
-            read posts in your chosen language, regardless of what language they were originally written in!</p>
-    
-        <p class="summary-text text-center">Theres a topic for everyone at Found in Translation!</p>
+    <p class="summary-text text-center">Simply create an account and chose your
+        language (over 160 to choose from). You can then create and
+        read posts in your chosen language, regardless of what language they
+        were originally written in!</p>
 
-        <hr>
+    <p class="summary-text text-center">Theres a topic for everyone at Found in
+        Translation!</p>
 
-        <h3 class="text-center header-content">Recent Posts</h3>
+    <hr>
 
-    <div class="topthread-container">
-        <div class="row">
+    <h3 class="text-center header-content">Recent Posts</h3>
+
+    <div class="container pb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
             {% for thread in threads %}
-            <div class="col-12 text-center">
-                <h4 class="single-thread"><a
-                        href="{{ url_for('thread', threadID=thread._id) }}"
-                        class="view-more-thread">{{ thread.subject }}</a></h4>
-            </div>
-            {% endfor %}
+            <div class="col">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ thread.subject }}</h4>
+                        <p class="card-text">Posted by : {{ thread.author }} on
+                            {% if thread.created_on %}
+                            {{ thread.created_on.strftime('%Y-%m-%d at %H:%M') }}
+                            {% endif %}</p>
+                        <a href="{{ url_for('thread', threadID=thread._id) }}"
+                            class="btn green-button">View Thread</a>
 
-
-
-
-
-            
-            <div class="col-sm id-thread reply-button w-100">
-                <div class="replybutton">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="button reply"
-                        data-bs-toggle="modal" data-bs-target="#NewThreadModal">
-                        Start New Thread
-                    </button>
-                </div>
-            </div>
-
-            <!-- Reply Modal Start -->
-            <div class="modal fade" id="NewThreadModal" tabindex="-1"
-                aria-labelledby="NewThreadModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="NewThreadModalLabel">
-                                START NEW THREAD</h5>
-                            <button type="button" class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"></button>
+                        <div class="icons">
+                            <ul
+                                class="list-inline list-unstyled text-center text-lg-right my-0">
+                                <li class="list-inline-item pl-3">
+                                    <a class="remove-style"
+                                        href="{{ url_for('report_thread', threadID=thread._id) }}">
+                                        <div class="text-center">
+                                            <div><i class="bi bi-flag-fill"><em
+                                                        class="text-black">Report
+                                                        Issue</em></i></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item pl-5">
+                                    <div class="text-center">
+                                        <div><i class="bi bi-chat-dots-fill"><em
+                                                    class="text-black">{{thread.posts}}</em></i>
+                                            Posts</div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="modal-body text-center">
-                            <form action="{{ url_for('add_thread_to_db') }}"
-                                method="POST">
-                                <input type="hidden" name="author"
-                                    value="{{user.username}}">
-                                <label>Thread Subject</label>
-                                <input class="form-control" type="text"
-                                    name="subject" placeholder="subject">
-                                <br>
-                                <label>Thread content</label>
-                                <br>
-                                <textarea name="content" cols="40" rows="10"
-                                    maxlength="200"
-                                    class="textarea form-control" required=""
-                                    id="content"></textarea>
-                                <br>
-                                <button type="submit" class="button reply">Start
-                                    discussion</button>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary"
-                                data-bs-dismiss="modal">Close</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
-            <!-- Reply Modal End -->
+
+            {% endfor %}
         </div>
     </div>
+
+    <div class="col-sm id-thread reply-button w-100 pb-5">
+        <div class="replybutton">
+            <!-- Button trigger modal -->
+            <button type="button" class="button reply mx-auto col-6"
+                data-bs-toggle="modal" data-bs-target="#NewThreadModal">
+                Start a new thread
+            </button>
+        </div>
+    </div>
+
+    <!-- Reply Modal Start -->
+    <div class="modal fade" id="NewThreadModal" tabindex="-1"
+        aria-labelledby="NewThreadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="NewThreadModalLabel">
+                        START NEW THREAD</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <form action="{{ url_for('add_thread_to_db') }}"
+                        method="POST">
+                        <input type="hidden" name="author"
+                            value="{{user.username}}">
+                        <label>Thread Subject</label>
+                        <input class="form-control" type="text" name="subject"
+                            placeholder="subject">
+                        <br>
+                        <label>Thread content</label>
+                        <br>
+                        <textarea name="content" cols="40" rows="10"
+                            maxlength="200" class="textarea form-control"
+                            required="" id="content"></textarea>
+                        <br>
+                        <button type="submit" class="button reply">Start
+                            discussion</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reply Modal End -->
+
 </section>
 
-
 <section>
-    <h3 class="text-center community-header pt-2">Find Your Community</h3>
+    <h3 class="text-center community-header pt-5">Find Your Community</h3>
     <p class="summary-text text-center">Found in Translation's online community
         has you covered. Every day, there are new topics to discuss from a
         <br>

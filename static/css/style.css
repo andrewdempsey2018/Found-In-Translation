@@ -513,3 +513,8 @@ body {
     width: 100%;
     color: var(--red);
 }
+
+.messages {
+    background-color: var(--orange);
+    color: var(--white);
+}

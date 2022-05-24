@@ -1,6 +1,6 @@
-# Found in Translation -  Testing
+# Found in Translation -  Testing Documentation
 
-Responsive site image to go here  
+![Found in Translation site shown on multiple screen sizes](static/images/site-responsive.png)
 
 Visit the deployed site: [Found in Translation](https://foundintranslationsodaci.herokuapp.com/)
 
@@ -31,10 +31,15 @@ Each page has been inspected using google chrome developer tools & Firefox inspe
 
 An error relating to the use of the aria-label on the bootstrap icons was flagged using the validator as being a possible misuse of the label. However this label was taken from the bootstrap icon accessibility section and can therefore be ignored.
 
-* [Index Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoundintranslationsodaci.herokuapp.com%2F)
-* [Privacy Page]()
-
-* [style.css](documentation/testing/css-validator.png)
+* [Index Page W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoundintranslationsodaci.herokuapp.com%2F)
+* [Login Page W3C HTML Validation]
+* [Sign Up Page W3C HTML Validation]
+* [Admin Page W3C HTML Validation]
+* [All threads Page W3C HTML Validation](documentation/testing/allthreads-validation.png)
+* [Privacy Page W3C HTML Validation]
+* [Terms & Conditions Page W3C HTML Validation]
+* [404 Page W3C HTML Validation](documentation/testing/404-validation.png)
+* [style.css CSS Validation](documentation/testing/css-validator.png)
 
 - - -
 
@@ -42,7 +47,7 @@ An error relating to the use of the aria-label on the bootstrap icons was flagge
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
-* [dropdown.js]()
+* [dropdown.js]
 * [form_validation.js](documentation/testing/form-validation-js.png)
 * [language_codes.js](documentation/testing/language-list-js.png)
 

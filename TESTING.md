@@ -68,22 +68,22 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 ### Desktop Results
 
 * Index Page
-  ![Index Page lighthouse testing desktop](documentation/testing/index-lh-desk.png)
+  ![Index Page lighthouse testing desktop](documentation/lighthouse/index-lh-desk.png)
 
 * Login Page
-  ![Login Page Lighthouse testing desktop](documentation/testing/login-lh-desk.png)
+  ![Login Page Lighthouse testing desktop](documentation/lighthouse/login-lh-desk.png)
   
 * Sign Up Page
-  ![Sign Up Page Lighthouse testing desktop](documentation/testing/signup-lh-desk.png)
+  ![Sign Up Page Lighthouse testing desktop](documentation/lighthouse/signup-lh-desk.png)
   
   * All Threads Page
-  ![All threads page lighthouse testing desktop](documentation/testing/allthreads-lh-desk.png)
+  ![All threads page lighthouse testing desktop](documentation/lighthouse/allthreads-lh-desk.png)
   
   * Privacy Policy Page
-  ![Privacy policy page lighthouse testing desktop](documentation/testing/privacy-lh-desk.png)
+  ![Privacy policy page lighthouse testing desktop](documentation/lighthouse/privacy-lh-desk.png)
   
   * Terms and conditions Page
-  ![Terms and conditions page lighthouse testing desktop](documentation/testing/terms-lh-desk.png)
+  ![Terms and conditions page lighthouse testing desktop](documentation/lighthouse/terms-lh-desk.png)
   
   * 404 Error Page
   ![404 Error Page lighthouse testing desktop]()
@@ -91,22 +91,22 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 ### Mobile Results
 
 * Index Page
-  ![Index Page lighthouse testing mobile](documentation/testing/index-lh-mobile.png)
+  ![Index Page lighthouse testing mobile](documentation/lighthouse/index-lh-mobile.png)
 
 * Login Page
-  ![Login Page Lighthouse testing mobile](documentation/testing/login-lh-mobile.png)
+  ![Login Page Lighthouse testing mobile](documentation/lighthouse/login-lh-mobile.png)
   
 * Sign Up Page
-  ![Sign Up Page Lighthouse testing mobile](documentation/testing/signup-lh-mobile.png)
+  ![Sign Up Page Lighthouse testing mobile](documentation/lighthouse/signup-lh-mobile.png)
   
   * All Threads Page
-  ![All threads page lighthouse testing mobile](documentation/testing/allthreads-lh-mobile.png)
+  ![All threads page lighthouse testing mobile](documentation/lighthouse/allthreads-lh-mobile.png)
   
   * Privacy Policy Page
-  ![Privacy policy page lighthouse testing mobile](documentation/testing/privacy-lh-mobile.png)
+  ![Privacy policy page lighthouse testing mobile](documentation/lighthouse/privacy-lh-mobile.png)
   
   * Terms and conditions Page
-  ![Terms and conditions page lighthouse testing mobile](documentation/testing/terms-lh-mobile.png)
+  ![Terms and conditions page lighthouse testing mobile](documentation/lighthouse/terms-lh-mobile.png)
   
   * 404 Error Page
   ![404 Error Page lighthouse testing mobile]()

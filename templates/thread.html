@@ -5,9 +5,9 @@
 <div class="single-thread-header pt-5">
     <div class="row">
         <div class="col-sm id-thread threadheaderone">
-            <h2 class="thread-header">{{thread.subject}}</h2>
-            <small class="time-stamp"> 20 May 2020 by  3pm </small>
-            <p class="pt-2">{{thread.content}}</p>
+            <h2 class="thread-header">{{ thread.subject.translatedText }}</h2>
+            <small class="time-stamp">By {{ thread.author }} on {{ thread.created_on.strftime('%Y-%m-%d %H:%M') }} </small>
+            <p class="pt-2">{{ thread.content.translatedText }}</p>
            
         </div>
         <div class="col-sm id-thread  reply-button">

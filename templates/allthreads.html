@@ -53,7 +53,7 @@
     <!-- Reply Modal End -->
 
     <div class="container">
-        {% if threads.count() > 0 %}
+        {% if threads|length > 0 %}
             <div class="allthread-box">
             {% for thread in threads %}
                 <div class="card thread-box mt-3 mb-4">
@@ -61,14 +61,14 @@
                         <div class="row">
                             <div class="col-sm-6 ">
                                 <div class="threads">
-                                    <h5 class="bold">{{thread.subject}}</h5> 
+                                    <h5 class="bold">{{thread.subject.translatedText}}</h5> 
                                     <small class="general-color">
                                         Posted by : {{ thread.author }} on 
                                         {% if thread.created_on %}
                                             {{ thread.created_on.strftime('%Y-%m-%d at %H:%M') }}
                                         {% endif %}
                                     </small>
-                                    <p class="pt-1">{{thread.content}}</p>
+                                    <p class="pt-1">{{thread.content.translatedText}}</p>
                                 </div>
                             </div>
                             <div class="col-sm-6">

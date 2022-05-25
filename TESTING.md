@@ -32,7 +32,7 @@ Each page has been inspected using google chrome developer tools & Firefox inspe
 An error relating to the use of the aria-label was flagged on all pages the validator as being a possible misuse of the label. This is due to the bootstrap class for the icons to allow the icons to be accessible friendly (taken from the documentation for bootstrap5), and can therefore be ignored.
 
 * [Index Page W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoundintranslationsodaci.herokuapp.com%2F) - Pass
-* [Login Page W3C HTML Validation]
+* [Login Page W3C HTML Validation](documentation/testing/login-user.png) - Pass
 * [Sign Up Page W3C HTML Validation]
 * [Admin Page W3C HTML Validation]
 * [All threads Page W3C HTML Validation](documentation/testing/allthreads-validation.png) - Pass

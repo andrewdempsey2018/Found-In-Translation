@@ -37,7 +37,7 @@ An error relating to the use of the aria-label was flagged on all pages the vali
 * [Admin Page W3C HTML Validation]
 * [All threads Page W3C HTML Validation](documentation/testing/allthreads-validation.png) - Pass
 * [Privacy Page W3C HTML Validation](documentation/testing/privacy-validation.png) - Pass
-* [Terms & Conditions Page W3C HTML Validation]
+* [Terms & Conditions Page W3C HTML Validation](documentation/testing/terms-validation.png) - Pass
 * [404 Page W3C HTML Validation](documentation/testing/404-validation.png) - Pass
 * [style.css CSS Validation](documentation/testing/css-validator.png) - Pass
 

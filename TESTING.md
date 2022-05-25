@@ -29,17 +29,17 @@ Each page has been inspected using google chrome developer tools & Firefox inspe
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-An error relating to the use of the aria-label on the bootstrap icons was flagged using the validator as being a possible misuse of the label. However this label was taken from the bootstrap icon accessibility section and can therefore be ignored.
+An error relating to the use of the aria-label was flagged on all pages the validator as being a possible misuse of the label. This is due to the bootstrap class for the icons to allow the icons to be accessible friendly (taken from the documentation for bootstrap5), and can therefore be ignored.
 
-* [Index Page W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoundintranslationsodaci.herokuapp.com%2F)
+* [Index Page W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoundintranslationsodaci.herokuapp.com%2F) - Pass
 * [Login Page W3C HTML Validation]
 * [Sign Up Page W3C HTML Validation]
 * [Admin Page W3C HTML Validation]
-* [All threads Page W3C HTML Validation](documentation/testing/allthreads-validation.png)
-* [Privacy Page W3C HTML Validation]
+* [All threads Page W3C HTML Validation](documentation/testing/allthreads-validation.png) - Pass
+* [Privacy Page W3C HTML Validation](documentation/testing/privacy-validation.png) - Pass
 * [Terms & Conditions Page W3C HTML Validation]
-* [404 Page W3C HTML Validation](documentation/testing/404-validation.png)
-* [style.css CSS Validation](documentation/testing/css-validator.png)
+* [404 Page W3C HTML Validation](documentation/testing/404-validation.png) - Pass
+* [style.css CSS Validation](documentation/testing/css-validator.png) - Pass
 
 - - -
 

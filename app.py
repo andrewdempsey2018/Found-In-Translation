@@ -143,6 +143,14 @@ def get_all_threads():
     # Sort threads by most recent first and translate them
     sorted_threads = threadDB.find().sort('_id', -1)
     translated_threads = list(sorted_threads)
+
+    # Pagination
+    page = request.args.get('page', type=int)
+    POSTS_PER_PAGE = 4
+    firstPostToDisplay = page * POSTS_PER_PAGE
+    lastPostToDisplay = firstPostToDisplay + POSTS_PER_PAGE
+    translated_threads = translated_threads[firstPostToDisplay:lastPostToDisplay]
+
     for thread in translated_threads:
             thread['subject'] = translate_text(user['language'], thread['subject'])
             thread['content'] = translate_text(user['language'], thread['content'])

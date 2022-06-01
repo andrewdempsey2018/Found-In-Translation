@@ -145,16 +145,22 @@ def get_all_threads():
     translated_threads = list(sorted_threads)
 
     # Pagination
-    page = request.args.get('page', type=int)
+    page = request.args.get('page', type=int) # page number is fed in via url
     POSTS_PER_PAGE = 4
-    firstPostToDisplay = page * POSTS_PER_PAGE
-    lastPostToDisplay = firstPostToDisplay + POSTS_PER_PAGE
-    translated_threads = translated_threads[firstPostToDisplay:lastPostToDisplay]
+
+    # find what post is the first post on this particular page
+    firstPostToList = page * POSTS_PER_PAGE
+
+    lastPostToList = firstPostToList + POSTS_PER_PAGE
+
+    # translate the thread details only for the threads that will appear on
+    # this particular page
+    translated_threads = translated_threads[firstPostToList:lastPostToList]
 
     for thread in translated_threads:
             thread['subject'] = translate_text(user['language'], thread['subject'])
             thread['content'] = translate_text(user['language'], thread['content'])
-    return render_template('allthreads.html', user=user, threads=translated_threads)
+    return render_template('allthreads.html', user=user, threads=translated_threads, totalThreads=threadDB.count())
 
 @app.route("/thread")
 def thread():

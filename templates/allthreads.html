@@ -113,14 +113,17 @@
         {% endif %}
     </div>
 
+    <!-- Use the total amount of threads to calculate the number of page links to generate
+    by dividing totalThreads by the number of threads per page to display-->
+    {% set num_pages = ((totalThreads/4)|round|int) + 1 %}
+
     <div class="row">
         <div class="col-12 pt-3 text-center pb-5">
-            <ul>
-                <li><a href="{{url_for('get_all_threads', page=0)}}">Page 0</a></li>
-                <li><a href="{{url_for('get_all_threads', page=1)}}">Page 1</a></li>
-                <li><a href="{{url_for('get_all_threads', page=2)}}">Page 2</a></li>
-                <li><a href="{{url_for('get_all_threads', page=3)}}">Page 3</a></li>
-                <li><a href="{{url_for('get_all_threads', page=4)}}">Page 4</a></li>
+            <ul class="pagination">
+                {% for i in range(num_pages) %}
+                <li class="page-item"><a class="page-link" href="{{url_for('get_all_threads', page=i)}}">{{i}}</a>
+                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>

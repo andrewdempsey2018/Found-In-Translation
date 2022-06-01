@@ -160,7 +160,7 @@ def get_all_threads():
     for thread in translated_threads:
             thread['subject'] = translate_text(user['language'], thread['subject'])
             thread['content'] = translate_text(user['language'], thread['content'])
-    return render_template('allthreads.html', user=user, threads=translated_threads, totalThreads=threadDB.count())
+    return render_template('allthreads.html', user=user, threads=translated_threads, totalThreads=threadDB.count(), page=page)
 
 @app.route("/thread")
 def thread():

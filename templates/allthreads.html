@@ -121,8 +121,14 @@
         <div class="col-12 pt-3 text-center pb-5">
             <ul class="pagination justify-content-center">
                 {% for i in range(num_pages) %}
+                {% if page == i %}
+                <li class="page-item active"><a class="page-link"
+                        href="{{url_for('get_all_threads', page=i)}}">{{i}}</a>
+                </li>
+                {% else %}
                 <li class="page-item"><a class="page-link" href="{{url_for('get_all_threads', page=i)}}">{{i}}</a>
                 </li>
+                {% endif %}
                 {% endfor %}
             </ul>
         </div>

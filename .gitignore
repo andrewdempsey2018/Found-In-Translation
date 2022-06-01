@@ -3,4 +3,4 @@ __pycache__/
 env.py
 virtual/
 .gitpod.yml
-cloud_credentials.json
+cloud_credentials.json 

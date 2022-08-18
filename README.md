@@ -1,5 +1,7 @@
 # **FOUND IN TRANSLATION**
 
+![Found in Translation site shown on multiple screen sizes](static/images/site-responsive.png)
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/andrewdempsey2018/Found-In-Translation?color=red&style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/andrewdempsey2018/Found-In-Translation?color=orange&style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/andrewdempsey2018/Found-In-Translation?color=yellow&style=for-the-badge)
@@ -13,7 +15,7 @@ Gone are the days of having to use annoying plugin translators - Found in Transl
 
 Simply create an account and chose your language (over 160 to choose from). You can then create and read posts in your chosen language, regardless of what language they were originally written in! Theres a topic for everyone at Found in Translation!
 
-[View deployed site](https://foundintranslationsodaci.herokuapp.com/)
+View deployed site: [Found in Translation](https://foundintranslationsodaci.herokuapp.com/)
 
 - - -
 
@@ -102,9 +104,9 @@ Found in Translation allows anyone to connect with others around the world with 
 
 ### **Colour Scheme**
 
-Colors have a significant effect on our mood, through them, we simulate a series of emotions. Our main objective in choosing pastel colors is to transmit peace, happiness and harmony.
+Colors have a significant effect on our mood, through them, we simulate a series of emotions. Our main objective in choosing our color theme was to transmit peace, happiness and harmony.
 
-(color pallete image)
+![Found in Translation Color Palette](documentation/color-palette.png)
 
 ### **Typography**
 
@@ -186,6 +188,10 @@ As the site has been created for educational purposes only, please note that the
 ### **iso-639**
 
 To provide users with translated text on the pages, [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) were used to classify the users’ language on the page. When a user signs up, they can choose a country to be their default language on their account. If a user replies to or starts a thread, the text posted will be translated.
+
+### **Language Icons**
+
+We wanted to be able to display an icon for a language, however while researching we didn't feel that we could use country flags, as someone may speak a language, but not identify with the country flag for that language, as many areas can speak the same language. We eventually came across [Language Icons by Anand Chowdhary](https://github.com/AnandChowdhary/language-icons) which fit our thinking perfectly.
 
 ### **Google translation api**
 

@@ -34,7 +34,7 @@ An error relating to the use of the aria-label was flagged on all pages the vali
 * [Index Page W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoundintranslationsodaci.herokuapp.com%2F) - Pass
 * [Login Page W3C HTML Validation](documentation/testing/login-user.png) - Pass
 * [Sign Up Page W3C HTML Validation]
-* [Admin Page W3C HTML Validation]
+* [Admin Page W3C HTML Validation](documentation/testing/admin-validation.png) - Pass
 * [All threads Page W3C HTML Validation](documentation/testing/allthreads-validation.png) - Pass
 * [Privacy Page W3C HTML Validation](documentation/testing/privacy-validation.png) - Pass
 * [Terms & Conditions Page W3C HTML Validation](documentation/testing/terms-validation.png) - Pass

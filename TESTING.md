@@ -57,7 +57,7 @@ An error relating to the use of the aria-label was flagged on all pages the vali
 
 [PEP8](http://pep8online.com/)was used to validate the python files.
 
-* Insert testing results here
+* [translate.py](documentation/testing/translate-validation.png)
 
 - - -
 

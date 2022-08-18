@@ -76,13 +76,13 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 * Sign Up Page
   ![Sign Up Page Lighthouse testing desktop](documentation/lighthouse/signup-lh-desk.png)
   
-  * All Threads Page
+* All Threads Page
   ![All threads page lighthouse testing desktop](documentation/lighthouse/allthreads-lh-desk.png)
   
-  * Privacy Policy Page
+* Privacy Policy Page
   ![Privacy policy page lighthouse testing desktop](documentation/lighthouse/privacy-lh-desk.png)
   
-  * Terms and conditions Page
+* Terms and conditions Page
   ![Terms and conditions page lighthouse testing desktop](documentation/lighthouse/terms-lh-desk.png)
 
 ### Mobile Results
@@ -96,13 +96,13 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 * Sign Up Page
   ![Sign Up Page Lighthouse testing mobile](documentation/lighthouse/signup-lh-mobile.png)
   
-  * All Threads Page
+* All Threads Page
   ![All threads page lighthouse testing mobile](documentation/lighthouse/allthreads-lh-mobile.png)
   
-  * Privacy Policy Page
+* Privacy Policy Page
   ![Privacy policy page lighthouse testing mobile](documentation/lighthouse/privacy-lh-mobile.png)
   
-  * Terms and conditions Page
+* Terms and conditions Page
   ![Terms and conditions page lighthouse testing mobile](documentation/lighthouse/terms-lh-mobile.png)
 
 - - -

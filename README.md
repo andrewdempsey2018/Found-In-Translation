@@ -44,9 +44,9 @@ Simply create an account and chose your language (over 160 to choose from). You 
 
 3. [Technology Used](#technology-used)  
     * [Language Used](#language-used)
-    * [Frameworks,libraries and Program Used](#frameworkslibraries-and-program-used) 
+    * [Frameworks,libraries and Program Used](#frameworkslibraries-and-program-used)
     * [ISO 639-1 Language Codes](#iso-639)  
-    * [Google Translation API](#google-translation-api) 
+    * [Google Translation API](#google-translation-api)
 
 4. [Testing](#testing)
     * [TESTING.md](#testing)
@@ -145,28 +145,28 @@ MongoDB was chosen as the database for this project due to the flexibility it of
 
 The site has been designed to be fully responsive, from mobile all the way up to desktop.
 
-**Navbar**
+#### **Navbar**
 
 The site has a fully responsive navbar.
 
 ![Navbar desktop](documentation/navbar-desktop.png)
 ![Navbar Small Screens](documentation/navbar-small.png)
 
-**Footer**
+#### **Footer**
 
 The site has a fully responsive footer. The footer contains links to social media, the privacy policy and terms and conditions pages. It also features a call to action button asking users to join now.
 
 ![Footer Large](documentation/footer-large.png)
 ![Footer Small](documentation/footer-small.png)
 
-**Favicon**
+#### **Favicon**
 
 The Favicon was created using [Favicon.io](https://favicon.io/).
 We have chosen this image as our site logo and have also used it as our favicon as it brings brand cohesion to the site.
 
 ![Favicon](documentation/rm-favicon.png)
 
-**Site Logo**
+####  **Site Logo**
 
 We have chosen this image as our site logo as we feel it displays the core principle of our site in an icon which allows the site logo to be understood by anyone, regardless of their language. The image shows a globe with two speech bubbles, each with a different language character.
 
@@ -177,7 +177,7 @@ We have chosen this image as our site logo as we feel it displays the core princ
 We are aware that as we are asking users to create a username and a password to allow full interactivity with our site we need to also be mindful of how we are storing the data to ensure it remains private and secure. In the UK it is also important to be GDPR compliant.
 
 As this site was created as part of a hackathon project, the privacy and terms & conditions pages have been created to demonstrate an understanding that we, as the site creators and custodians of peoples personal data have taken consideration about this and have provided the user with a terms and conditions and privacy policy page which lets the users know how their data is being used.
-These documents were created on [RocketLawyer.com](https://www.rocketlawyer.com/gb/en?gclid=Cj0KCQjwm6KUBhC3ARIsACIwxBg54TtP8b529a5qduEkHY7u-D1hKr_I6qvoCuqtQM6VhwDUdpnR6fsaApToEALw_wcB), a site that creates documents. 
+These documents were created on [RocketLawyer.com](https://www.rocketlawyer.com/gb/en?gclid=Cj0KCQjwm6KUBhC3ARIsACIwxBg54TtP8b529a5qduEkHY7u-D1hKr_I6qvoCuqtQM6VhwDUdpnR6fsaApToEALw_wcB), a site that creates documents.
 
 As the site has been created for educational purposes only, please note that the following documents would not be legally binding, they are purely to demonstrate an understanding of the topic. We would like to however ensure users that all measures have been taken to ensure any data entered into the site is secure.
 
@@ -277,7 +277,6 @@ Click the Fork button in the top right corner.
 * [Logo and Favicon Image](https://www.flaticon.com/free-icons/language), sourced from Flatiron, created by Freepik
 
 * [Avatars](https://speckyboy.com/free-cute-user-avatar-icon-set/), sourced from specyboy
-
 
   ![Logo](documentation/rm-logo.png)
   ![Favicon](documentation/rm-favicon.png)

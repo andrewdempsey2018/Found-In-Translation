@@ -30,5 +30,5 @@ for (let i = 0; i < language_codes.length; i++) {
 
 /* Get the code and name from any dropdown element that is clicked */
 dropdown.addEventListener('change', event => {
-    document.getElementById("symbol").src = "https://unpkg.com/language-icons/icons/" + event.target.value + ".svg"
+    document.getElementById("symbol").src = "https://unpkg.com/language-icons/icons/" + event.target.value + ".svg";
 });

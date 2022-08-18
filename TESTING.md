@@ -47,7 +47,7 @@ An error relating to the use of the aria-label was flagged on all pages the vali
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
-* [dropdown.js]
+* [dropdown.js](documentation/testing/dropdownjs-validation.png)
 * [form_validation.js](documentation/testing/form-validation-js.png)
 * [language_codes.js](documentation/testing/language-list-js.png)
 

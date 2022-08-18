@@ -84,9 +84,6 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
   
   * Terms and conditions Page
   ![Terms and conditions page lighthouse testing desktop](documentation/lighthouse/terms-lh-desk.png)
-  
-  * 404 Error Page
-  ![404 Error Page lighthouse testing desktop]()
 
 ### Mobile Results
 
@@ -107,9 +104,6 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
   
   * Terms and conditions Page
   ![Terms and conditions page lighthouse testing mobile](documentation/lighthouse/terms-lh-mobile.png)
-  
-  * 404 Error Page
-  ![404 Error Page lighthouse testing mobile]()
 
 - - -
 

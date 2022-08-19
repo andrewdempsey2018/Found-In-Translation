@@ -4,7 +4,7 @@ def translate_text(target, text):
     target text, leverages Google Translate API
     enpoint to perform conversion to target language
 
-    Source text language is processed by Google API and 
+    Source text language is processed by Google API and
     auto detected
     """
 

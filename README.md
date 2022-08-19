@@ -1,5 +1,7 @@
 # **FOUND IN TRANSLATION**
 
+![Found in Translation site shown on multiple screen sizes](static/images/site-responsive.png)
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/andrewdempsey2018/Found-In-Translation?color=red&style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/andrewdempsey2018/Found-In-Translation?color=orange&style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/andrewdempsey2018/Found-In-Translation?color=yellow&style=for-the-badge)
@@ -13,7 +15,7 @@ Gone are the days of having to use annoying plugin translators - Found in Transl
 
 Simply create an account and chose your language (over 160 to choose from). You can then create and read posts in your chosen language, regardless of what language they were originally written in! Theres a topic for everyone at Found in Translation!
 
-[View deployed site](https://foundintranslationsodaci.herokuapp.com/)
+View deployed site: [Found in Translation](https://foundintranslationsodaci.herokuapp.com/)
 
 - - -
 
@@ -44,9 +46,9 @@ Simply create an account and chose your language (over 160 to choose from). You 
 
 3. [Technology Used](#technology-used)  
     * [Language Used](#language-used)
-    * [Frameworks,libraries and Program Used](#frameworkslibraries-and-program-used) 
+    * [Frameworks,libraries and Program Used](#frameworkslibraries-and-program-used)
     * [ISO 639-1 Language Codes](#iso-639)  
-    * [Google Translation API](#google-translation-api) 
+    * [Google Translation API](#google-translation-api)
 
 4. [Testing](#testing)
     * [TESTING.md](#testing)
@@ -102,9 +104,9 @@ Found in Translation allows anyone to connect with others around the world with 
 
 ### **Colour Scheme**
 
-Colors have a significant effect on our mood, through them, we simulate a series of emotions. Our main objective in choosing pastel colors is to transmit peace, happiness and harmony.
+Colors have a significant effect on our mood, through them, we simulate a series of emotions. Our main objective in choosing our color theme was to transmit peace, happiness and harmony.
 
-(color pallete image)
+![Found in Translation Color Palette](documentation/color-palette.png)
 
 ### **Typography**
 
@@ -145,28 +147,28 @@ MongoDB was chosen as the database for this project due to the flexibility it of
 
 The site has been designed to be fully responsive, from mobile all the way up to desktop.
 
-**Navbar**
+#### **Navbar**
 
 The site has a fully responsive navbar.
 
 ![Navbar desktop](documentation/navbar-desktop.png)
 ![Navbar Small Screens](documentation/navbar-small.png)
 
-**Footer**
+#### **Footer**
 
 The site has a fully responsive footer. The footer contains links to social media, the privacy policy and terms and conditions pages. It also features a call to action button asking users to join now.
 
 ![Footer Large](documentation/footer-large.png)
 ![Footer Small](documentation/footer-small.png)
 
-**Favicon**
+#### **Favicon**
 
 The Favicon was created using [Favicon.io](https://favicon.io/).
 We have chosen this image as our site logo and have also used it as our favicon as it brings brand cohesion to the site.
 
 ![Favicon](documentation/rm-favicon.png)
 
-**Site Logo**
+####  **Site Logo**
 
 We have chosen this image as our site logo as we feel it displays the core principle of our site in an icon which allows the site logo to be understood by anyone, regardless of their language. The image shows a globe with two speech bubbles, each with a different language character.
 
@@ -177,7 +179,7 @@ We have chosen this image as our site logo as we feel it displays the core princ
 We are aware that as we are asking users to create a username and a password to allow full interactivity with our site we need to also be mindful of how we are storing the data to ensure it remains private and secure. In the UK it is also important to be GDPR compliant.
 
 As this site was created as part of a hackathon project, the privacy and terms & conditions pages have been created to demonstrate an understanding that we, as the site creators and custodians of peoples personal data have taken consideration about this and have provided the user with a terms and conditions and privacy policy page which lets the users know how their data is being used.
-These documents were created on [RocketLawyer.com](https://www.rocketlawyer.com/gb/en?gclid=Cj0KCQjwm6KUBhC3ARIsACIwxBg54TtP8b529a5qduEkHY7u-D1hKr_I6qvoCuqtQM6VhwDUdpnR6fsaApToEALw_wcB), a site that creates documents. 
+These documents were created on [RocketLawyer.com](https://www.rocketlawyer.com/gb/en?gclid=Cj0KCQjwm6KUBhC3ARIsACIwxBg54TtP8b529a5qduEkHY7u-D1hKr_I6qvoCuqtQM6VhwDUdpnR6fsaApToEALw_wcB), a site that creates documents.
 
 As the site has been created for educational purposes only, please note that the following documents would not be legally binding, they are purely to demonstrate an understanding of the topic. We would like to however ensure users that all measures have been taken to ensure any data entered into the site is secure.
 
@@ -186,6 +188,10 @@ As the site has been created for educational purposes only, please note that the
 ### **iso-639**
 
 To provide users with translated text on the pages, [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) were used to classify the users’ language on the page. When a user signs up, they can choose a country to be their default language on their account. If a user replies to or starts a thread, the text posted will be translated.
+
+### **Language Icons**
+
+We wanted to be able to display an icon for a language, however while researching we didn't feel that we could use country flags, as someone may speak a language, but not identify with the country flag for that language, as many areas can speak the same language. We eventually came across [Language Icons by Anand Chowdhary](https://github.com/AnandChowdhary/language-icons) which fit our thinking perfectly.
 
 ### **Google translation api**
 
@@ -277,7 +283,6 @@ Click the Fork button in the top right corner.
 * [Logo and Favicon Image](https://www.flaticon.com/free-icons/language), sourced from Flatiron, created by Freepik
 
 * [Avatars](https://speckyboy.com/free-cute-user-avatar-icon-set/), sourced from specyboy
-
 
   ![Logo](documentation/rm-logo.png)
   ![Favicon](documentation/rm-favicon.png)

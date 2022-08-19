@@ -34,7 +34,7 @@ An error relating to the use of the aria-label was flagged on all pages the vali
 * [Index Page W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoundintranslationsodaci.herokuapp.com%2F) - Pass
 * [Login Page W3C HTML Validation](documentation/testing/login-user.png) - Pass
 * [Sign Up Page W3C HTML Validation]
-* [Admin Page W3C HTML Validation]
+* [Admin Page W3C HTML Validation](documentation/testing/admin-validation.png) - Pass
 * [All threads Page W3C HTML Validation](documentation/testing/allthreads-validation.png) - Pass
 * [Privacy Page W3C HTML Validation](documentation/testing/privacy-validation.png) - Pass
 * [Terms & Conditions Page W3C HTML Validation](documentation/testing/terms-validation.png) - Pass
@@ -47,7 +47,7 @@ An error relating to the use of the aria-label was flagged on all pages the vali
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
-* [dropdown.js]
+* [dropdown.js](documentation/testing/dropdownjs-validation.png)
 * [form_validation.js](documentation/testing/form-validation-js.png)
 * [language_codes.js](documentation/testing/language-list-js.png)
 
@@ -57,7 +57,7 @@ An error relating to the use of the aria-label was flagged on all pages the vali
 
 [PEP8](http://pep8online.com/)was used to validate the python files.
 
-* Insert testing results here
+* [translate.py](documentation/testing/translate-validation.png)
 
 - - -
 
@@ -76,17 +76,14 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 * Sign Up Page
   ![Sign Up Page Lighthouse testing desktop](documentation/lighthouse/signup-lh-desk.png)
   
-  * All Threads Page
+* All Threads Page
   ![All threads page lighthouse testing desktop](documentation/lighthouse/allthreads-lh-desk.png)
   
-  * Privacy Policy Page
+* Privacy Policy Page
   ![Privacy policy page lighthouse testing desktop](documentation/lighthouse/privacy-lh-desk.png)
   
-  * Terms and conditions Page
+* Terms and conditions Page
   ![Terms and conditions page lighthouse testing desktop](documentation/lighthouse/terms-lh-desk.png)
-  
-  * 404 Error Page
-  ![404 Error Page lighthouse testing desktop]()
 
 ### Mobile Results
 
@@ -99,17 +96,14 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 * Sign Up Page
   ![Sign Up Page Lighthouse testing mobile](documentation/lighthouse/signup-lh-mobile.png)
   
-  * All Threads Page
+* All Threads Page
   ![All threads page lighthouse testing mobile](documentation/lighthouse/allthreads-lh-mobile.png)
   
-  * Privacy Policy Page
+* Privacy Policy Page
   ![Privacy policy page lighthouse testing mobile](documentation/lighthouse/privacy-lh-mobile.png)
   
-  * Terms and conditions Page
+* Terms and conditions Page
   ![Terms and conditions page lighthouse testing mobile](documentation/lighthouse/terms-lh-mobile.png)
-  
-  * 404 Error Page
-  ![404 Error Page lighthouse testing mobile]()
 
 - - -
 

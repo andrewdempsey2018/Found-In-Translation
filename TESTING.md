@@ -29,7 +29,9 @@ Each page has been inspected using google chrome developer tools & Firefox inspe
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-An error relating to the use of the aria-label was flagged on all pages the validator as being a possible misuse of the label. This is due to the bootstrap class for the icons to allow the icons to be accessible friendly (taken from the documentation for bootstrap5), and can therefore be ignored.
+A warning relating to the use of the aria-label in the `<i>` tag was flagged as being a possible misuse of the label. This is due to the bootstrap class for the icons to allow the icons to be accessible friendly (taken from the documentation for bootstrap5), and can therefore be ignored.
+__Update September 2022__
+Further research into this matter suggests that moving the aria-label into the parent `<a>` tag will remove the above error relating to the misuse of the label.
 
 * [Index Page W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffoundintranslationsodaci.herokuapp.com%2F) - Pass
 * [Login Page W3C HTML Validation](documentation/testing/login-user.png) - Pass

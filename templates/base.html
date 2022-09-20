@@ -72,46 +72,40 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('index') }}">
-                            <i class="bi bi-house-fill"
-                                aria-label="Home page"></i>
+                        <a class="nav-link" href="{{ url_for('index') }}" aria-label="Home page">
+                            <i class="bi bi-house-fill"></i>
                             Home</a>
                     </li>
 
                     {% if user.username == 'guest' %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('login') }}">
-                            <i class="bi bi-box-arrow-in-right"
-                                aria-label="Login"></i>
+                        <a class="nav-link" href="{{ url_for('login') }}" aria-label="Login">
+                            <i class="bi bi-box-arrow-in-right"></i>
                             Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('signup') }}">
-                            <i class="bi bi-box-arrow-in-right"
-                                aria-label="Sign up"></i>
+                        <a class="nav-link" href="{{ url_for('signup') }}" aria-label="Sign up">
+                            <i class="bi bi-box-arrow-in-right"></i>
                             Sign Up</a>
                     </li>
                     {% endif %}
 
                     <li class="nav-item">
                         <a class="nav-link"
-                            href="{{url_for('get_all_threads', page=0)}}">
-                            <i class="bi bi-file-text"
-                                aria-label="View all posts"></i>
+                            href="{{url_for('get_all_threads', page=0)}}" aria-label="View all posts">
+                            <i class="bi bi-file-text"></i>
                             View all threads</a>
                     </li>
 
                     {% if user.username != 'guest' %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('admin_posts') }}">
-                            <i class="bi bi-chat-fill"
-                                aria-label="Admin Posts"></i>
+                        <a class="nav-link" href="{{ url_for('admin_posts') }}" aria-label="Admin Posts">
+                            <i class="bi bi-chat-fill"></i>
                             Admin View</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('logout') }}">
-                            <i class="bi bi-box-arrow-right"
-                                aria-label="Logout"></i>
+                        <a class="nav-link" href="{{ url_for('logout') }}" aria-label="Logout">
+                            <i class="bi bi-box-arrow-right"></i>
                             Logout</a>
                     </li>
                     {% endif %}
@@ -237,16 +231,14 @@
                                     <li class="list-group-item flex-fill">
                                         Andrew:
                                         <a href="https://github.com/andrewdempsey2018"
-                                            target="_blank">
+                                            target="_blank" aria-label="Visit Andrew's GitHub Profile">
                                             <i class="bi bi-github icon pe-2"
-                                                role="img"
-                                                aria-label="Visit Andrew's GitHub Profile"></i>
+                                                role="img"></i>
                                         </a>
                                         <a href="https://www.linkedin.com/in/andrew-dempsey-20ab40180/"
-                                            target="_blank">
+                                            target="_blank" aria-label="Visit Andrew's Linked in Profile">
                                             <i class="bi bi-linkedin icon pe-2"
-                                                role="img"
-                                                aria-label="Visit Andrew's Linked in Profile"></i>
+                                                role="img"></i>
                                         </a>
                                     </li>
 
@@ -254,31 +246,27 @@
                                     <li class="list-group-item flex-fill">
                                         Cristian:
                                         <a href="https://github.com/CristianBuca"
-                                            target="_blank">
+                                            target="_blank"  aria-label="Visit Cristian's GitHub Profile">
                                             <i class="bi bi-github icon pe-2"
-                                                role="img"
-                                                aria-label="Visit Cristian's GitHub Profile"></i>
+                                                role="img"></i>
                                         </a>
                                         <a href="https://www.linkedin.com/in/cristianbuca/"
-                                            target="_blank">
+                                            target="_blank" aria-label="Visit Cristian's Linked in Profile">
                                             <i class="bi bi-linkedin icon pe-2"
-                                                role="img"
-                                                aria-label="Visit Cristian's Linked in Profile"></i>
+                                                role="img"></i>
                                         </a>
                                     </li>
 
                                     <li class="list-group-item flex-fill">Didi:
                                         <a href="https://github.com/Didisimmons"
-                                            target="_blank">
+                                            target="_blank"  aria-label="Visit Didi's GitHub Profile">
                                             <i class="bi bi-github icon pe-2"
-                                                role="img"
-                                                aria-label="Visit Didi's GitHub Profile"></i>
+                                                role="img"></i>
                                         </a>
                                         <a href="https://www.linkedin.com/in/onyema-onyejekwe-492128102/"
-                                            target="_blank">
+                                            target="_blank" aria-label="Visit Didi's Linked in Profile">
                                             <i class="bi bi-linkedin icon pe-2"
-                                                role="img"
-                                                aria-label="Visit Didi's Linked in Profile"></i>
+                                                role="img"></i>
                                         </a>
                                     </li>
 
@@ -290,25 +278,22 @@
                                                 aria-label="Visit Kera's GitHub Profile"></i>
                                         </a>
                                         <a href="https://www.linkedin.com/in/keracudmore/"
-                                            target="_blank">
+                                            target="_blank" aria-label="Visit Kera's Linked in Profile">
                                             <i class="bi bi-linkedin icon pe-2"
-                                                role="img"
-                                                aria-label="Visit Kera's Linked in Profile"></i>
+                                                role="img"></i>
                                         </a>
                                     </li>
 
                                     <li class="list-group-item flex-fill">Paula:
                                         <a href="https://github.com/paulasdev"
-                                            target="_blank">
+                                            target="_blank" aria-label="Visit Paula's GitHub Profile">
                                             <i class="bi bi-github icon pe-2"
-                                                role="img"
-                                                aria-label="Visit Paula's GitHub Profile"></i>
+                                                role="img"></i>
                                         </a>
                                         <a href="https://www.linkedin.com/in/paulacgsilva"
-                                            target="_blank">
+                                            target="_blank" aria-label="Visit Paula's Linked in Profile">
                                             <i class="bi bi-linkedin icon pe-2"
-                                                role="img"
-                                                aria-label="Visit Paula's Linked in Profile"></i>
+                                                role="img"></i>
                                         </a>
                                     </li>
 
